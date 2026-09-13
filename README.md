@@ -24,7 +24,7 @@ Students spend hours doomscrolling short-form video algorithms designed for dist
 
 ## 2. Live Demo & Video Links
 
-- 🌐 **Live Web Application**: [VERCEL_LINK]
+- 🌐 **Live Web Application**: [https://study-rot-red.vercel.app/](https://study-rot-red.vercel.app/)
 - 📺 **Full Video Walkthrough**: [YOUTUBE_LINK]
 - 📑 **Hackathon Pitch Deck**: [`submission/pitch-deck.pdf`](submission/pitch-deck.pdf) (Slide source: [`submission/pitch-deck.md`](submission/pitch-deck.md))
 - ⏱️ **Presentation Script**: [`submission/demo-script.md`](submission/demo-script.md)

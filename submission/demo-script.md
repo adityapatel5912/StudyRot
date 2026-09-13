@@ -14,7 +14,7 @@
 ---
 
 ### [0:25 – 1:05] The Feed Experience & Multi-Modal Science
-- **Visual**: Open StudyRot at `[VERCEL_LINK]`. Click **Science Cl 10: Light & Refraction** under Quick Demos. The feed immediately pops up with Card 1.
+- **Visual**: Open StudyRot at `https://study-rot-red.vercel.app/`. Click **Science Cl 10: Light & Refraction** under Quick Demos. The feed immediately pops up with Card 1.
 - **Voiceover**:
   > *"Here's our feed for Class 10 Optics. Notice the clean 100dvh snap-scroll container. As I swipe down, each card delivers a core syllabus concept. 
   > Here on Card 1, look at this animated ray diagram: the incident ray, reflected ray, and normal line rendered in pure, responsive SVG. 
@@ -52,4 +52,4 @@
   > User API keys are encrypted at rest with AES-256-GCM authenticated encryption.
   > And our test suite passes 100% across all 11 endpoints and WebSocket lifecycles.
   > 
-  > StudyRot is live right now at [VERCEL_LINK]. Try it, learn an entire chapter in 5 minutes, and never doomscroll uselessly again. Thank you!"*
+  > StudyRot is live right now at https://study-rot-red.vercel.app/. Try it, learn an entire chapter in 5 minutes, and never doomscroll uselessly again. Thank you!"*

@@ -71,7 +71,7 @@
 ---
 
 ## Slide 10: Call to Action & Live Links
-- **Live App**: [VERCEL_LINK]
+- **Live App**: [https://study-rot-red.vercel.app/](https://study-rot-red.vercel.app/)
 - **Video Walkthrough**: [YOUTUBE_LINK]
 - **GitHub Repository**: Open-source, production-ready, zero stubs, 100% test coverage.
 - *Thank you, Nerdy Hackathon Judges!*
