@@ -1,0 +1,165 @@
+{
+  "title": "Photosynthesis & Life Processes",
+  "subject": "Science",
+  "grade": 10,
+  "posts": [
+    {
+      "type": "key_point",
+      "title": "Light Dependent Reactions in Thylakoids",
+      "body": "Chlorophyll inside thylakoid membranes absorbs photon energy to split water ($2\\text{H}_2\\text{O} \\to 4\\text{H}^+ + 4e^- + \\text{O}_2$), generating ATP and NADPH.",
+      "analogy": "Like rooftop solar panels generating immediate direct current to charge your inverter batteries before evening.",
+      "quiz": null,
+      "diagram": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"40\" width=\"140\" height=\"70\" rx=\"10\" fill=\"#0f1e3d\"/><text x=\"100\" y=\"78\" fill=\"#ffffff\" font-size=\"12\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\" font-weight=\"600\">LIGHT ENERGY</text><rect x=\"230\" y=\"40\" width=\"140\" height=\"70\" rx=\"10\" fill=\"#22c55e\"/><text x=\"300\" y=\"78\" fill=\"#ffffff\" font-size=\"12\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\" font-weight=\"600\">ATP &amp; NADPH</text><line x1=\"170\" y1=\"75\" x2=\"230\" y2=\"75\" stroke=\"#4f6ba0\" stroke-width=\"3\"/></svg>",
+      "hashtags": ["#Photosynthesis", "#Class10Science", "#Chloroplast"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 54, "comments": [] }
+    },
+    {
+      "type": "analogy",
+      "title": "The Stomata Security Gate",
+      "body": "Guard cells swell when water enters, bowing outward like a pair of curved bananas to create an open pore for $\\text{CO}_2$ entry.",
+      "analogy": "Just like a metro station automatic gate that slides open only when the sensor registers passenger flow.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Stomata", "#GuardCells", "#NCERTAnalogy"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 41, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Source of Released Oxygen",
+      "body": "A critical 1-mark CBSE question: Where does the molecular oxygen produced during photosynthesis actually come from?",
+      "analogy": "",
+      "quiz": {
+        "question": "Which molecule is photolyzed to release $O_2$ into the atmosphere?",
+        "options": ["Water (H2O)", "Carbon dioxide (CO2)", "Glucose (C6H12O6)", "Chlorophyll"],
+        "answer": "Water (H2O)",
+        "explanation": "Isotope tracer studies proved that photolysis of water ($2\\text{H}_2\\text{O} \\to 4\\text{H}^+ + 4e^- + \\text{O}_2$) releases the oxygen gas, not carbon dioxide."
+      },
+      "diagram": "",
+      "hashtags": ["#BoardMCQ", "#CBSEPrep", "#Class10Science"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 88, "comments": [] }
+    },
+    {
+      "type": "apply",
+      "title": "Agrivoltaics in Kutch & Punjab",
+      "body": "Agrivoltaic systems mount solar panels over crops. The panels shade vegetables from scorched noon heat while plants keep the panels cool through transpiration.",
+      "analogy": "Engineering synergy: clean electricity above, high-yield agriculture below.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Agrivoltaics", "#IndianScience", "#RenewableEnergy"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 62, "comments": [] }
+    },
+    {
+      "type": "exam_tip",
+      "title": "CBSE Trap: Desert Plant Stomata",
+      "body": "Desert plants (xerophytes) take up $\\text{CO}_2$ at NIGHT and prepare an intermediate acid, preventing water loss under hot daytime desert winds.",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#CBSETip", "#DesertPlants", "#ExamStrategy"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 95, "comments": [] }
+    },
+    {
+      "type": "recap",
+      "title": "Mid-Feed Recap: 3 Essential Steps",
+      "body": "1. Absorption of light energy by chlorophyll. 2. Conversion to chemical energy and splitting of water. 3. Reduction of $\\text{CO}_2$ to carbohydrates.",
+      "analogy": "Stepwise factory workflow turning sunshine and air into sweet starch.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Recap", "#RevisionQuick", "#CBSE10"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 38, "comments": [] }
+    },
+    {
+      "type": "myth_buster",
+      "title": "Myth: Dark Reactions Happen in the Dark",
+      "body": "Dark reactions (Calvin cycle) do not require darkness! They are simply 'light-independent' and utilize ATP and NADPH produced during the daytime.",
+      "analogy": "Like cooking dinner with pre-charged solar batteries: you don't need direct sun on the pan.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#MythBuster", "#BiologyMisconceptions"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 77, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Starch Test Reagent",
+      "body": "Which chemical test is used to detect presence of synthesized starch in a destarched variegated leaf?",
+      "analogy": "",
+      "quiz": {
+        "question": "Which reagent produces a blue-black colour in the presence of starch?",
+        "options": ["Dilute Iodine Solution", "Benedict Solution", "Methyl Orange", "Phenolphthalein"],
+        "answer": "Dilute Iodine Solution",
+        "explanation": "Iodine reacts with amylose in starch to form a dark blue-black inclusion complex."
+      },
+      "diagram": "",
+      "hashtags": ["#StarchTest", "#LabPractical", "#Class10"],
+      "source_ref": "NCERT Class 10 Ch 6 — Activity 6.1",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 59, "comments": [] }
+    },
+    {
+      "type": "key_point",
+      "title": "Xylem vs Phloem Transport",
+      "body": "Xylem conducts water and minerals unidirectionally upwards via suction pressure ($P$), while Phloem translocates sucrose bidirectionally utilizing ATP.",
+      "analogy": "Xylem is an escalator going strictly up; phloem is a delivery van travelling both directions.",
+      "quiz": null,
+      "diagram": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"200\" x2=\"120\" y2=\"40\" stroke=\"#0f1e3d\" stroke-width=\"4\"/><text x=\"120\" y=\"225\" fill=\"#0f1e3d\" font-size=\"12\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">Xylem (Up)</text><line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"200\" stroke=\"#22c55e\" stroke-width=\"4\"/><text x=\"280\" y=\"225\" fill=\"#22c55e\" font-size=\"12\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">Phloem (Both)</text></svg>",
+      "hashtags": ["#Xylem", "#Phloem", "#PlantPhysiology"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 83, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Energy Currency in Cells",
+      "body": "What molecule carries high-energy phosphate bonds synthesized during photophosphorylation?",
+      "analogy": "",
+      "quiz": {
+        "question": "Which molecule acts as the cellular energy currency synthesized during light reactions?",
+        "options": ["ATP", "ADP", "NADP+", "Pyruvate"],
+        "answer": "ATP",
+        "explanation": "Adenosine Triphosphate (ATP) stores energy within terminal phosphoanhydride bonds."
+      },
+      "diagram": "",
+      "hashtags": ["#ATP", "#CellEnergy", "#Class10"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 49, "comments": [] }
+    },
+    {
+      "type": "summary",
+      "title": "Master Summary: Photosynthesis in 2 Sentences",
+      "body": "Plants capture solar radiation via chlorophyll to split water and assemble glucose from $\\text{CO}_2$, releasing atmospheric oxygen as a byproduct. This fundamental biochemical cascade sustains almost all aerobic life on Earth.",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Summary", "#Class10Science", "#NCERT"],
+      "source_ref": "NCERT Class 10 Ch 6 — Life Processes",
+      "grade": 10,
+      "subject": "Science",
+      "engagement": { "likes": 112, "comments": [] }
+    }
+  ]
+}

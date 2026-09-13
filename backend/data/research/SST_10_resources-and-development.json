@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "subject": "SST",
+    "grade": 10,
+    "topic": "Resources and Development",
+    "chapters": ["Geography Ch 1"],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 34,
+    "verified_facts_count": 16,
+    "mcqs_count": 10,
+    "editions_used": ["2025-26", "2023-24"]
+  },
+  "facts": [
+    {
+      "statement": "Resources are technologically accessible, economically feasible, and culturally acceptable elements of the environment.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "Individual, Community, National, and International resources form the classification based on ownership.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Oceanic resources up to 12 nautical miles ($22.2\\ \\text{km}$) from the coast are termed territorial waters and belong to the nation.",
+      "latex": "12\\ \\text{NM} \\approx 22.2\\ \\text{km}",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The oceanic resources beyond 200 nautical miles of the Exclusive Economic Zone belong to open ocean and no individual country can utilise them without international concurrence.",
+      "latex": "> 200\\ \\text{NM}",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Sustainable development means development should take place without damaging the environment and without compromising the needs of future generations.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The first international Earth Summit was held in Rio de Janeiro, Brazil in June 1992, endorsing Agenda 21.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Black soil is also known as regur soil and is ideal for growing cotton ('black cotton soil').",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Black soil is rich in calcium carbonate, magnesium, potash, and lime, but generally poor in phosphoric content.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Alluvial soil is deposited by three important Himalayan river systems: Indus, Ganga, and Brahmaputra.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Old alluvial soil is called Bangar (higher concentration of kankar nodules) and new alluvial soil is called Khadar (more fertile).",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Laterite soil develops in areas with high temperature and heavy rainfall, resulting in intense leaching.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Red soil develops a reddish color due to diffusion of iron in crystalline and metamorphic rocks.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Gully erosion occurs when running water cuts through clayey soils making deep channels, creating badland topography in the Chambal basin.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.7",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Sheet erosion takes place when water flows as a sheet over large areas down a slope and washes away the topsoil.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.7",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Planting lines of trees to create shelter (shelter belts) stabilizes sand dunes in western India.",
+      "latex": "",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.7",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The National Forest Policy of India (1952) outlined 33% of geographical area should be under forest cover for ecological balance.",
+      "latex": "33\\%",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    }
+  ],
+  "formulas": [],
+  "definitions": [
+    {
+      "term": "Net Sown Area",
+      "definition": "Total area sown with crops and orchards, counted once in a particular year.",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf"
+    },
+    {
+      "term": "Gross Cropped Area",
+      "definition": "Area sown more than once in an agricultural year plus net sown area.",
+      "source": "NCERT Class 10 SST Geography Ch 1 Section 1.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess101.pdf"
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Students swap Khadar and Bangar soils",
+      "truth": "Khadar is the newer, more fertile low-lying river alluvium; Bangar is the older, less fertile terrace alluvium with kankar.",
+      "source": "CBSE Class 10 Social Science Marking Scheme 2023 Q18"
+    }
+  ],
+  "board_exam_questions": [
+    {
+      "year": 2023,
+      "question": "Which one of the following soils is ideal for growing cotton?",
+      "marks": 1,
+      "type": "MCQ",
+      "options": ["Regur soil", "Laterite soil", "Desert soil", "Red soil"],
+      "answer": "Regur soil",
+      "explanation": "Regur soil (black soil) has high clay content and moisture retention, making it ideal for cotton cultivation.",
+      "source": "CBSE Class 10 Board Exam 2023 Set 1 Q1",
+      "source_url": "https://cbseacademic.nic.in"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "Which soil is also known as 'Regur' soil?",
+      "options": ["Black soil", "Alluvial soil", "Red soil", "Laterite soil"],
+      "answer": "Black soil",
+      "explanation": "Black soil of the Deccan trap is known locally as Regur soil.",
+      "difficulty": "easy",
+      "concept_tested": "Soil nomenclature",
+      "source_fact_id": "Regur black soil",
+      "board_pattern_match": "CBSE 2024 Q1"
+    },
+    {
+      "question": "In which city was the first international Earth Summit held in 1992?",
+      "options": ["Rio de Janeiro", "Kyoto", "Johannesburg", "Geneva"],
+      "answer": "Rio de Janeiro",
+      "explanation": "The United Nations Conference on Environment and Development (UNCED) met at Rio de Janeiro, Brazil in June 1992.",
+      "difficulty": "easy",
+      "concept_tested": "Earth Summit 1992",
+      "source_fact_id": "Rio Summit",
+      "board_pattern_match": "CBSE 2023 Q2"
+    },
+    {
+      "question": "Territorial water extends up to what distance from the baseline coast of a nation?",
+      "options": ["12 nautical miles", "200 nautical miles", "24 nautical miles", "100 nautical miles"],
+      "answer": "12 nautical miles",
+      "explanation": "Oceanic resources up to 12 nautical miles ($22.2\\ \\text{km}$) belong to the nation as territorial waters.",
+      "difficulty": "medium",
+      "concept_tested": "Maritime ownership limits",
+      "source_fact_id": "12 NM territorial",
+      "board_pattern_match": "CBSE 2022 Q3"
+    },
+    {
+      "question": "What is the new alluvial soil deposited by floods every year called?",
+      "options": ["Khadar", "Bangar", "Regur", "Laterite"],
+      "answer": "Khadar",
+      "explanation": "Khadar is the newer, fine-textured alluvium renewed every annual flood.",
+      "difficulty": "easy",
+      "concept_tested": "Alluvial classification",
+      "source_fact_id": "Khadar vs Bangar",
+      "board_pattern_match": "CBSE 2024 Q5"
+    },
+    {
+      "question": "Which of the following states suffers predominantly from land degradation due to over-irrigation?",
+      "options": ["Punjab", "Jharkhand", "Odisha", "Madhya Pradesh"],
+      "answer": "Punjab",
+      "explanation": "Over-irrigation in Punjab and Haryana causes waterlogging, leading to increased salinity and alkalinity in the soil.",
+      "difficulty": "medium",
+      "concept_tested": "Causes of land degradation",
+      "source_fact_id": "Over-irrigation Punjab",
+      "board_pattern_match": "CBSE 2023 Q7"
+    },
+    {
+      "question": "What percentage of geographical area was targeted for forest cover in India's National Forest Policy (1952)?",
+      "options": ["33%", "25%", "40%", "50%"],
+      "answer": "33%",
+      "explanation": "The 1952 National Forest Policy stipulated 33% forest cover for maintaining ecological balance.",
+      "difficulty": "easy",
+      "concept_tested": "Forest policy percentage",
+      "source_fact_id": "33% forest policy",
+      "board_pattern_match": "CBSE 2021 Q4"
+    },
+    {
+      "question": "Deep ravines and badland topography caused by gully erosion are particularly famous in which basin?",
+      "options": ["Chambal basin", "Ganga basin", "Kaveri basin", "Brahmaputra basin"],
+      "answer": "Chambal basin",
+      "explanation": "The Chambal ravines in Madhya Pradesh and Rajasthan are classic examples of severe gully erosion badlands.",
+      "difficulty": "easy",
+      "concept_tested": "Gully erosion Chambal",
+      "source_fact_id": "Chambal badlands",
+      "board_pattern_match": "CBSE 2022 Q9"
+    },
+    {
+      "question": "Laterite soil is formed due to which of the following natural processes?",
+      "options": ["Intense leaching under high temperature and heavy rainfall", "Deposition by glacier winds", "Weathering of volcanic basalt lava", "Accumulation of organic humus"],
+      "answer": "Intense leaching under high temperature and heavy rainfall",
+      "explanation": "Laterite develops under high temperature and heavy rainfall where tropical downpours wash away soluble nutrients.",
+      "difficulty": "medium",
+      "concept_tested": "Laterite genesis",
+      "source_fact_id": "Laterite leaching",
+      "board_pattern_match": "CBSE 2020 Q6"
+    },
+    {
+      "question": "Planting shelter belts of trees is an effective method to control soil erosion in which region?",
+      "options": ["Arid and semi-arid desert areas", "Himalayan slopes", "Coastal delta marshes", "River flood plains"],
+      "answer": "Arid and semi-arid desert areas",
+      "explanation": "Shelter belts break wind velocity and stabilize shifting sand dunes in dry desert regions of Rajasthan.",
+      "difficulty": "easy",
+      "concept_tested": "Soil conservation shelter belts",
+      "source_fact_id": "Shelter belts western India",
+      "board_pattern_match": "CBSE 2023 Q11"
+    },
+    {
+      "question": "Why is red soil reddish in appearance?",
+      "options": ["Diffusion of iron in crystalline and metamorphic rocks", "High humus and nitrogen content", "Presence of calcium carbonate kankar", "Excessive waterlogging"],
+      "answer": "Diffusion of iron in crystalline and metamorphic rocks",
+      "explanation": "Iron diffusion in ancient crystalline rocks gives red soil its reddish hue; it looks yellow when hydrated.",
+      "difficulty": "easy",
+      "concept_tested": "Red soil coloration",
+      "source_fact_id": "Red soil iron diffusion",
+      "board_pattern_match": "CBSE 2024 Q12"
+    }
+  ],
+  "diagram_specs": [
+    {
+      "concept": "Soil profile layers",
+      "elements": ["Topsoil horizon A", "Subsoil horizon B", "Substratum horizon C", "Bedrock horizon D"],
+      "animation": "horizons stack from bottom bedrock to topsoil",
+      "labels": ["Topsoil", "Subsoil", "Weathered rock", "Bedrock"],
+      "suggested_colors": ["green for top", "brown for subsoil", "gray for bedrock"]
+    }
+  ]
+}

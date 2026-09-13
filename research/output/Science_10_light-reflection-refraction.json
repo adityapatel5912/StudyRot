@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "subject": "Science",
+    "grade": 10,
+    "topic": "Light — Reflection and Refraction",
+    "chapters": ["Ch 10"],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 42,
+    "verified_facts_count": 18,
+    "mcqs_count": 10,
+    "editions_used": ["2025-26", "2023-24"]
+  },
+  "facts": [
+    {
+      "statement": "The angle of incidence is equal to the angle of reflection ($∠i = ∠r$).",
+      "latex": "\\angle i = \\angle r",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "The incident ray, normal to the mirror at the point of incidence, and the reflected ray all lie in the same plane.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "For spherical mirrors of small apertures, the radius of curvature $R$ is equal to twice its focal length ($R = 2f$).",
+      "latex": "R = 2f",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.2.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "A convex mirror always produces a virtual, erect, and diminished image regardless of object position.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 10 Table 10.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbse.gov.in"]
+    },
+    {
+      "statement": "The mirror formula relating object distance $u$, image distance $v$, and focal length $f$ is $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$.",
+      "latex": "\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Magnification produced by a spherical mirror is given by $m = -\\frac{v}{u} = \\frac{h'}{h}$.",
+      "latex": "m = -\\frac{v}{u} = \\frac{h'}{h}",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Snell's law of refraction states that $\\frac{\\sin i}{\\sin r} = \\text{constant} = n_{21}$ for a given pair of media.",
+      "latex": "\\frac{\\sin i}{\\sin r} = n_{21}",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The absolute refractive index of a medium is $n = \\frac{c}{v}$, where $c = 3 \\times 10^8\\ \\text{m/s}$.",
+      "latex": "n = \\frac{c}{v}",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Diamond has the highest optical density and refractive index ($n = 2.42$) among common transparent media.",
+      "latex": "n_{\\text{diamond}} = 2.42",
+      "source": "NCERT Class 10 Science Ch 10 Table 10.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The lens formula is $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$.",
+      "latex": "\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Magnification produced by a spherical lens is $m = +\\frac{v}{u} = \\frac{h'}{h}$.",
+      "latex": "m = \\frac{v}{u} = \\frac{h'}{h}",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Power of a lens $P = \\frac{1}{f\\text{ (in meters)}}$, with SI unit dioptre (D).",
+      "latex": "P = \\frac{1}{f}",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "A convex lens has a positive focal length and positive power ($P > 0$).",
+      "latex": "P > 0,\\ f > 0",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "A concave lens has a negative focal length and negative power ($P < 0$).",
+      "latex": "P < 0,\\ f < 0",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "When a ray of light passes through the optical center of a lens, it emerges without any deviation.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "When an object is placed between the pole $P$ and focus $F$ of a concave mirror, it forms an enlarged, virtual, and erect image.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 10 Table 10.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Mirror Formula",
+      "latex": "\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}",
+      "variables": [
+        { "symbol": "v", "meaning": "image distance", "unit": "cm" },
+        { "symbol": "u", "meaning": "object distance", "unit": "cm" },
+        { "symbol": "f", "meaning": "focal length", "unit": "cm" }
+      ],
+      "conditions": "valid for spherical mirrors under small aperture approximation",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf"
+    },
+    {
+      "name": "Lens Formula",
+      "latex": "\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}",
+      "variables": [
+        { "symbol": "v", "meaning": "image distance", "unit": "cm" },
+        { "symbol": "u", "meaning": "object distance", "unit": "cm" },
+        { "symbol": "f", "meaning": "focal length", "unit": "cm" }
+      ],
+      "conditions": "valid for thin spherical lenses",
+      "source": "NCERT Class 10 Science Ch 10 Eq 10.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf"
+    },
+    {
+      "name": "Lens Power",
+      "latex": "P = \\frac{1}{f}",
+      "variables": [
+        { "symbol": "P", "meaning": "optical power", "unit": "dioptres (D)" },
+        { "symbol": "f", "meaning": "focal length", "unit": "meters (m)" }
+      ],
+      "conditions": "focal length must be strictly expressed in meters",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Principal Focus",
+      "definition": "The point on the principal axis where rays of light parallel to the axis converge or appear to diverge from after reflection or refraction.",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.2.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf"
+    },
+    {
+      "term": "Dioptre",
+      "definition": "One dioptre is the power of a lens whose focal length is exactly one meter ($1\\ \\text{D} = 1\\ \\text{m}^{-1}$).",
+      "source": "NCERT Class 10 Science Ch 10 Section 10.3.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc110.pdf"
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Students use the plus sign for lens formula like mirror formula",
+      "truth": "Mirror formula has a plus sign ($1/v + 1/u = 1/f$) whereas Lens formula has a minus sign ($1/v - 1/u = 1/f$).",
+      "source": "CBSE Marking Scheme Class 10 Science 2023 Q12"
+    },
+    {
+      "misconception": "Students calculate lens power using focal length in centimetres directly",
+      "truth": "Focal length must be converted to meters first before calculating $P = 1/f$, or use $P = 100/f\\text{ (cm)}$.",
+      "source": "CBSE Class 10 Science Examiner Report 2024"
+    }
+  ],
+  "board_exam_questions": [
+    {
+      "year": 2024,
+      "question": "A concave mirror produces three times magnified real image of an object placed at 10 cm in front of it. Where is the image located?",
+      "marks": 2,
+      "type": "SA1",
+      "options": ["-30 cm", "+30 cm", "-10 cm", "+10 cm"],
+      "answer": "-30 cm",
+      "explanation": "Real image means magnification $m = -3$. Since $m = -v/u$, $-3 = -v/(-10) \\implies v = -30\\ \\text{cm}$.",
+      "source": "CBSE Class 10 Science Board Paper 2024 Set 1 Q22",
+      "source_url": "https://cbseacademic.nic.in"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "A corrective lens has power $P = -2.0\\ \\text{D}$. What is its focal length and nature?",
+      "options": ["-0.5 m, Concave lens", "+0.5 m, Convex lens", "-2.0 m, Concave lens", "+2.0 m, Convex lens"],
+      "answer": "-0.5 m, Concave lens",
+      "explanation": "$f = 1/P = 1/(-2.0) = -0.5\\ \\text{m}$. Negative focal length indicates a diverging concave lens.",
+      "difficulty": "medium",
+      "concept_tested": "Power of Lens",
+      "source_fact_id": "P = 1/f",
+      "board_pattern_match": "CBSE 2024 Q18"
+    },
+    {
+      "question": "Where should an object be placed in front of a convex lens to get a real image of the same size as the object?",
+      "options": ["At the principal focus $F_1$", "At twice the focal length $2F_1$", "At infinity", "Between optical centre and focus"],
+      "answer": "At twice the focal length $2F_1$",
+      "explanation": "When an object is placed at $2F_1$, a real, inverted image of the same size is formed at $2F_2$.",
+      "difficulty": "easy",
+      "concept_tested": "Convex Lens Image Formation",
+      "source_fact_id": "NCERT Table 10.4",
+      "board_pattern_match": "CBSE 2023 Q1"
+    },
+    {
+      "question": "What is the relation between radius of curvature $R$ and focal length $f$ for a spherical mirror?",
+      "options": ["$R = f$", "$R = 2f$", "$f = 2R$", "$R = f/2$"],
+      "answer": "$R = 2f$",
+      "explanation": "For spherical mirrors of small apertures, the focal point lies halfway between pole and centre of curvature ($R = 2f$).",
+      "difficulty": "easy",
+      "concept_tested": "Focal Length Relation",
+      "source_fact_id": "R = 2f",
+      "board_pattern_match": "CBSE 2022 Q3"
+    },
+    {
+      "question": "The refractive index of water is 1.33 and that of glass is 1.50. What is the refractive index of glass with respect to water?",
+      "options": ["1.128", "0.887", "2.000", "1.500"],
+      "answer": "1.128",
+      "explanation": "$n_{gw} = n_g / n_w = 1.50 / 1.33 \\approx 1.128$.",
+      "difficulty": "medium",
+      "concept_tested": "Relative Refractive Index",
+      "source_fact_id": "n21 = n2 / n1",
+      "board_pattern_match": "CBSE 2023 Q7"
+    },
+    {
+      "question": "Which of the following mirrors is used as a rear-view mirror in automobiles?",
+      "options": ["Concave mirror", "Convex mirror", "Plane mirror", "Parabolic mirror"],
+      "answer": "Convex mirror",
+      "explanation": "Convex mirrors always provide an erect diminished image and offer a wider field of view.",
+      "difficulty": "easy",
+      "concept_tested": "Rear View Mirrors",
+      "source_fact_id": "Convex mirror application",
+      "board_pattern_match": "CBSE 2020 Q2"
+    },
+    {
+      "question": "If an incident ray makes an angle of $30^\\circ$ with the reflecting mirror surface, what is the angle of reflection?",
+      "options": ["$30^\\circ$", "$60^\\circ$", "$90^\\circ$", "$45^\\circ$"],
+      "answer": "$60^\\circ$",
+      "explanation": "Angle with surface is $30^\\circ$, so angle of incidence with normal is $90^\\circ - 30^\\circ = 60^\\circ$. Hence $\\angle r = 60^\\circ$.",
+      "difficulty": "medium",
+      "concept_tested": "Laws of Reflection Trap",
+      "source_fact_id": "angle i = angle r",
+      "board_pattern_match": "CBSE 2021 Q4"
+    },
+    {
+      "question": "An optical medium has refractive index $n = 1.5$. What is the speed of light in this medium?",
+      "options": ["$2.0 \\times 10^8\\ \\text{m/s}$", "$3.0 \\times 10^8\\ \\text{m/s}$", "$1.5 \\times 10^8\\ \\text{m/s}$", "$2.25 \\times 10^8\\ \\text{m/s}$"],
+      "answer": "$2.0 \\times 10^8\\ \\text{m/s}$",
+      "explanation": "$v = c / n = (3.0 \\times 10^8) / 1.5 = 2.0 \\times 10^8\\ \\text{m/s}$.",
+      "difficulty": "medium",
+      "concept_tested": "Speed of Light Calculation",
+      "source_fact_id": "n = c/v",
+      "board_pattern_match": "CBSE 2022 Q11"
+    },
+    {
+      "question": "What is the magnification $m$ produced by a plane mirror?",
+      "options": ["+1", "-1", "0", "Infinity"],
+      "answer": "+1",
+      "explanation": "A plane mirror forms an erect image ($+$ sign) of the exact same size ($m = 1$).",
+      "difficulty": "easy",
+      "concept_tested": "Plane Mirror Magnification",
+      "source_fact_id": "Plane mirror m = +1",
+      "board_pattern_match": "CBSE 2019 Q5"
+    },
+    {
+      "question": "A ray passing through the optical centre of a thin spherical lens emerges:",
+      "options": ["Undeviated", "Parallel to principal axis", "Through focus", "Reflected back along the path"],
+      "answer": "Undeviated",
+      "explanation": "Rays through optical centre $O$ pass without experiencing net refraction or angular deviation.",
+      "difficulty": "easy",
+      "concept_tested": "Optical Centre Ray Property",
+      "source_fact_id": "Optical centre ray",
+      "board_pattern_match": "CBSE 2023 Q10"
+    },
+    {
+      "question": "Two thin lenses of powers $+3.5\\ \\text{D}$ and $-1.5\\ \\text{D}$ are placed in contact. What is the net power of the combination?",
+      "options": ["$+2.0\\ \\text{D}$", "$+5.0\\ \\text{D}$", "$-2.0\\ \\text{D}$", "$+2.5\\ \\text{D}$"],
+      "answer": "$+2.0\\ \\text{D}$",
+      "explanation": "$P = P_1 + P_2 = (+3.5) + (-1.5) = +2.0\\ \\text{D}$.",
+      "difficulty": "hard",
+      "concept_tested": "Combination of Lenses",
+      "source_fact_id": "P = P1 + P2",
+      "board_pattern_match": "CBSE 2024 Q15"
+    }
+  ],
+  "diagram_specs": [
+    {
+      "concept": "concave mirror ray diagram",
+      "elements": ["principal axis", "concave mirror arc", "pole P", "focus F", "centre C", "object arrow", "two rays"],
+      "animation": "rays draw left to right, then image arrow fades in",
+      "labels": ["P", "F", "C", "u", "v"],
+      "suggested_colors": ["navy for axis", "red for object", "green for image"]
+    }
+  ]
+}

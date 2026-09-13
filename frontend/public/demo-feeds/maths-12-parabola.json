@@ -1,0 +1,350 @@
+[
+  {
+    "id": "m12_1",
+    "type": "key_point",
+    "title": "Standard Equation of Parabola: $y^2 = 4ax$",
+    "body": "A parabola is the locus of a point whose distance from a fixed point (focus) strictly equals its perpendicular distance from a fixed straight line (directrix). Its eccentricity is identically $e = 1$.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 400 220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"110\" x2=\"380\" y2=\"110\" stroke=\"#0f1e3d\" stroke-width=\"2\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"200\" stroke=\"#0f1e3d\" stroke-width=\"2\"/><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"200\" stroke=\"#e63946\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><path d=\"M 320,30 Q 140,110 320,190\" fill=\"none\" stroke=\"#1e3a6b\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"110\" r=\"4\" fill=\"#22c55e\"/><text x=\"195\" y=\"135\" font-family=\"system-ui, sans-serif\" font-size=\"12\" fill=\"#22c55e\" font-weight=\"700\">F(a, 0)</text><text x=\"50\" y=\"45\" font-family=\"system-ui, sans-serif\" font-size=\"11\" fill=\"#e63946\" font-weight=\"700\">x = -a</text></svg>",
+    "hashtags": [
+      "#Parabola",
+      "#Class12Maths",
+      "#ConicSections"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Section 11.2",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 115,
+      "comments": [],
+      "seed_comment": "Vertex is always at (0,0) for standard form."
+    }
+  },
+  {
+    "id": "m12_2",
+    "type": "analogy",
+    "title": "ISRO Satellite Dishes & Dish Antennas",
+    "body": "Every Tata Play DTH dish and ISRO deep-space ground antenna uses a paraboloid of revolution. Signals from geostationary satellites arrive as parallel rays and reflect inward to concentrate at the receiver located at the focus.",
+    "analogy": "Parallel rays bounce off any parabolic reflector to converge at the exact same focus point $F(a, 0)$.",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 400 180\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 300,20 Q 160,90 300,160\" fill=\"none\" stroke=\"#0f1e3d\" stroke-width=\"4\"/><circle cx=\"210\" cy=\"90\" r=\"6\" fill=\"#e63946\"/><line x1=\"360\" y1=\"40\" x2=\"270\" y2=\"40\" stroke=\"#22c55e\" stroke-width=\"2\"/><line x1=\"270\" y1=\"40\" x2=\"210\" y2=\"90\" stroke=\"#22c55e\" stroke-width=\"2\"/><line x1=\"360\" y1=\"140\" x2=\"270\" y2=\"140\" stroke=\"#22c55e\" stroke-width=\"2\"/><line x1=\"270\" y1=\"140\" x2=\"210\" y2=\"90\" stroke=\"#22c55e\" stroke-width=\"2\"/><text x=\"200\" y=\"115\" font-size=\"11\" fill=\"#e63946\" font-weight=\"bold\">Receiver (Focus)</text></svg>",
+    "hashtags": [
+      "#ReflectiveProperty",
+      "#ISROPhysics",
+      "#AntennaOptics"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Application",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 140,
+      "comments": [],
+      "seed_comment": "Same principle for car headlights in reverse!"
+    }
+  },
+  {
+    "id": "m12_3",
+    "type": "quiz",
+    "title": "Board MCQ: Latus Rectum of $y^2 = 12x$",
+    "body": "Test your rapid evaluation of focal chord parameters.",
+    "analogy": "",
+    "quiz": {
+      "question": "What is the length of the latus rectum for the parabola $y^2 = 12x$?",
+      "options": [
+        "$12$",
+        "$3$",
+        "$6$",
+        "$24$"
+      ],
+      "answer": "$12$",
+      "explanation": "Comparing $y^2 = 12x$ with standard form $y^2 = 4ax$, we have $4a = 12$. The length of latus rectum is $4a = 12$."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#LatusRectum",
+      "#ConicsMCQ",
+      "#Class12Board"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Section 11.2",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 98,
+      "comments": [],
+      "seed_comment": "Semi latus rectum would be 2a = 6."
+    }
+  },
+  {
+    "id": "m12_4",
+    "type": "formula",
+    "title": "Four Standard Forms of Parabola",
+    "body": "(1) $y^2 = 4ax$: opens right, focus $(a, 0)$, directrix $x = -a$. (2) $y^2 = -4ax$: opens left, focus $(-a, 0)$, directrix $x = a$. (3) $x^2 = 4ay$: opens up, focus $(0, a)$, directrix $y = -a$. (4) $x^2 = -4ay$: opens down, focus $(0, -a)$, directrix $y = a$.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 380 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"20\" width=\"150\" height=\"140\" rx=\"10\" fill=\"#f7f9fc\" stroke=\"#1e3a6b\" stroke-width=\"2\"/><text x=\"105\" y=\"55\" fill=\"#1e3a6b\" font-weight=\"bold\" font-size=\"13\" text-anchor=\"middle\">y² = 4ax</text><text x=\"105\" y=\"85\" fill=\"#0f1e3d\" font-size=\"12\" text-anchor=\"middle\">Focus: (a, 0)</text><text x=\"105\" y=\"115\" fill=\"#4f6ba0\" font-size=\"12\" text-anchor=\"middle\">Directrix: x = -a</text><rect x=\"200\" y=\"20\" width=\"150\" height=\"140\" rx=\"10\" fill=\"#f7f9fc\" stroke=\"#22c55e\" stroke-width=\"2\"/><text x=\"275\" y=\"55\" fill=\"#22c55e\" font-weight=\"bold\" font-size=\"13\" text-anchor=\"middle\">x² = 4ay</text><text x=\"275\" y=\"85\" fill=\"#0f1e3d\" font-size=\"12\" text-anchor=\"middle\">Focus: (0, a)</text><text x=\"275\" y=\"115\" fill=\"#22c55e\" font-size=\"12\" text-anchor=\"middle\">Directrix: y = -a</text></svg>",
+    "hashtags": [
+      "#ConicFormula",
+      "#CheatSheet",
+      "#MathsRevision"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Table 11.1",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 165,
+      "comments": [],
+      "seed_comment": "Memorize this grid before entering the exam hall."
+    }
+  },
+  {
+    "id": "m12_5",
+    "type": "apply",
+    "title": "Suspension Bridges: Golden Gate and Bandra-Worli Sea Link",
+    "body": "The main suspension cables of bridges like Mumbai's Bandra-Worli Sea Link hang under uniform vertical roadway dead-load in the shape of a parabola. Engineers use $x^2 = 4ay$ to calculate cable tension at varying tower heights.",
+    "analogy": "A uniformly loaded string bends into a pure parabolic arc.",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#CivilEngineering",
+      "#BandraWorli",
+      "#AppliedCalculus"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Practical Applications",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 130,
+      "comments": [],
+      "seed_comment": "Freely hanging rope without load is a catenary, but with uniform roadway load it becomes a parabola!"
+    }
+  },
+  {
+    "id": "m12_6",
+    "type": "quiz",
+    "title": "Board MCQ: Parametric Coordinates of Parabola",
+    "body": "Test parametric substitution in calculus integration problems.",
+    "analogy": "",
+    "quiz": {
+      "question": "What are the standard parametric coordinates for any point on the parabola $y^2 = 4ax$?",
+      "options": [
+        "$(at^2, 2at)$",
+        "$(2at, at^2)$",
+        "$(a\\cos t, a\\sin t)$",
+        "$(at, 2at^2)$"
+      ],
+      "answer": "$(at^2, 2at)$",
+      "explanation": "Substituting $x = at^2$ and $y = 2at$ into $y^2 = (2at)^2 = 4a^2t^2 = 4a(at^2) = 4ax$, satisfying the equation identically for all parameter values $t$."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#ParametricCoordinates",
+      "#CalculusPrep",
+      "#BoardMCQ"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Section 11.2",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 150,
+      "comments": [],
+      "seed_comment": "Crucial for area under curves integration problems in Class 12!"
+    }
+  },
+  {
+    "id": "m12_7",
+    "type": "exam_tip",
+    "title": "Integration Area Under Curves: Symmetry Doubling",
+    "body": "When asked to find the area bounded by $y^2 = 4ax$ and its latus rectum $x = a$, students routinely forget to multiply by 2. The parabola is symmetric across the x-axis, spanning quadrant 1 and quadrant 4.",
+    "analogy": "Total Area $= 2 \\times \\int_0^a 2\\sqrt{a}\\sqrt{x}\\,dx = 4\\sqrt{a} \\left[\\frac{2}{3}x^{3/2}\\right]_0^a = \\frac{8}{3}a^2\\text{ sq units}$.",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#CBSETip",
+      "#AreaUnderCurves",
+      "#BoardTrap"
+    ],
+    "source_ref": "NCERT Class 12 Maths Ch 8 Section 8.2",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 185,
+      "comments": [],
+      "seed_comment": "Lost 2 marks in pre-boards because I forgot the x2 factor!"
+    }
+  },
+  {
+    "id": "m12_8",
+    "type": "recap",
+    "title": "Mid-Feed Checkpoint: Focal Chord Properties",
+    "body": "Recap: (1) Eccentricity $e = 1$. (2) Latus rectum length is $4a$. (3) Any focal chord with ends $t_1$ and $t_2$ satisfies $t_1 t_2 = -1$. (4) Tangent at vertex is the y-axis ($x = 0$).",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#MidFeedCheckpoint",
+      "#FocalChord",
+      "#MathsRevision"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Review",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 95,
+      "comments": [],
+      "seed_comment": "t1 * t2 = -1 is so useful for coordinate geometry."
+    }
+  },
+  {
+    "id": "m12_9",
+    "type": "key_point",
+    "title": "Focal Distance of Any Point $P(x_1, y_1)$",
+    "body": "For $y^2 = 4ax$, the distance of any point $P(x_1, y_1)$ from the focus $S(a, 0)$ is simply $SP = x_1 + a$. By definition of parabola, $SP$ equals the distance $PM$ to the directrix line $x = -a$, giving $SP = |x_1 - (-a)| = x_1 + a$.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 380 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"300\" height=\"120\" rx=\"12\" fill=\"#0f1e3d\"/><text x=\"190\" y=\"80\" fill=\"#ffffff\" font-size=\"20\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\" font-weight=\"bold\">SP = x₁ + a</text><text x=\"190\" y=\"115\" fill=\"#22c55e\" font-size=\"13\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">Focal distance depends only on x-coordinate</text></svg>",
+    "hashtags": [
+      "#FocalDistance",
+      "#GeometryTrick",
+      "#Class12Maths"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Section 11.2",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 122,
+      "comments": [],
+      "seed_comment": "No square roots needed to compute distance from focus!"
+    }
+  },
+  {
+    "id": "m12_10",
+    "type": "myth_buster",
+    "title": "Myth: A Parabola and a Catenary are the Same Curve",
+    "body": "Busted! A cable hanging purely under its own self-weight forms a hyperbolic cosine catenary ($y = c \\cosh(x/c)$). It only becomes a true parabola ($y = ax^2$) when carrying a uniform horizontal load, such as a bridge deck.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#MythBuster",
+      "#CalculusTruth",
+      "#EngineeringMaths"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Conic Appendix",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 140,
+      "comments": [],
+      "seed_comment": "Galileo initially thought it was a parabola too!"
+    }
+  },
+  {
+    "id": "m12_11",
+    "type": "quiz",
+    "title": "Board MCQ: Area Bounded by Parabola & Latus Rectum",
+    "body": "Test your evaluation of standard CBSE 5-mark definite integral problem.",
+    "analogy": "",
+    "quiz": {
+      "question": "What is the total area bounded by $y^2 = 4ax$ and its latus rectum $x = a$?",
+      "options": [
+        "$\\frac{8}{3}a^2$",
+        "$\\frac{4}{3}a^2$",
+        "$\\frac{16}{3}a^2$",
+        "$4a^2$"
+      ],
+      "answer": "$\\frac{8}{3}a^2$",
+      "explanation": "Area $= 2 \\int_0^a 2\\sqrt{a}\\sqrt{x}\\,dx = 4\\sqrt{a} \\left[\\frac{2}{3}x^{3/2}\\right]_0^a = \\frac{8}{3}a^2\\text{ sq units}$."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#DefiniteIntegrals",
+      "#AreaCalculation",
+      "#BoardMCQ"
+    ],
+    "source_ref": "NCERT Class 12 Maths Ch 8 Exercise 8.1",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 170,
+      "comments": [],
+      "seed_comment": "Standard result, can be used to crosscheck 5-mark answers."
+    }
+  },
+  {
+    "id": "m12_12",
+    "type": "formula",
+    "title": "Tangent in Slope Form: $y = mx + \\frac{a}{m}$",
+    "body": "The straight line $y = mx + c$ touches the parabola $y^2 = 4ax$ if and only if $c = \\frac{a}{m}$. The point of contact in terms of slope $m$ is $\\left(\\frac{a}{m^2}, \\frac{2a}{m}\\right)$.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 380 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"300\" height=\"120\" rx=\"12\" fill=\"#0f1e3d\"/><text x=\"190\" y=\"75\" fill=\"#ffffff\" font-size=\"18\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\" font-weight=\"bold\">y = mx + a/m</text><text x=\"190\" y=\"110\" fill=\"#22c55e\" font-size=\"13\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">Point of contact: (a/m², 2a/m)</text></svg>",
+    "hashtags": [
+      "#TangentFormula",
+      "#SlopeForm",
+      "#ConicsGeometry"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Tangents",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 155,
+      "comments": [],
+      "seed_comment": "Notice m cannot be zero (tangent would be horizontal)."
+    }
+  },
+  {
+    "id": "m12_13",
+    "type": "quiz",
+    "title": "Board MCQ: Locus of Perpendicular Tangents (Director Circle)",
+    "body": "Test your conceptual mastery of conic intersections.",
+    "analogy": "",
+    "quiz": {
+      "question": "The locus of the point of intersection of two perpendicular tangents to the parabola $y^2 = 4ax$ is:",
+      "options": [
+        "Its directrix ($x = -a$)",
+        "Its axis ($y = 0$)",
+        "The latus rectum ($x = a$)",
+        "A circle of radius $2a$"
+      ],
+      "answer": "Its directrix ($x = -a$)",
+      "explanation": "Perpendicular tangents have product of slopes $m_1 m_2 = -1$. The equation becomes $x = -a$, proving that tangents intersect at right angles on the directrix (the director circle degenerates into a straight line)."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#DirectorCircle",
+      "#PerpendicularTangents",
+      "#ConicProperty"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Theorem",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 165,
+      "comments": [],
+      "seed_comment": "One of the most elegant geometric results in maths!"
+    }
+  },
+  {
+    "id": "m12_14",
+    "type": "summary",
+    "title": "Parabola Revision Deck Complete",
+    "body": "Parabola mastery achieved! Remember: (1) Standard form $y^2 = 4ax$, (2) Latus rectum $= 4a$, (3) Parametric point is $(at^2, 2at)$, (4) Area bounded by latus rectum is $\\frac{8}{3}a^2$, and (5) Perpendicular tangents meet on the directrix $x = -a$.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#ParabolaComplete",
+      "#Class12Topper",
+      "#StudyRotRevision"
+    ],
+    "source_ref": "NCERT Class 11/12 Maths Ch 11 Summary",
+    "grade": 12,
+    "subject": "Maths",
+    "engagement": {
+      "likes": 230,
+      "comments": [],
+      "seed_comment": "Solid revision deck for board exams!"
+    }
+  }
+]

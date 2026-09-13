@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "subject": "SST",
+    "grade": 8,
+    "topic": "Resources & Land Use",
+    "chapters": [
+      "Geography Ch 1",
+      "Geography Ch 2"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 28,
+    "verified_facts_count": 12,
+    "mcqs_count": 6,
+    "editions_used": [
+      "2025-26"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Anything that can be used to satisfy a human need is a resource; utility and usability give an object its value.",
+      "latex": "",
+      "source": "NCERT Class 8 Geography Ch 1 Section 1.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Renewable resources get renewed or replenished quickly (solar, wind), whereas non-renewable resources have a limited stock that takes millions of years to form (coal, petroleum).",
+      "latex": "",
+      "source": "NCERT Class 8 Geography Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Sustainable development means carefully utilizing resources so that besides meeting present requirements, it takes care of future generations.",
+      "latex": "",
+      "source": "NCERT Class 8 Geography Ch 1 Section 1.3",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Ubiquitous resources are found everywhere (like air we breathe), while localized resources are found only in certain places (like copper and iron ore).",
+      "latex": "",
+      "source": "NCERT Class 8 Geography Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [],
+  "definitions": [
+    {
+      "term": "Sustainable Development",
+      "definition": "Balancing the need to use resources and conserving them for the future."
+    },
+    {
+      "term": "Human Made Resources",
+      "definition": "Natural substances transformed by humans using technology to create useful structures like bridges, roads, and machinery."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Water is a non-renewable resource because of droughts.",
+      "truth": "Water is technically a renewable resource replenished through the hydrological cycle, though freshwater pollution causes scarcity.",
+      "why": "The global water cycle constantly recycles planetary water."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2023",
+      "type": "Short Answer",
+      "question": "State the two factors that determine whether a substance becomes a resource.",
+      "answer": "Time and technology are the two crucial factors that convert substances into valuable resources.",
+      "marking_scheme": "1 mark for time, 1 mark for technology"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "Which of the following is an example of a ubiquitous resource?",
+      "options": [
+        "Air",
+        "Petroleum",
+        "Iron ore",
+        "Uranium in Ladakh"
+      ],
+      "answer": "Air",
+      "explanation": "Air is present everywhere across the globe, making it a ubiquitous resource."
+    }
+  ]
+}

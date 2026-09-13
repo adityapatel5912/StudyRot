@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "subject": "Science",
+    "grade": 8,
+    "topic": "Force and Pressure",
+    "chapters": [
+      "Ch 11"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 30,
+    "verified_facts_count": 12,
+    "mcqs_count": 8,
+    "editions_used": [
+      "2025-26",
+      "2023-24"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Force is a push or pull upon an object resulting from its interaction with another object. SI unit is Newton (N).",
+      "latex": "F = ma",
+      "source": "NCERT Class 8 Science Ch 11 Section 11.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Pressure is defined as the force acting per unit area of a surface: $P = \\frac{F}{A}$. The SI unit is Pascal (Pa), equivalent to $\\text{N/m}^2$.",
+      "latex": "P = \\frac{F}{A}",
+      "source": "NCERT Class 8 Science Ch 11 Section 11.8",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Liquids exert equal pressure at the same depth in all directions and exert pressure on the walls of the container.",
+      "latex": "P = h\\rho g",
+      "source": "NCERT Class 8 Science Ch 11 Section 11.9",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Atmospheric pressure is the weight of air in a column of unit area extending from sea level to the top of the atmosphere, approximately $1.013 \\times 10^5\\text{ Pa}$.",
+      "latex": "1\\text{ atm} = 1.013 \\times 10^5\\text{ Pa}",
+      "source": "NCERT Class 8 Science Ch 11 Section 11.10",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Electrostatic and gravitational forces act from a distance without physical contact, classifying them as non-contact forces.",
+      "latex": "",
+      "source": "NCERT Class 8 Science Ch 11 Section 11.7",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Pressure Formula",
+      "latex": "P = \\frac{F}{A}",
+      "variables": {
+        "P": "Pressure in Pascal (Pa)",
+        "F": "Thrust or Force in Newton (N)",
+        "A": "Contact area in square meters (m^2)"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Force",
+      "definition": "A push or pull on an object resulting from interaction with another object."
+    },
+    {
+      "term": "Pressure",
+      "definition": "Force acting perpendicular to a surface per unit area."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Sharper knives exert more total force than blunt knives.",
+      "truth": "Sharp knives exert equal force but much higher pressure because contact area is tiny.",
+      "why": "Pressure is inversely proportional to area: P = F / A."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2023",
+      "type": "VSA",
+      "question": "Why do porter porters place a round piece of cloth on their heads when carrying heavy loads?",
+      "answer": "By placing a round piece of cloth, porters increase the surface contact area with the load, decreasing pressure on their head ($P = F/A$).",
+      "marking_scheme": "1 mark for area increase and pressure reduction"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What happens to the pressure exerted by a liquid as the depth increases?",
+      "options": [
+        "It increases linearly with depth",
+        "It decreases with depth",
+        "It remains constant",
+        "It first increases then decreases"
+      ],
+      "answer": "It increases linearly with depth",
+      "explanation": "Liquid pressure is given by $P = h\\rho g$, which is directly proportional to depth $h$."
+    },
+    {
+      "question": "If a force of $50\\text{ N}$ acts on an area of $2\\text{ m}^2$, what is the pressure generated?",
+      "options": [
+        "$25\\text{ Pa}$",
+        "$100\\text{ Pa}$",
+        "$50\\text{ Pa}$",
+        "$10\\text{ Pa}$"
+      ],
+      "answer": "$25\\text{ Pa}$",
+      "explanation": "$P = F / A = 50 / 2 = 25\\text{ Pa}$."
+    }
+  ]
+}

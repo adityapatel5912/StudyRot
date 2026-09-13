@@ -1,0 +1,101 @@
+{
+  "version": "2025-26",
+  "total_topics": 15,
+  "distribution": {
+    "Science": 5,
+    "Maths": 5,
+    "SST": 5
+  },
+  "topics": [
+    {
+      "subject": "Science",
+      "grade": 10,
+      "topic": "Light \u2014 Reflection and Refraction",
+      "file": "Science_10_light-reflection-refraction.json"
+    },
+    {
+      "subject": "Science",
+      "grade": 10,
+      "topic": "Electricity",
+      "file": "Science_10_electricity.json"
+    },
+    {
+      "subject": "Science",
+      "grade": 8,
+      "topic": "Force and Pressure",
+      "file": "Science_8_force-and-pressure.json"
+    },
+    {
+      "subject": "Science",
+      "grade": 8,
+      "topic": "Sound",
+      "file": "Science_8_sound.json"
+    },
+    {
+      "subject": "Science",
+      "grade": 12,
+      "topic": "Electrostatics \u2014 Electric Charges and Fields",
+      "file": "Science_12_electrostatics.json"
+    },
+    {
+      "subject": "Maths",
+      "grade": 12,
+      "topic": "Parabola & Conic Sections",
+      "file": "Maths_12_parabola-conic-sections.json"
+    },
+    {
+      "subject": "Maths",
+      "grade": 10,
+      "topic": "Trigonometry",
+      "file": "Maths_10_trigonometry.json"
+    },
+    {
+      "subject": "Maths",
+      "grade": 8,
+      "topic": "Linear Equations in One Variable",
+      "file": "Maths_8_linear-equations.json"
+    },
+    {
+      "subject": "Maths",
+      "grade": 10,
+      "topic": "Real Numbers",
+      "file": "Maths_10_real-numbers.json"
+    },
+    {
+      "subject": "Maths",
+      "grade": 12,
+      "topic": "Matrices & Determinants",
+      "file": "Maths_12_matrices.json"
+    },
+    {
+      "subject": "SST",
+      "grade": 10,
+      "topic": "Nationalism in India",
+      "file": "SST_10_nationalism-in-india.json"
+    },
+    {
+      "subject": "SST",
+      "grade": 10,
+      "topic": "Resources and Development",
+      "file": "SST_10_resources-and-development.json"
+    },
+    {
+      "subject": "SST",
+      "grade": 8,
+      "topic": "The Indian Constitution",
+      "file": "SST_8_the-indian-constitution.json"
+    },
+    {
+      "subject": "SST",
+      "grade": 8,
+      "topic": "Resources & Land Use",
+      "file": "SST_8_resources.json"
+    },
+    {
+      "subject": "SST",
+      "grade": 10,
+      "topic": "Power Sharing",
+      "file": "SST_10_power-sharing.json"
+    }
+  ]
+}

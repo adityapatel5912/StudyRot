@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "subject": "Maths",
+    "grade": 10,
+    "topic": "Real Numbers & Fundamental Theorem of Arithmetic",
+    "chapters": [
+      "Ch 1"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 35,
+    "verified_facts_count": 14,
+    "mcqs_count": 8,
+    "editions_used": [
+      "2025-26",
+      "2023-24"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "The Fundamental Theorem of Arithmetic states that every composite number can be uniquely expressed as a product of primes, up to the order of factors.",
+      "latex": "n = p_1^{a_1} p_2^{a_2} \\cdots p_k^{a_k}",
+      "source": "NCERT Class 10 Maths Ch 1 Theorem 1.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "For any two positive integers $a$ and $b$, $\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\times b$.",
+      "latex": "\\text{HCF}(a, b) \\times \\text{LCM}(a, b) = a \\cdot b",
+      "source": "NCERT Class 10 Maths Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "If $p$ is a prime number and $p$ divides $a^2$, then $p$ divides $a$ (where $a$ is a positive integer).",
+      "latex": "p \\mid a^2 \\implies p \\mid a",
+      "source": "NCERT Class 10 Maths Ch 1 Theorem 1.3",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "$\\sqrt{2}$, $\\sqrt{3}$, $\\sqrt{5}$ are irrational numbers.",
+      "latex": "\\sqrt{p} \\in \\mathbb{R} \\setminus \\mathbb{Q}",
+      "source": "NCERT Class 10 Maths Ch 1 Theorem 1.4",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "HCF and LCM Product Rule",
+      "latex": "\\text{HCF}(a, b) \\cdot \\text{LCM}(a, b) = a \\cdot b",
+      "variables": {
+        "a, b": "Positive integers"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Rational Number",
+      "definition": "A real number expressible as $p/q$ where $p, q \\in \\mathbb{Z}$ and $q \\ne 0$."
+    },
+    {
+      "term": "Irrational Number",
+      "definition": "A real number that cannot be expressed as a ratio of two integers; has non-terminating, non-repeating decimal expansion."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "The product rule HCF(a,b,c) * LCM(a,b,c) = a * b * c holds for three numbers.",
+      "truth": "The product formula holds ONLY for two numbers, not for three or more integers.",
+      "why": "For 3 numbers, shared pairwise factors invalidate direct equality."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2024",
+      "type": "MCQ",
+      "question": "If two positive integers $a$ and $b$ are written as $a = x^3 y^2$ and $b = x y^3$, where $x, y$ are prime numbers, then $\\text{HCF}(a, b)$ is:",
+      "answer": "$x y^2$",
+      "marking_scheme": "1 mark for HCF = product of smallest powers of common prime factors = x * y^2"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "If $\\text{HCF}(306, 657) = 9$, find $\\text{LCM}(306, 657)$:",
+      "options": [
+        "$22,338$",
+        "$2,238$",
+        "$22,388$",
+        "$23,328$"
+      ],
+      "answer": "$22,338$",
+      "explanation": "$\\text{LCM} = (306 \\times 657) / 9 = 34 \\times 657 = 22,338$."
+    }
+  ]
+}

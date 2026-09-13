@@ -1,0 +1,6 @@
+{
+  "name": "StudyRot",
+  "description": "CBSE study feed turning NCERT material into scrollable TikTok-style cards with animated SVG diagrams and quizzes",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

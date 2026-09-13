@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "subject": "SST",
+    "grade": 10,
+    "topic": "Power Sharing",
+    "chapters": [
+      "Civics Ch 1"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 32,
+    "verified_facts_count": 14,
+    "mcqs_count": 8,
+    "editions_used": [
+      "2025-26",
+      "2023-24"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Belgium avoided ethnic civil strife by amending its Constitution 4 times between 1970 and 1993 to give equal ministerial representation to Dutch and French-speaking communities.",
+      "latex": "",
+      "source": "NCERT Class 10 Civics Ch 1 Section 1.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Sri Lanka adopted Majoritarian policies in 1956, declaring Sinhala as the sole official language, which alienated the Tamil minority and triggered a devastating civil war.",
+      "latex": "",
+      "source": "NCERT Class 10 Civics Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Horizontal power sharing distributes authority among different organs of government at the same level: Legislature, Executive, and Judiciary (System of Checks and Balances).",
+      "latex": "",
+      "source": "NCERT Class 10 Civics Ch 1 Section 1.4",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Vertical power sharing (federalism) shares power among governments at different levels: Union (Central), State, and Local (Panchayats/Municipalities).",
+      "latex": "",
+      "source": "NCERT Class 10 Civics Ch 1 Section 1.4",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Prudential reasons for power sharing emphasize that it reduces the possibility of conflict between social groups, while moral reasons view power sharing as the very spirit of democracy.",
+      "latex": "",
+      "source": "NCERT Class 10 Civics Ch 1 Section 1.3",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [],
+  "definitions": [
+    {
+      "term": "Checks and Balances",
+      "definition": "A system where each organ of government checks the others, ensuring no single organ exercises unlimited power."
+    },
+    {
+      "term": "Majoritarianism",
+      "definition": "A belief that the majority community should rule a country in whichever way it pleases, disregarding the wishes of minorities."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Power sharing weakens a country by dividing its sovereign authority.",
+      "truth": "Power sharing unites the country by granting representation to diverse linguistic and social groups, as proven by Belgium.",
+      "why": "Majoritarian domination undermines unity and triggers conflict."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2024",
+      "type": "MCQ",
+      "question": "Which community in Brussels formed the majority, despite being a minority in the whole of Belgium?",
+      "answer": "French-speaking community (80% in Brussels)",
+      "marking_scheme": "1 mark for French-speaking"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What kind of power sharing is exemplified by the system of Checks and Balances?",
+      "options": [
+        "Horizontal power sharing",
+        "Vertical power sharing",
+        "Community power sharing",
+        "Coalition power sharing"
+      ],
+      "answer": "Horizontal power sharing",
+      "explanation": "Horizontal division places Legislature, Executive, and Judiciary at the same horizontal tier, allowing each to check the others."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "title": "Dandi March & Civil Disobedience Movement",
+  "subject": "SST",
+  "grade": 10,
+  "posts": [
+    {
+      "type": "key_point",
+      "title": "The Salt Monopoly as a Universal Symbol",
+      "body": "Salt was taxed heavily by the British colonial state despite being consumed equally by rich and poor. Mahatma Gandhi identified it as the most oppressive tax on essential daily life.",
+      "analogy": "Taxing basic salt in 1930 was like taxing tap drinking water or air today: everyone felt the direct pain.",
+      "quiz": null,
+      "diagram": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"120\" x2=\"350\" y2=\"120\" stroke=\"#4f6ba0\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"120\" r=\"12\" fill=\"#0f1e3d\"/><text x=\"80\" y=\"155\" fill=\"#0f1e3d\" font-size=\"10\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">12 Mar 1930</text><circle cx=\"320\" cy=\"120\" r=\"12\" fill=\"#22c55e\"/><text x=\"320\" y=\"155\" fill=\"#22c55e\" font-size=\"10\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">6 Apr 1930</text><text x=\"200\" y=\"95\" fill=\"#1e3a6b\" font-size=\"11\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\" font-weight=\"600\">240 Miles (Sabarmati to Dandi)</text></svg>",
+      "hashtags": ["#DandiMarch", "#Class10SST", "#IndianHistory"],
+      "source_ref": "NCERT Class 10 History Ch 2 — Nationalism in India",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 78, "comments": [] }
+    },
+    {
+      "type": "timeline",
+      "title": "Chronology of the March: 24 Days on Foot",
+      "body": "Starting on 12-Mar-1930 from Sabarmati Ashram with 78 trusted volunteers, walking 10 miles a day, arriving at the coastal village of Dandi on 05-Apr-1930 and breaking the law on 06-Apr-1930.",
+      "analogy": "A marching media campaign that rallied thousands of villagers along rural Gujarat highways.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Timeline", "#NationalismInIndia"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 65, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Initial Volunteer Count",
+      "body": "How many trusted ashram volunteers accompanied Gandhiji at the start of the historic Salt March?",
+      "analogy": "",
+      "quiz": {
+        "question": "How many trusted volunteers began the march from Sabarmati Ashram?",
+        "options": ["78 volunteers", "50 volunteers", "100 volunteers", "250 volunteers"],
+        "answer": "78 volunteers",
+        "explanation": "Gandhiji started with 78 verified ashram members, though thousands joined as the procession traversed Gujarati villages."
+      },
+      "diagram": "",
+      "hashtags": ["#BoardMCQ", "#HistoryQuiz"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 89, "comments": [] }
+    },
+    {
+      "type": "apply",
+      "title": "Salt Satyagraha Across Coastal India",
+      "body": "C. Rajagopalachari led a parallel march from Trichinopoly to Vedarannyam in Tamil Nadu, and K. Kelappan led the march in Malabar (Kerala), breaking salt laws coast to coast.",
+      "analogy": "A decentralized nationwide movement synchronized without modern social media.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#CivilDisobedience", "#VedarannyamMarch"],
+      "source_ref": "NCERT Class 10 SST",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 56, "comments": [] }
+    },
+    {
+      "type": "exam_tip",
+      "title": "CBSE Distinction: Non-Cooperation vs Civil Disobedience",
+      "body": "In 1920-22 (Non-Cooperation), people were asked not to cooperate with the colonial government. In 1930 (Civil Disobedience), people were urged to actively BREAK colonial laws like salt and forest laws.",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#CBSETip", "#3MarkQuestions"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 92, "comments": [] }
+    },
+    {
+      "type": "recap",
+      "title": "Mid-Feed Check: Why CDM Was Distinctive",
+      "body": "1. Large-scale participation of women picketing liquor and foreign cloth shops. 2. Active defiance of statutory colonial regulations. 3. Boycott of British revenue and village chaukidari taxes.",
+      "analogy": "Escalation from passive boycotting to active civic resistance.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#QuickRecap", "#HistoryRevision"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 44, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Gandhi-Irwin Pact Year",
+      "body": "In which year was the Gandhi-Irwin Pact signed, leading to the suspension of the Civil Disobedience Movement?",
+      "analogy": "",
+      "quiz": {
+        "question": "When was the Gandhi-Irwin Pact signed in London/Delhi?",
+        "options": ["March 1931", "January 1930", "August 1942", "December 1929"],
+        "answer": "March 1931",
+        "explanation": "Signed on 5 March 1931, Viceroy Irwin agreed to release political prisoners in exchange for Congress participating in the Second Round Table Conference."
+      },
+      "diagram": "",
+      "hashtags": ["#GandhiIrwinPact", "#DatesInHistory"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 71, "comments": [] }
+    },
+    {
+      "type": "summary",
+      "title": "Revision Summary: Civil Disobedience Movement",
+      "body": "The 1930 Dandi March mobilized ordinary Indians across caste, class, and gender against colonial salt tax exploitation. By demonstrating the power of mass satyagraha, it marked a decisive turning point towards complete independence (Purna Swaraj).",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Summary", "#PurnaSwaraj", "#CBSE10"],
+      "source_ref": "NCERT History Ch 2",
+      "grade": 10,
+      "subject": "SST",
+      "engagement": { "likes": 105, "comments": [] }
+    }
+  ]
+}

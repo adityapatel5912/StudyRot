@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "subject": "Maths",
+    "grade": 8,
+    "topic": "Linear Equations in One Variable",
+    "chapters": [
+      "Ch 2"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 25,
+    "verified_facts_count": 10,
+    "mcqs_count": 6,
+    "editions_used": [
+      "2025-26"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "An algebraic equation where the highest exponent of the variable is 1 is called a linear equation.",
+      "latex": "ax + b = 0 \\quad (a \\ne 0)",
+      "source": "NCERT Class 8 Maths Ch 2 Section 2.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Transposition rule: shifting a term from one side of an equality to the other inverts its mathematical sign (+ becomes -, * becomes /).",
+      "latex": "ax = c - b \\implies x = \\frac{c - b}{a}",
+      "source": "NCERT Class 8 Maths Ch 2 Section 2.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "A linear equation in one variable always possesses exactly one unique rational solution.",
+      "latex": "",
+      "source": "NCERT Class 8 Maths Ch 2 Section 2.3",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Standard Form",
+      "latex": "ax + b = c \\implies x = \\frac{c - b}{a}",
+      "variables": {
+        "a": "Coefficient (a != 0)",
+        "b, c": "Constants",
+        "x": "Unknown variable"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Linear Equation",
+      "definition": "An equality involving one or more variables with maximum power 1."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Dividing both sides by an unknown variable x preserves all roots.",
+      "truth": "Dividing by x without checking if x = 0 can discard legitimate roots or cause division by zero.",
+      "why": "Division by zero is undefined."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2023",
+      "type": "VSA",
+      "question": "Solve for x: $5x - 7 = 2x + 8$.",
+      "answer": "$5x - 2x = 8 + 7 \\implies 3x = 15 \\implies x = 5$.",
+      "marking_scheme": "1 mark for transposition, 1 mark for answer x = 5"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What is the solution of the equation $\\frac{2x}{3} + 1 = \\frac{7x}{15} + 3$?",
+      "options": [
+        "$x = 10$",
+        "$x = 5$",
+        "$x = 15$",
+        "$x = -10$"
+      ],
+      "answer": "$x = 10$",
+      "explanation": "Multiplying by 15: $10x + 15 = 7x + 45 \\implies 3x = 30 \\implies x = 10$."
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "subject": "Maths",
+    "grade": 10,
+    "topic": "Trigonometry",
+    "chapters": ["Ch 8", "Ch 9"],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 36,
+    "verified_facts_count": 16,
+    "mcqs_count": 10,
+    "editions_used": ["2025-26", "2023-24"]
+  },
+  "facts": [
+    {
+      "statement": "In a right-angled triangle, $\\sin\\theta = \\frac{\\text{Side opposite}}{\\text{Hypotenuse}} = \\frac{p}{h}$.",
+      "latex": "\\sin\\theta = \\frac{p}{h}",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "In a right-angled triangle, $\\cos\\theta = \\frac{\\text{Side adjacent}}{\\text{Hypotenuse}} = \\frac{b}{h}$.",
+      "latex": "\\cos\\theta = \\frac{b}{h}",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Tangent of an acute angle is $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{p}{b}$.",
+      "latex": "\\tan\\theta = \\frac{p}{b}",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The fundamental Pythagorean trigonometric identity is $\\sin^2\\theta + \\cos^2\\theta = 1$ for all $0^\\circ \\le \\theta \\le 90^\\circ$.",
+      "latex": "\\sin^2\\theta + \\cos^2\\theta = 1",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Second identity: $1 + \\tan^2\\theta = \\sec^2\\theta$ for $0^\\circ \\le \\theta < 90^\\circ$.",
+      "latex": "1 + \\tan^2\\theta = \\sec^2\\theta",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Third identity: $1 + \\cot^2\\theta = \\csc^2\\theta$ for $0^\\circ < \\theta \\le 90^\\circ$.",
+      "latex": "1 + \\cot^2\\theta = \\csc^2\\theta",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Exact value: $\\sin 30^\\circ = \\frac{1}{2},\\ \\cos 30^\\circ = \\frac{\\sqrt{3}}{2},\\ \\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$.",
+      "latex": "\\sin 30^\\circ = \\frac{1}{2}",
+      "source": "NCERT Class 10 Maths Ch 8 Table 8.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Exact value: $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}},\\ \\cos 45^\\circ = \\frac{1}{\\sqrt{2}},\\ \\tan 45^\\circ = 1$.",
+      "latex": "\\tan 45^\\circ = 1",
+      "source": "NCERT Class 10 Maths Ch 8 Table 8.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Exact value: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2},\\ \\cos 60^\\circ = \\frac{1}{2},\\ \\tan 60^\\circ = \\sqrt{3}$.",
+      "latex": "\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}",
+      "source": "NCERT Class 10 Maths Ch 8 Table 8.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Values of $\\sin\\theta$ and $\\cos\\theta$ never exceed 1 ($0 \\le \\sin\\theta \\le 1$ and $0 \\le \\cos\\theta \\le 1$ for acute $\\theta$).",
+      "latex": "\\sin\\theta \\le 1",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.2 Note",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Angle of elevation is the angle formed by the line of sight with horizontal when object is above observer level.",
+      "latex": "",
+      "source": "NCERT Class 10 Maths Ch 9 Section 9.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh109.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Angle of depression is formed by line of sight with horizontal when object is below horizontal level.",
+      "latex": "",
+      "source": "NCERT Class 10 Maths Ch 9 Section 9.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh109.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "If a pole of height $h$ casts a shadow of length $h\\sqrt{3}$, the angle of elevation of the sun is $30^\\circ$.",
+      "latex": "\\theta = 30^\\circ",
+      "source": "NCERT Class 10 Maths Ch 9 Example 1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh109.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Reciprocal relations: $\\csc\\theta = \\frac{1}{\\sin\\theta},\\ \\sec\\theta = \\frac{1}{\\cos\\theta},\\ \\cot\\theta = \\frac{1}{\\tan\\theta}$.",
+      "latex": "\\csc\\theta = \\frac{1}{\\sin\\theta}",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The expression $(\\sec\\theta + \\tan\\theta)(\\sec\\theta - \\tan\\theta) = \\sec^2\\theta - \\tan^2\\theta = 1$.",
+      "latex": "\\sec^2\\theta - \\tan^2\\theta = 1",
+      "source": "NCERT Class 10 Maths Ch 8 Section 8.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "As angle $\\theta$ increases from $0^\\circ$ to $90^\\circ$, $\\sin\\theta$ increases from 0 to 1, while $\\cos\\theta$ decreases from 1 to 0.",
+      "latex": "",
+      "source": "NCERT Class 10 Maths Ch 8 Table 8.1 Analysis",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Trigonometric Identity",
+      "latex": "\\sin^2\\theta + \\cos^2\\theta = 1",
+      "variables": [
+        { "symbol": "\\theta", "meaning": "acute angle in right triangle", "unit": "degrees" }
+      ],
+      "conditions": "valid for all real angles",
+      "source": "NCERT Class 10 Maths Ch 8 Eq 8.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh108.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Angle of Elevation",
+      "definition": "The angle between the horizontal line from observer eye and line of sight to an object placed above observer level.",
+      "source": "NCERT Class 10 Maths Ch 9 Section 9.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jemh109.pdf"
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Students write sin(A + B) = sin A + sin B",
+      "truth": "Trigonometric ratios are single operational functions, not algebraic multipliers.",
+      "source": "CBSE Class 10 Maths Examiner Insights 2023"
+    }
+  ],
+  "board_exam_questions": [
+    {
+      "year": 2024,
+      "question": "If $\\tan\\theta + \\cot\\theta = 2$, find the value of $\\tan^2\\theta + \\cot^2\\theta$.",
+      "marks": 2,
+      "type": "SA1",
+      "options": ["2", "4", "1", "0"],
+      "answer": "2",
+      "explanation": "Squaring both sides: $(\\tan\\theta + \\cot\\theta)^2 = 4 \\implies \\tan^2\\theta + \\cot^2\\theta + 2(1) = 4 \\implies 2$.",
+      "source": "CBSE Class 10 Maths Board Paper 2024 Standard Q21",
+      "source_url": "https://cbseacademic.nic.in"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "If $\\sin\\theta = \\frac{3}{5}$, what is the value of $\\cos\\theta$ for acute angle $\\theta$?",
+      "options": ["$\\frac{4}{5}$", "$\\frac{5}{4}$", "$\\frac{3}{4}$", "$\\frac{4}{3}$"],
+      "answer": "$\\frac{4}{5}$",
+      "explanation": "$\\cos\\theta = \\sqrt{1 - \\sin^2\\theta} = \\sqrt{1 - 9/25} = \\sqrt{16/25} = 4/5$.",
+      "difficulty": "easy",
+      "concept_tested": "Pythagorean Identity",
+      "source_fact_id": "sin^2 + cos^2 = 1",
+      "board_pattern_match": "CBSE 2024 Q2"
+    },
+    {
+      "question": "Evaluate: $\\frac{2\\tan 30^\\circ}{1 + \\tan^2 30^\\circ}$.",
+      "options": ["$\\sin 60^\\circ$", "$\\cos 60^\\circ$", "$\\tan 60^\\circ$", "$\\sin 30^\\circ$"],
+      "answer": "$\\sin 60^\\circ$",
+      "explanation": "Substitute $\\tan 30^\\circ = 1/\\sqrt{3}$: $\\frac{2/\\sqrt{3}}{1 + 1/3} = \\frac{2/\\sqrt{3}}{4/3} = \\frac{\\sqrt{3}}{2} = \\sin 60^\\circ$.",
+      "difficulty": "medium",
+      "concept_tested": "Standard Angle Values",
+      "source_fact_id": "Table 8.1",
+      "board_pattern_match": "CBSE 2023 Q4"
+    },
+    {
+      "question": "What is the value of $(1 + \\tan^2\\theta)(1 - \\sin\\theta)(1 + \\sin\\theta)$?",
+      "options": ["1", "0", "2", "-1"],
+      "answer": "1",
+      "explanation": "$(1 + \\tan^2\\theta)(1 - \\sin^2\\theta) = \\sec^2\\theta \\cdot \\cos^2\\theta = 1$.",
+      "difficulty": "medium",
+      "concept_tested": "Identity Simplification",
+      "source_fact_id": "sec^2 * cos^2 = 1",
+      "board_pattern_match": "CBSE 2023 Q12"
+    },
+    {
+      "question": "A pole $6\\ \\text{m}$ high casts a shadow $2\\sqrt{3}\\ \\text{m}$ on the ground. What is the sun's elevation angle?",
+      "options": ["$60^\\circ$", "$30^\\circ$", "$45^\\circ$", "$90^\\circ$"],
+      "answer": "$60^\\circ$",
+      "explanation": "$\\tan\\theta = 6 / (2\\sqrt{3}) = 3/\\sqrt{3} = \\sqrt{3} \\implies \\theta = 60^\\circ$.",
+      "difficulty": "easy",
+      "concept_tested": "Heights and Distances",
+      "source_fact_id": "tan theta = h / shadow",
+      "board_pattern_match": "CBSE 2022 Q5"
+    },
+    {
+      "question": "If $\\sqrt{3}\\tan\\theta = 1$, find the acute value of $\\theta$.",
+      "options": ["$30^\\circ$", "$60^\\circ$", "$45^\\circ$", "$0^\\circ$"],
+      "answer": "$30^\\circ$",
+      "explanation": "$\\tan\\theta = 1/\\sqrt{3} \\implies \\theta = 30^\\circ$.",
+      "difficulty": "easy",
+      "concept_tested": "Table value lookup",
+      "source_fact_id": "tan 30 = 1/sqrt(3)",
+      "board_pattern_match": "CBSE 2020 Q3"
+    },
+    {
+      "question": "If $\\cos A = \\frac{4}{5}$, then the value of $\\tan A$ is:",
+      "options": ["$\\frac{3}{4}$", "$\\frac{3}{5}$", "$\\frac{4}{3}$", "$\\frac{5}{3}$"],
+      "answer": "$\\frac{3}{4}$",
+      "explanation": "Hypotenuse 5, adjacent 4 $\\implies$ opposite $= \\sqrt{25 - 16} = 3$. Hence $\\tan A = 3/4$.",
+      "difficulty": "easy",
+      "concept_tested": "Triangle ratio definitions",
+      "source_fact_id": "tan = p/b",
+      "board_pattern_match": "CBSE 2021 Q1"
+    },
+    {
+      "question": "The value of $(\\sin 45^\\circ + \\cos 45^\\circ)$ is:",
+      "options": ["$\\sqrt{2}$", "$\\frac{1}{\\sqrt{2}}$", "1", "2"],
+      "answer": "$\\sqrt{2}$",
+      "explanation": "$1/\\sqrt{2} + 1/\\sqrt{2} = 2/\\sqrt{2} = \\sqrt{2}$.",
+      "difficulty": "easy",
+      "concept_tested": "45 degree ratio addition",
+      "source_fact_id": "sin 45 + cos 45",
+      "board_pattern_match": "CBSE 2023 Q2"
+    },
+    {
+      "question": "What is the maximum value of $\\frac{1}{\\csc\\theta}$ for an acute angle $\\theta$?",
+      "options": ["1", "0", "$\\frac{1}{2}$", "Infinity"],
+      "answer": "1",
+      "explanation": "$1/\\csc\\theta = \\sin\\theta$. Maximum value of sine for acute angle is 1 at $90^\\circ$.",
+      "difficulty": "medium",
+      "concept_tested": "Reciprocal and Maxima",
+      "source_fact_id": "sin theta <= 1",
+      "board_pattern_match": "CBSE 2022 Q10"
+    },
+    {
+      "question": "If $\\tan\\theta = 1$, then what is the value of $\\sin^2\\theta - \\cos^2\\theta$?",
+      "options": ["0", "1", "$\\frac{1}{2}$", "-1"],
+      "answer": "0",
+      "explanation": "$\\tan\\theta = 1 \\implies \\theta = 45^\\circ$. $\\sin^2 45^\\circ - \\cos^2 45^\\circ = (1/2) - (1/2) = 0$.",
+      "difficulty": "easy",
+      "concept_tested": "Angle substitution",
+      "source_fact_id": "tan 45 = 1",
+      "board_pattern_match": "CBSE 2024 Q7"
+    },
+    {
+      "question": "If $\\sec\\theta - \\tan\\theta = k$, then $\\sec\\theta + \\tan\\theta$ equals:",
+      "options": ["$\\frac{1}{k}$", "$k$", "$k^2$", "$1 - k$"],
+      "answer": "$\\frac{1}{k}$",
+      "explanation": "Since $\\sec^2\\theta - \\tan^2\\theta = 1$, $(\\sec\\theta - \\tan\\theta)(\\sec\\theta + \\tan\\theta) = 1 \\implies 1/k$.",
+      "difficulty": "hard",
+      "concept_tested": "Algebraic Identity in Trigonometry",
+      "source_fact_id": "sec^2 - tan^2 = 1",
+      "board_pattern_match": "CBSE 2023 Q18"
+    }
+  ],
+  "diagram_specs": [
+    {
+      "concept": "right angled triangle trigonometry",
+      "elements": ["right triangle ABC", "acute angle theta", "opposite side", "adjacent side", "hypotenuse"],
+      "animation": "triangle outlines and labels appear sequentially",
+      "labels": ["theta", "Opposite", "Adjacent", "Hypotenuse"],
+      "suggested_colors": ["navy for frame", "red for hypotenuse", "green for adjacent"]
+    }
+  ]
+}

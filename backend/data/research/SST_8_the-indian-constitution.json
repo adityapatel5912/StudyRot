@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "subject": "SST",
+    "grade": 8,
+    "topic": "The Indian Constitution",
+    "chapters": [
+      "Civics Ch 1"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 26,
+    "verified_facts_count": 12,
+    "mcqs_count": 6,
+    "editions_used": [
+      "2025-26"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "The Indian Constitution was drafted by the Constituent Assembly between Dec 1946 and Nov 1949, and came into effect on 26-Jan-1950.",
+      "latex": "",
+      "source": "NCERT Class 8 Civics Ch 1 Section 1.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Dr. B.R. Ambedkar is revered as the Father of the Indian Constitution and served as Chairman of the Drafting Committee.",
+      "latex": "",
+      "source": "NCERT Class 8 Civics Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "The Constitution guarantees 6 Fundamental Rights to all citizens: Right to Equality, Right to Freedom, Right against Exploitation, Right to Freedom of Religion, Cultural and Educational Rights, and Right to Constitutional Remedies.",
+      "latex": "",
+      "source": "NCERT Class 8 Civics Ch 1 Key Features",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Secularism in the Indian Constitution means the State does not officially promote any one religion as the state religion.",
+      "latex": "",
+      "source": "NCERT Class 8 Civics Ch 1 Section 1.3",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Federalism refers to the existence of more than one level of government in the country (Center, State, and Panchayati Raj).",
+      "latex": "",
+      "source": "NCERT Class 8 Civics Ch 1 Section 1.2",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [],
+  "definitions": [
+    {
+      "term": "Federalism",
+      "definition": "Division of governance powers between Central and State tiers."
+    },
+    {
+      "term": "Secularism",
+      "definition": "State policy of neutrality and non-discrimination towards all religious faiths."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Fundamental Rights are completely absolute and cannot be restricted.",
+      "truth": "Fundamental rights are subject to reasonable restrictions in the interest of public order, morality, and national security.",
+      "why": "Constitution of India Article 19 clauses 2-6 provide constitutional safeguards."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2024",
+      "type": "SA",
+      "question": "Name the key feature of the Constitution that prevents the misuse of power by any one branch of government.",
+      "answer": "Separation of Powers between the Legislature, the Executive, and the Judiciary.",
+      "marking_scheme": "1 mark for Separation of Powers and three organs"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "Which Fundamental Right is called the 'Heart and Soul of the Constitution' by Dr. B.R. Ambedkar?",
+      "options": [
+        "Right to Constitutional Remedies (Article 32)",
+        "Right to Equality",
+        "Right to Freedom",
+        "Right against Exploitation"
+      ],
+      "answer": "Right to Constitutional Remedies (Article 32)",
+      "explanation": "Article 32 empowers citizens to move the Supreme Court directly for enforcement of Fundamental Rights."
+    }
+  ]
+}

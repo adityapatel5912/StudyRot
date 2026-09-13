@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "subject": "SST",
+    "grade": 10,
+    "topic": "Nationalism in India",
+    "chapters": ["History Ch 2"],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 40,
+    "verified_facts_count": 18,
+    "mcqs_count": 10,
+    "editions_used": ["2025-26", "2023-24"]
+  },
+  "facts": [
+    {
+      "statement": "Mahatma Gandhi returned to India from South Africa in January 1915.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "In 1917, Gandhiji organized a satyagraha in Champaran (Bihar) to inspire peasants struggling against the oppressive indigo plantation system.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In 1917, Gandhiji organized a satyagraha to support peasants of Kheda district of Gujarat suffering from crop failure and plague.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In 1918, Mahatma Gandhi intervened in Ahmedabad to organize a satyagraha movement among cotton mill workers.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The Rowlatt Act of 1919 allowed the colonial government to detain political prisoners without trial for up to two years.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbse.gov.in"]
+    },
+    {
+      "statement": "On 13 April 1919, General Dyer opened fire on the peaceful gathering at Jallianwala Bagh in Amritsar, Punjab.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The Khilafat Committee was formed in Bombay in March 1919 by Muhammad Ali and Shaukat Ali.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "At the Nagpur session of the Indian National Congress in December 1920, the Non-Cooperation programme was adopted.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In Awadh, the peasant movement was led by Baba Ramchandra, a sanyasi who had earlier been an indentured labourer in Fiji.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 2.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The Oudh Kisan Sabha was set up in October 1920, headed by Jawaharlal Nehru, Baba Ramchandra and others.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 2.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In the Gudem Hills of Andhra Pradesh, a militant guerrilla movement spread under the leadership of Alluri Sitaram Raju.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 2.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Under the Inland Emigration Act of 1859, plantation workers were not permitted to leave tea gardens without permission.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 2.3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In February 1922, Mahatma Gandhi decided to withdraw the Non-Cooperation Movement after the violent incident at Chauri Chaura in Gorakhpur.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The Swaraj Party was formed within the Congress by C.R. Das and Motilal Nehru to argue for a return to council politics.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 3",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The Simon Commission arrived in India in 1928 and was greeted with the slogan 'Go back Simon' because it had no Indian members.",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 3.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In December 1929, under presidency of Jawaharlal Nehru, the Lahore Congress formalised the demand of 'Purna Swaraj' (Full Independence).",
+      "latex": "",
+      "source": "NCERT Class 10 SST History Ch 2 Section 3.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    }
+  ],
+  "formulas": [],
+  "definitions": [
+    {
+      "term": "Satyagraha",
+      "definition": "A method of mass agitation based on truth and non-violence, asserting that if the cause is true, physical force is not necessary against the oppressor.",
+      "source": "NCERT Class 10 SST History Ch 2 Section 1.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf"
+    },
+    {
+      "term": "Boycott",
+      "definition": "The refusal to deal and associate with people or participate in activities, or buy and use things; usually a form of protest.",
+      "source": "NCERT Class 10 SST History Ch 2 Section 2.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jess302.pdf"
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Students think the Dandi March marked the beginning of Non-Cooperation",
+      "truth": "The Dandi Salt March (1930) marked the launch of the Civil Disobedience Movement, not the Non-Cooperation Movement (1920-22).",
+      "source": "CBSE Class 10 Social Science Board Report 2023"
+    }
+  ],
+  "board_exam_questions": [
+    {
+      "year": 2023,
+      "question": "Name the place where the session of Indian National Congress was held in December 1920.",
+      "marks": 1,
+      "type": "SA1",
+      "options": ["Nagpur", "Calcutta", "Madras", "Lahore"],
+      "answer": "Nagpur",
+      "explanation": "At the Nagpur session in December 1920, the Non-Cooperation programme was ratified.",
+      "source": "CBSE Class 10 SST Board Paper 2023 Set 1 Q14",
+      "source_url": "https://cbseacademic.nic.in"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "In which city did the Jallianwala Bagh massacre take place on 13 April 1919?",
+      "options": ["Amritsar", "Lahore", "Delhi", "Meerut"],
+      "answer": "Amritsar",
+      "explanation": "General Dyer opened fire on the gathering assembled at Jallianwala Bagh in Amritsar, Punjab.",
+      "difficulty": "easy",
+      "concept_tested": "Jallianwala Bagh Location",
+      "source_fact_id": "Jallianwala Amritsar",
+      "board_pattern_match": "CBSE 2024 Q1"
+    },
+    {
+      "question": "Who led the peasant movement in Awadh during the Non-Cooperation Movement?",
+      "options": ["Baba Ramchandra", "Alluri Sitaram Raju", "Jawaharlal Nehru", "Mahatma Gandhi"],
+      "answer": "Baba Ramchandra",
+      "explanation": "Baba Ramchandra, a sanyasi who had earlier been an indentured labourer in Fiji, led the Awadh peasants.",
+      "difficulty": "easy",
+      "concept_tested": "Awadh Peasant Movement",
+      "source_fact_id": "Baba Ramchandra",
+      "board_pattern_match": "CBSE 2023 Q3"
+    },
+    {
+      "question": "Why was the Simon Commission boycotted by Indians in 1928?",
+      "options": ["It did not have a single Indian member", "It supported the Rowlatt Act", "It rejected provincial autonomy", "It arrested Jawaharlal Nehru"],
+      "answer": "It did not have a single Indian member",
+      "explanation": "The statutory commission under Sir John Simon consisted entirely of British members with no Indian representation.",
+      "difficulty": "easy",
+      "concept_tested": "Simon Commission boycott",
+      "source_fact_id": "Simon Commission 1928",
+      "board_pattern_match": "CBSE 2022 Q4"
+    },
+    {
+      "question": "At which Congress session was the resolution of 'Purna Swaraj' formalised in December 1929?",
+      "options": ["Lahore", "Nagpur", "Calcutta", "Karachi"],
+      "answer": "Lahore",
+      "explanation": "Under the presidency of Jawaharlal Nehru, the Lahore Congress session of December 1929 passed the Purna Swaraj resolution.",
+      "difficulty": "easy",
+      "concept_tested": "Lahore Congress 1929",
+      "source_fact_id": "Purna Swaraj Lahore",
+      "board_pattern_match": "CBSE 2023 Q8"
+    },
+    {
+      "question": "Which violent incident forced Mahatma Gandhi to call off the Non-Cooperation Movement in February 1922?",
+      "options": ["Chauri Chaura incident", "Jallianwala Bagh incident", "Kakori train action", "Dandi raid"],
+      "answer": "Chauri Chaura incident",
+      "explanation": "At Chauri Chaura in Gorakhpur, a peaceful protest turned violent when a police station was burnt down, killing 22 policemen.",
+      "difficulty": "easy",
+      "concept_tested": "Withdrawal of Non-Cooperation",
+      "source_fact_id": "Chauri Chaura 1922",
+      "board_pattern_match": "CBSE 2021 Q2"
+    },
+    {
+      "question": "Who were the founders of the Swaraj Party within the Congress in 1923?",
+      "options": ["C.R. Das and Motilal Nehru", "Jawaharlal Nehru and Subhas Bose", "Mahatma Gandhi and Sardar Patel", "Muhammad Ali and Shaukat Ali"],
+      "answer": "C.R. Das and Motilal Nehru",
+      "explanation": "C.R. Das and Motilal Nehru formed the Swaraj Party to participate in legislative council elections.",
+      "difficulty": "medium",
+      "concept_tested": "Swaraj Party founders",
+      "source_fact_id": "Swaraj party",
+      "board_pattern_match": "CBSE 2022 Q12"
+    },
+    {
+      "question": "Which Act prohibited tea garden plantation workers from leaving without permission?",
+      "options": ["Inland Emigration Act of 1859", "Rowlatt Act of 1919", "Vernacular Press Act of 1878", "Government of India Act of 1919"],
+      "answer": "Inland Emigration Act of 1859",
+      "explanation": "Under the Inland Emigration Act of 1859, tea garden labourers were rarely given permission to visit their native villages.",
+      "difficulty": "medium",
+      "concept_tested": "Plantation worker legislation",
+      "source_fact_id": "Inland Emigration Act",
+      "board_pattern_match": "CBSE 2023 Q15"
+    },
+    {
+      "question": "Who painted the first famous image of Bharat Mata portraying her as an ascetic figure?",
+      "options": ["Abanindranath Tagore", "Ravi Varma", "Bankim Chandra Chattopadhyay", "Rabindranath Tagore"],
+      "answer": "Abanindranath Tagore",
+      "explanation": "In 1905, Abanindranath Tagore painted Bharat Mata as calm, composed, divine, and spiritual.",
+      "difficulty": "medium",
+      "concept_tested": "Sense of Collective Belonging",
+      "source_fact_id": "Bharat Mata portrait",
+      "board_pattern_match": "CBSE 2020 Q7"
+    },
+    {
+      "question": "What was the primary outcome of the Poona Pact signed in September 1932?",
+      "options": ["Reserved seats for Depressed Classes in provincial councils with general electorate", "Separate electorates for Dalits", "Immediate grant of Dominion status", "Calling off the Civil Disobedience Movement"],
+      "answer": "Reserved seats for Depressed Classes in provincial councils with general electorate",
+      "explanation": "Dr. Ambedkar agreed with Gandhi to abandon separate electorates in return for reserved seats in joint electorates.",
+      "difficulty": "hard",
+      "concept_tested": "Poona Pact 1932 terms",
+      "source_fact_id": "Poona Pact terms",
+      "board_pattern_match": "CBSE 2024 Q19"
+    },
+    {
+      "question": "The famous slogan 'Swaraj is my birthright and I shall have it' was declared by:",
+      "options": ["Bal Gangadhar Tilak", "Bipin Chandra Pal", "Lala Lajpat Rai", "Gopal Krishna Gokhale"],
+      "answer": "Bal Gangadhar Tilak",
+      "explanation": "Lokmanya Bal Gangadhar Tilak championed mass nationalist consciousness with this famous clarion call.",
+      "difficulty": "easy",
+      "concept_tested": "Nationalist leaders slogans",
+      "source_fact_id": "Tilak slogan",
+      "board_pattern_match": "CBSE 2019 Q2"
+    }
+  ],
+  "diagram_specs": [
+    {
+      "concept": "Indian nationalist movement timeline",
+      "elements": ["horizontal line", "1915 Gandhi return", "1919 Rowlatt/Jallianwala", "1920 Non-Cooperation", "1922 Chauri Chaura", "1930 Dandi Salt March"],
+      "animation": "markers appear along the timeline from left to right",
+      "labels": ["1915", "1919", "1920", "1922", "1930"],
+      "suggested_colors": ["navy for timeline", "red for key events"]
+    }
+  ]
+}

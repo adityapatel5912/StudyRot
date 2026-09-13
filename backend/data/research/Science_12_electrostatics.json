@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "subject": "Science",
+    "grade": 12,
+    "topic": "Electrostatics — Electric Charges and Fields",
+    "chapters": [
+      "Ch 1",
+      "Ch 2"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 40,
+    "verified_facts_count": 18,
+    "mcqs_count": 10,
+    "editions_used": [
+      "2025-26",
+      "2023-24"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Coulomb's Law states the electrostatic force between two point charges is directly proportional to the product of charges and inversely proportional to the square of distance: $F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{|q_1 q_2|}{r^2}$.",
+      "latex": "F = \\frac{1}{4\\pi\\varepsilon_0} \\frac{|q_1 q_2|}{r^2}",
+      "source": "NCERT Class 12 Physics Ch 1 Section 1.6",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Permittivity of free space $\\varepsilon_0 \\approx 8.854 \\times 10^{-12}\\text{ C}^2\\text{N}^{-1}\\text{m}^{-2}$ and $\\frac{1}{4\\pi\\varepsilon_0} \\approx 8.987 \\times 10^9\\text{ N m}^2\\text{C}^{-2}$.",
+      "latex": "\\frac{1}{4\\pi\\varepsilon_0} = 9 \\times 10^9\\text{ N m}^2\\text{C}^{-2}",
+      "source": "NCERT Class 12 Physics Ch 1 Section 1.6",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Electric field due to a point charge $q$ is given by $\\vec{E} = \\frac{1}{4\\pi\\varepsilon_0} \\frac{q}{r^2} \\hat{r}$.",
+      "latex": "\\vec{E} = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q}{r^2}\\hat{r}",
+      "source": "NCERT Class 12 Physics Ch 1 Section 1.8",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Gauss's Law states the total electric flux through any closed Gaussian surface equals $\\frac{q_{\\text{enclosed}}}{\\varepsilon_0}$.",
+      "latex": "\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{q_{\\text{enc}}}{\\varepsilon_0}",
+      "source": "NCERT Class 12 Physics Ch 1 Section 1.14",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Electric field inside a hollow charged conductor in electrostatic equilibrium is identically zero.",
+      "latex": "E_{\\text{inside}} = 0",
+      "source": "NCERT Class 12 Physics Ch 2 Section 2.13",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Coulomb's Law",
+      "latex": "F = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q_1 q_2}{r^2}",
+      "variables": {
+        "F": "Electrostatic force (N)",
+        "q_1, q_2": "Charges (C)",
+        "r": "Distance (m)",
+        "\\varepsilon_0": "Permittivity of free space"
+      }
+    },
+    {
+      "name": "Electric Potential of Point Charge",
+      "latex": "V = \\frac{1}{4\\pi\\varepsilon_0}\\frac{q}{r}",
+      "variables": {
+        "V": "Potential (V)",
+        "q": "Source charge (C)",
+        "r": "Distance (m)"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Electric Dipole",
+      "definition": "A pair of equal and opposite point charges $\\pm q$ separated by distance $2a$."
+    },
+    {
+      "term": "Equipotential Surface",
+      "definition": "A surface having identical electrostatic potential at every point."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Electric field lines can form closed loops.",
+      "truth": "Electrostatic field lines originate on positive charges and terminate on negative charges; they never form closed loops because electrostatic fields are conservative.",
+      "why": "Curl of electrostatic field is zero: nabla x E = 0."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2023",
+      "type": "SA",
+      "question": "What is the angle between electric field lines and an equipotential surface at all points?",
+      "answer": "Electric field lines are always perpendicular ($90^\\circ$) to equipotential surfaces at every point.",
+      "marking_scheme": "1 mark for perpendicular / 90 degrees"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What is the net electric flux through a closed surface enclosing an electric dipole of dipole moment $\\vec{p}$?",
+      "options": [
+        "Zero",
+        "$\\frac{p}{\\varepsilon_0}$",
+        "$\\frac{2q}{\\varepsilon_0}$",
+        "$\\frac{q}{2\\varepsilon_0}$"
+      ],
+      "answer": "Zero",
+      "explanation": "An electric dipole consists of $+q$ and $-q$. The net enclosed charge is $q_{\\text{enc}} = q - q = 0$, so by Gauss's law flux $\\Phi = 0$."
+    }
+  ]
+}

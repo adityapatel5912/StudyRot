@@ -1,0 +1,20 @@
+{
+  "title": "Parabola & Conic Sections",
+  "subject": "Maths",
+  "grade": 12,
+  "posts": [
+    {
+      "type": "key_point",
+      "title": "Standard Equation: $y^2 = 4ax$",
+      "body": "A parabola is the locus of a point whose distance from the focus $(a, 0)$ equals its perpendicular distance from the directrix $x = -a$. Here eccentricity $e = 1$.",
+      "analogy": "Like a satellite dish focusing every parallel incoming signal ray onto a single detector point.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Parabola", "#Class12Maths", "#ConicSections"],
+      "source_ref": "NCERT Class 11/12 Maths — Conic Sections",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 64, "comments": [] }
+    }
+  ]
+}

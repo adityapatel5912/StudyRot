@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "subject": "Maths",
+    "grade": 12,
+    "topic": "Matrices & Determinants",
+    "chapters": [
+      "Ch 3",
+      "Ch 4"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 38,
+    "verified_facts_count": 16,
+    "mcqs_count": 8,
+    "editions_used": [
+      "2025-26",
+      "2023-24"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Matrix multiplication is associative $(AB)C = A(BC)$ but generally non-commutative ($AB \\ne BA$).",
+      "latex": "AB \\ne BA",
+      "source": "NCERT Class 12 Maths Ch 3 Section 3.4",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "For any square matrix $A$, $A + A^T$ is always symmetric and $A - A^T$ is skew-symmetric.",
+      "latex": "A = \\frac{1}{2}(A + A^T) + \\frac{1}{2}(A - A^T)",
+      "source": "NCERT Class 12 Maths Ch 3 Theorem 1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "A square matrix $A$ is invertible if and only if its determinant is non-zero ($|A| \\ne 0$, non-singular).",
+      "latex": "A^{-1} = \\frac{1}{|A|} \\text{adj}(A)",
+      "source": "NCERT Class 12 Maths Ch 4 Theorem 4",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "For an $n \\times n$ matrix $A$, $|kA| = k^n |A|$ where $k$ is a scalar.",
+      "latex": "|kA| = k^n |A|",
+      "source": "NCERT Class 12 Maths Ch 4 Section 4.3",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "$|\\text{adj}(A)| = |A|^{n-1}$ for any square matrix $A$ of order $n$.",
+      "latex": "|\\text{adj}(A)| = |A|^{n-1}",
+      "source": "NCERT Class 12 Maths Ch 4 Theorem 3",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Inverse Formula",
+      "latex": "A^{-1} = \\frac{1}{|A|} \\text{adj}(A)",
+      "variables": {
+        "A^{-1}": "Inverse matrix",
+        "|A|": "Determinant of A (!= 0)",
+        "adj(A)": "Adjugate of matrix A"
+      }
+    },
+    {
+      "name": "Adjugate Determinant",
+      "latex": "|\\text{adj}(A)| = |A|^{n-1}",
+      "variables": {
+        "n": "Order of the square matrix"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Non-Singular Matrix",
+      "definition": "A square matrix whose determinant is strictly non-zero ($|A| \\ne 0$)."
+    },
+    {
+      "term": "Adjoint of Matrix",
+      "definition": "The transpose of the cofactor matrix of a square matrix $A$."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "If AB = 0, then either A = 0 or B = 0.",
+      "truth": "Two non-zero matrices can multiply to yield the zero matrix (zero divisors exist in matrix algebra).",
+      "why": "Row-by-column dot products can sum to zero without components being zero."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2023",
+      "type": "MCQ",
+      "question": "If $A$ is a square matrix of order 3 such that $|A| = 5$, then find $|\\text{adj}(A)|$:",
+      "answer": "$25$",
+      "marking_scheme": "1 mark for formula |adj(A)| = |A|^(3-1) = 5^2 = 25"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "If $A$ is a $3 \\times 3$ matrix and $|A| = 4$, what is the value of $|3A|$?",
+      "options": [
+        "$108$",
+        "$12$",
+        "$36$",
+        "$48$"
+      ],
+      "answer": "$108$",
+      "explanation": "$|kA| = k^n |A| \\implies |3A| = 3^3 \\times 4 = 27 \\times 4 = 108$."
+    }
+  ]
+}

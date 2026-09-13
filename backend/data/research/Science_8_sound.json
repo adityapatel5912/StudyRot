@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "subject": "Science",
+    "grade": 8,
+    "topic": "Sound",
+    "chapters": [
+      "Ch 13"
+    ],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 28,
+    "verified_facts_count": 12,
+    "mcqs_count": 8,
+    "editions_used": [
+      "2025-26"
+    ]
+  },
+  "facts": [
+    {
+      "statement": "Sound is produced by vibrating objects and travels as longitudinal mechanical waves requiring a material medium.",
+      "latex": "v = \\nu\\lambda",
+      "source": "NCERT Class 8 Science Ch 13 Section 13.1",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Sound cannot propagate in a vacuum because mechanical waves require elastic particles to transmit compressions and rarefactions.",
+      "latex": "",
+      "source": "NCERT Class 8 Science Ch 13 Section 13.3",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Loudness of sound is proportional to the square of the amplitude of vibration: $\\text{Loudness} \\propto (\\text{Amplitude})^2$.",
+      "latex": "L \\propto A^2",
+      "source": "NCERT Class 8 Science Ch 13 Section 13.5",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "Pitch or shrillness of sound is determined by its frequency: higher frequency produces higher pitch.",
+      "latex": "\\nu = \\frac{1}{T}",
+      "source": "NCERT Class 8 Science Ch 13 Section 13.5",
+      "confidence": "high",
+      "verified": true
+    },
+    {
+      "statement": "The audible range of frequencies for average human ears is approximately $20\\text{ Hz}$ to $20,000\\text{ Hz}$ ($20\\text{ kHz}$).",
+      "latex": "20\\text{ Hz} \\le f \\le 20,000\\text{ Hz}",
+      "source": "NCERT Class 8 Science Ch 13 Section 13.6",
+      "confidence": "high",
+      "verified": true
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Wave Speed Equation",
+      "latex": "v = f \\lambda",
+      "variables": {
+        "v": "Speed of sound (m/s)",
+        "f": "Frequency in Hertz (Hz)",
+        "\\lambda": "Wavelength in meters (m)"
+      }
+    }
+  ],
+  "definitions": [
+    {
+      "term": "Frequency",
+      "definition": "The number of oscillations or vibrations per second, measured in Hertz (Hz)."
+    },
+    {
+      "term": "Amplitude",
+      "definition": "The maximum displacement of a vibrating particle from its central rest position."
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Sound travels faster in air than in solids.",
+      "truth": "Sound travels fastest in solids (iron ~5000 m/s), slower in liquids (~1500 m/s), and slowest in gases (~343 m/s).",
+      "why": "Intermolecular particles in solids are packed tightly with stronger elastic bonds."
+    }
+  ],
+  "board_questions": [
+    {
+      "year": "CBSE 2024",
+      "type": "Short Answer",
+      "question": "If the amplitude of a vibration is doubled, how does its loudness change?",
+      "answer": "Since loudness is proportional to the square of amplitude, doubling amplitude increases loudness by $2^2 = 4$ times.",
+      "marking_scheme": "1 mark for proportionality formula, 1 mark for 4 times factor"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What is the normal audible frequency range for the human ear?",
+      "options": [
+        "$20\\text{ Hz}$ to $20,000\\text{ Hz}$",
+        "$2\\text{ Hz}$ to $2,000\\text{ Hz}$",
+        "$200\\text{ Hz}$ to $200,000\\text{ Hz}$",
+        "$10\\text{ Hz}$ to $10,000\\text{ Hz}$"
+      ],
+      "answer": "$20\\text{ Hz}$ to $20,000\\text{ Hz}$",
+      "explanation": "Human hearing spans the sonic spectrum between 20 Hz (infrasonic threshold) and 20 kHz (ultrasonic threshold)."
+    }
+  ]
+}

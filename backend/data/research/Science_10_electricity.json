@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "subject": "Science",
+    "grade": 10,
+    "topic": "Electricity",
+    "chapters": ["Ch 12"],
+    "researched_at": "2026-03-01T10:00:00Z",
+    "sources_count": 39,
+    "verified_facts_count": 17,
+    "mcqs_count": 10,
+    "editions_used": ["2025-26", "2023-24"]
+  },
+  "facts": [
+    {
+      "statement": "Electric current is the rate of flow of electric charges: $I = \\frac{Q}{t}$.",
+      "latex": "I = \\frac{Q}{t}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbseacademic.nic.in"]
+    },
+    {
+      "statement": "One Coulomb equals the charge contained in nearly $6.25 \\times 10^{18}$ electrons.",
+      "latex": "1\\ \\text{C} \\approx 6.25 \\times 10^{18}\\ e",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Electric potential difference $V$ between two points is work done per unit charge: $V = \\frac{W}{Q}$.",
+      "latex": "V = \\frac{W}{Q}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Ohm's law states that potential difference across conductor ends is proportional to current at constant temperature ($V = IR$).",
+      "latex": "V = IR",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in", "https://cbse.gov.in"]
+    },
+    {
+      "statement": "Resistance $R$ of a uniform conductor is proportional to length $l$ and inversely proportional to cross-sectional area $A$: $R = \\rho \\frac{l}{A}$.",
+      "latex": "R = \\rho \\frac{l}{A}",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The SI unit of resistivity $\\rho$ is ohm-meter ($\\Omega\\cdot\\text{m}$).",
+      "latex": "\\Omega \\cdot \\text{m}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Metals and alloys have low resistivity ($10^{-8}\\ \\Omega\\cdot\\text{m}$ to $10^{-6}\\ \\Omega\\cdot\\text{m}$), making them good conductors.",
+      "latex": "10^{-8}\\ \\Omega\\cdot\\text{m}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Tungsten is used almost exclusively for electric bulb filaments due to its high melting point ($3380^\\circ\\text{C}$).",
+      "latex": "3380^\\circ\\text{C}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.7",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In a series combination, total equivalent resistance is the arithmetic sum of individual resistances: $R_s = R_1 + R_2 + R_3$.",
+      "latex": "R_s = R_1 + R_2 + R_3",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "In parallel combination, the reciprocal of equivalent resistance equals sum of reciprocals of individual resistances: $\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
+      "latex": "\\frac{1}{R_p} = \\frac{1}{R_1} + \\frac{1}{R_2}",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.9",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Joule's law of heating states heat produced in resistor is $H = I^2 R t$.",
+      "latex": "H = I^2 R t",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.11",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "Electric power $P$ is given by $P = VI = I^2 R = \\frac{V^2}{R}$.",
+      "latex": "P = VI = I^2 R = \\frac{V^2}{R}",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.12",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "The commercial unit of electrical energy is 1 kilowatt hour ($1\\ \\text{kWh}$), which equals $3.6 \\times 10^6\\ \\text{J}$.",
+      "latex": "1\\ \\text{kWh} = 3.6 \\times 10^6\\ \\text{J}",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.8",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "An ammeter is always connected in series in a circuit and has very low resistance.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "A voltmeter is always connected in parallel across the ends of the component and has very high resistance.",
+      "latex": "",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.2",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    },
+    {
+      "statement": "If a wire of resistance $R$ is stretched to double its original length, its new resistance becomes $4R$.",
+      "latex": "R_{\\text{new}} = 4R",
+      "source": "NCERT Class 10 Science Ch 12 Example 12.6",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf",
+      "confidence": "high",
+      "edition": "2025-26",
+      "verified": true,
+      "supporting_sources": ["https://ncert.nic.in"]
+    }
+  ],
+  "formulas": [
+    {
+      "name": "Ohm's Law",
+      "latex": "V = IR",
+      "variables": [
+        { "symbol": "V", "meaning": "potential difference", "unit": "volts (V)" },
+        { "symbol": "I", "meaning": "current", "unit": "amperes (A)" },
+        { "symbol": "R", "meaning": "resistance", "unit": "ohms (\\Omega)" }
+      ],
+      "conditions": "temperature and physical conditions of conductor remain constant",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.4",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf"
+    },
+    {
+      "name": "Joule's Heating Law",
+      "latex": "H = I^2 R t",
+      "variables": [
+        { "symbol": "H", "meaning": "heat generated", "unit": "joules (J)" },
+        { "symbol": "I", "meaning": "current", "unit": "amperes (A)" },
+        { "symbol": "R", "meaning": "resistance", "unit": "ohms (\\Omega)" },
+        { "symbol": "t", "meaning": "time", "unit": "seconds (s)" }
+      ],
+      "conditions": "current flow through a purely resistive conductor",
+      "source": "NCERT Class 10 Science Ch 12 Eq 12.11",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf"
+    }
+  ],
+  "definitions": [
+    {
+      "term": "One Ampere",
+      "definition": "The flow of electric charge across a surface at the rate of one coulomb per second ($1\\ \\text{A} = 1\\ \\text{C/s}$).",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.1",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf"
+    },
+    {
+      "term": "Resistivity",
+      "definition": "The electrical resistance of a conductor of unit length and unit cross-sectional area, characteristic of the material.",
+      "source": "NCERT Class 10 Science Ch 12 Section 12.5",
+      "source_url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf"
+    }
+  ],
+  "common_misconceptions": [
+    {
+      "misconception": "Stretching a wire doubles its resistance",
+      "truth": "When stretched to double length, volume is constant so area halves; therefore resistance increases by $2^2 = 4$ times.",
+      "source": "CBSE Class 10 Science Marking Scheme 2023 Q15"
+    }
+  ],
+  "board_exam_questions": [
+    {
+      "year": 2023,
+      "question": "An electric lamp of resistance $20\\ \\Omega$ and a conductor of $4\\ \\Omega$ resistance are connected in series to a $6\\ \\text{V}$ battery. Calculate total circuit resistance.",
+      "marks": 2,
+      "type": "SA1",
+      "options": ["$24\\ \\Omega$", "$5\\ \\Omega$", "$16\\ \\Omega$", "$80\\ \\Omega$"],
+      "answer": "$24\\ \\Omega$",
+      "explanation": "In series, $R_s = R_1 + R_2 = 20 + 4 = 24\\ \\Omega$.",
+      "source": "CBSE Class 10 Board Paper 2023 Set 2 Q23",
+      "source_url": "https://cbseacademic.nic.in"
+    }
+  ],
+  "mcqs": [
+    {
+      "question": "What is the equivalent resistance when two $6\\ \\Omega$ resistors are connected in parallel?",
+      "options": ["$3\\ \\Omega$", "$12\\ \\Omega$", "$6\\ \\Omega$", "$1.5\\ \\Omega$"],
+      "answer": "$3\\ \\Omega$",
+      "explanation": "$1/R_p = 1/6 + 1/6 = 2/6 = 1/3 \\implies R_p = 3\\ \\Omega$.",
+      "difficulty": "easy",
+      "concept_tested": "Parallel Resistors",
+      "source_fact_id": "1/Rp = 1/R1 + 1/R2",
+      "board_pattern_match": "CBSE 2024 Q2"
+    },
+    {
+      "question": "A cylindrical wire of length $L$ and area $A$ has resistance $R$. Another wire of same material of length $2L$ and area $A/2$ will have resistance:",
+      "options": ["$4R$", "$2R$", "$R/2$", "$R/4$"],
+      "answer": "$4R$",
+      "explanation": "$R' = \\rho (2L)/(A/2) = 4 \\rho L / A = 4R$.",
+      "difficulty": "medium",
+      "concept_tested": "Resistivity and Dimensions",
+      "source_fact_id": "R = rho L/A",
+      "board_pattern_match": "CBSE 2023 Q5"
+    },
+    {
+      "question": "How many electrons constitute one coulomb of electric charge?",
+      "options": ["$6.25 \\times 10^{18}$", "$1.6 \\times 10^{-19}$", "$6.25 \\times 10^{19}$", "$1.6 \\times 10^{18}$"],
+      "answer": "$6.25 \\times 10^{18}$",
+      "explanation": "$n = Q / e = 1 / (1.6 \\times 10^{-19}) \\approx 6.25 \\times 10^{18}$ electrons.",
+      "difficulty": "easy",
+      "concept_tested": "Quantisation of Charge",
+      "source_fact_id": "1 C electron count",
+      "board_pattern_match": "CBSE 2022 Q1"
+    },
+    {
+      "question": "Which metal is almost exclusively used for the filament of incandescent electric lamps?",
+      "options": ["Tungsten", "Nichrome", "Copper", "Aluminium"],
+      "answer": "Tungsten",
+      "explanation": "Tungsten has an exceptionally high melting point of $3380^\\circ\\text{C}$ and high resistivity.",
+      "difficulty": "easy",
+      "concept_tested": "Bulb Filament",
+      "source_fact_id": "Tungsten application",
+      "board_pattern_match": "CBSE 2021 Q3"
+    },
+    {
+      "question": "What is the commercial unit of electric energy in terms of Joules?",
+      "options": ["$3.6 \\times 10^6\\ \\text{J}$", "$3.6 \\times 10^5\\ \\text{J}$", "$3.6 \\times 10^3\\ \\text{J}$", "$1.0 \\times 10^6\\ \\text{J}$"],
+      "answer": "$3.6 \\times 10^6\\ \\text{J}$",
+      "explanation": "$1\\ \\text{kWh} = 1000\\ \\text{W} \\times 3600\\ \\text{s} = 3.6 \\times 10^6\\ \\text{J}$.",
+      "difficulty": "easy",
+      "concept_tested": "Commercial Unit 1 kWh",
+      "source_fact_id": "1 kWh in Joules",
+      "board_pattern_match": "CBSE 2023 Q16"
+    },
+    {
+      "question": "An ammeter should always have:",
+      "options": ["Very low resistance and connected in series", "Very high resistance and connected in series", "Very low resistance and connected in parallel", "Very high resistance and connected in parallel"],
+      "answer": "Very low resistance and connected in series",
+      "explanation": "Low resistance ensures minimal voltage drop so that it does not disturb the measured current.",
+      "difficulty": "medium",
+      "concept_tested": "Ammeter Characteristics",
+      "source_fact_id": "Ammeter connection",
+      "board_pattern_match": "CBSE 2020 Q4"
+    },
+    {
+      "question": "Three identical resistors of $3\\ \\Omega$ each are connected to form a triangle. What is the resistance between any two vertices?",
+      "options": ["$2\\ \\Omega$", "$9\\ \\Omega$", "$1\\ \\Omega$", "$6\\ \\Omega$"],
+      "answer": "$2\\ \\Omega$",
+      "explanation": "Two resistors in series ($3 + 3 = 6\\ \\Omega$) in parallel with the third ($3\\ \\Omega$): $(6 \\times 3)/(6 + 3) = 18/9 = 2\\ \\Omega$.",
+      "difficulty": "hard",
+      "concept_tested": "Bridge Resistor Combination",
+      "source_fact_id": "Series-Parallel Bridge",
+      "board_pattern_match": "CBSE 2022 Q14"
+    },
+    {
+      "question": "If current $I$ passing through a resistor is doubled at constant resistance, the heat generated per second becomes:",
+      "options": ["4 times", "2 times", "Half", "Constant"],
+      "answer": "4 times",
+      "explanation": "According to Joule's law, $H \\propto I^2$. Doubling current increases heat by $2^2 = 4$ times.",
+      "difficulty": "easy",
+      "concept_tested": "Joule Heating Proportionality",
+      "source_fact_id": "H = I^2 R t",
+      "board_pattern_match": "CBSE 2024 Q8"
+    },
+    {
+      "question": "What is the power of an electric heater that draws $5\\ \\text{A}$ current from a $220\\ \\text{V}$ line?",
+      "options": ["$1100\\ \\text{W}$", "$2200\\ \\text{W}$", "$44\\ \\text{W}$", "$550\\ \\text{W}$"],
+      "answer": "$1100\\ \\text{W}$",
+      "explanation": "$P = V \\times I = 220\\ \\text{V} \\times 5\\ \\text{A} = 1100\\ \\text{W}$.",
+      "difficulty": "easy",
+      "concept_tested": "Electric Power Calculation",
+      "source_fact_id": "P = VI",
+      "board_pattern_match": "CBSE 2019 Q7"
+    },
+    {
+      "question": "Which of the following materials has the highest electrical resistivity?",
+      "options": ["Glass (Insulator)", "Nichrome (Alloy)", "Copper (Metal)", "Silver (Metal)"],
+      "answer": "Glass (Insulator)",
+      "explanation": "Insulators like glass have resistivity on the order of $10^{10}$ to $10^{14}\\ \\Omega\\cdot\\text{m}$.",
+      "difficulty": "easy",
+      "concept_tested": "Resistivity Comparison",
+      "source_fact_id": "NCERT Table 12.2",
+      "board_pattern_match": "CBSE 2023 Q9"
+    }
+  ],
+  "diagram_specs": [
+    {
+      "concept": "Ohm's law V-I slope line",
+      "elements": ["x-axis Current I", "y-axis Voltage V", "linear slope line", "origin point O"],
+      "animation": "line draws from origin to top-right",
+      "labels": ["V", "I", "Slope = R"],
+      "suggested_colors": ["navy for axes", "red for slope"]
+    }
+  ]
+}

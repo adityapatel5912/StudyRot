@@ -1,0 +1,121 @@
+{
+  "title": "Parabola & Conic Sections",
+  "subject": "Maths",
+  "grade": 12,
+  "posts": [
+    {
+      "type": "key_point",
+      "title": "Standard Equation: $y^2 = 4ax$",
+      "body": "A parabola is the locus of a point whose distance from the focus $(a, 0)$ equals its perpendicular distance from the directrix $x = -a$. Here eccentricity $e = 1$.",
+      "analogy": "Like a satellite dish focusing every parallel incoming signal ray onto a single detector point.",
+      "quiz": null,
+      "diagram": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"120\" x2=\"360\" y2=\"120\" stroke=\"#4f6ba0\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"20\" x2=\"160\" y2=\"220\" stroke=\"#4f6ba0\" stroke-width=\"1.5\"/><path d=\"M 320,30 Q 160,120 320,210\" fill=\"none\" stroke=\"#0f1e3d\" stroke-width=\"3\"/><circle cx=\"220\" cy=\"120\" r=\"5\" fill=\"#e63946\"/><text x=\"220\" y=\"145\" fill=\"#0f1e3d\" font-size=\"11\" font-family=\"Inter, sans-serif\" text-anchor=\"middle\">Focus (a,0)</text></svg>",
+      "hashtags": ["#Parabola", "#Class12Maths", "#ConicSections"],
+      "source_ref": "NCERT Class 11/12 Maths — Conic Sections",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 64, "comments": [] }
+    },
+    {
+      "type": "formula",
+      "title": "Latus Rectum Length: $4a$",
+      "body": "The chord passing through focus $(a,0)$ and perpendicular to the axis of symmetry has endpoints $(a, 2a)$ and $(a, -2a)$. Total length is $|4a|$.",
+      "analogy": "The focal aperture width determining how wide or narrow the bowl opens.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#LatusRectum", "#MathFormulas"],
+      "source_ref": "NCERT Conic Sections",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 47, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Focus Coordinates",
+      "body": "Given the parabola $y^2 = -16x$, find the coordinates of its focus.",
+      "analogy": "",
+      "quiz": {
+        "question": "What is the focus of the parabola $y^2 = -16x$?",
+        "options": ["(-4, 0)", "(4, 0)", "(0, -4)", "(0, 4)"],
+        "answer": "(-4, 0)",
+        "explanation": "Comparing with $y^2 = -4ax$, we get $4a = 16 \\implies a = 4$. Since the parabola opens leftwards, focus is $(-a, 0) = (-4, 0)$."
+      },
+      "diagram": "",
+      "hashtags": ["#BoardMCQ", "#CalculusPrep"],
+      "source_ref": "NCERT Maths Ch 11",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 91, "comments": [] }
+    },
+    {
+      "type": "apply",
+      "title": "Suspension Bridges & Headlight Reflectors",
+      "body": "Cables of suspension bridges like the Bandra-Worli Sea Link hang in parabolic curves under uniform floor loading. Parabolic reflectors bounce bulb rays into a parallel beam.",
+      "analogy": "Real-world Mumbai civil engineering shaped by quadratic geometry.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#BandraWorli", "#EngineeringMaths"],
+      "source_ref": "NCERT Conics Application",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 84, "comments": [] }
+    },
+    {
+      "type": "exam_tip",
+      "title": "Board Trap: Upward vs Downward Parabola",
+      "body": "For $x^2 = 4ay$, the axis is the y-axis, not x-axis! Directrix is $y = -a$. Never confuse horizontal $y^2=4ax$ with vertical $x^2=4ay$.",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#CBSETip", "#CommonMistakes"],
+      "source_ref": "NCERT Maths Conics",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 73, "comments": [] }
+    },
+    {
+      "type": "recap",
+      "title": "Mid-Feed Check: 4 Standard Forms",
+      "body": "1. $y^2 = 4ax$ (right, focus $(a,0)$). 2. $y^2 = -4ax$ (left, focus $(-a,0)$). 3. $x^2 = 4ay$ (up, focus $(0,a)$). 4. $x^2 = -4ay$ (down, focus $(0,-a)$).",
+      "analogy": "Rotated orientations of the same symmetric curve.",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#ConicRecap", "#FormulaSheet"],
+      "source_ref": "NCERT Maths Conic Sections",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 52, "comments": [] }
+    },
+    {
+      "type": "quiz",
+      "title": "Board MCQ: Tangent in Slope Form",
+      "body": "What is the condition for line $y = mx + c$ to be tangent to parabola $y^2 = 4ax$?",
+      "analogy": "",
+      "quiz": {
+        "question": "Which relation gives the condition of tangency for $y = mx + c$ and $y^2 = 4ax$?",
+        "options": ["c = a / m", "c = a * m", "c = a * m^2", "c = -a / m"],
+        "answer": "c = a / m",
+        "explanation": "Substituting $y = mx + c$ and setting the quadratic discriminant $\\Delta = 0$ gives $c = \\frac{a}{m}$."
+      },
+      "diagram": "",
+      "hashtags": ["#Tangents", "#ConicsMCQ"],
+      "source_ref": "NCERT Class 12 Tangents",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 67, "comments": [] }
+    },
+    {
+      "type": "summary",
+      "title": "Revision Summary: Parabola Essentials",
+      "body": "The parabola represents quadratic trajectory and focal reflection with unit eccentricity $e=1$. Mastering vertex $(0,0)$, directrix, and latus rectum guarantees full marks on CBSE coordinate geometry problems.",
+      "analogy": "",
+      "quiz": null,
+      "diagram": "",
+      "hashtags": ["#Summary", "#CoordinateGeometry"],
+      "source_ref": "NCERT Conics",
+      "grade": 12,
+      "subject": "Maths",
+      "engagement": { "likes": 98, "comments": [] }
+    }
+  ]
+}

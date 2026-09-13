@@ -1,0 +1,350 @@
+[
+  {
+    "id": "sst10_1",
+    "type": "key_point",
+    "title": "The Rowlatt Act (1919) & Black Act",
+    "body": "Passed hurriedly through the Imperial Legislative Council despite united Indian opposition. It armed the British colonial government with enormous powers to repress political activities and allowed detention of political prisoners without trial for up to 2 years.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 400 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"320\" height=\"120\" rx=\"10\" fill=\"#0f1e3d\"/><text x=\"200\" y=\"70\" fill=\"#e63946\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">Rowlatt Act (March 1919)</text><text x=\"200\" y=\"105\" fill=\"#ffffff\" font-size=\"13\" text-anchor=\"middle\">Detention without trial for 2 years</text><text x=\"200\" y=\"130\" fill=\"#4f6ba0\" font-size=\"11\" text-anchor=\"middle\">Triggered nationwide Satyagraha Hartal</text></svg>",
+    "hashtags": [
+      "#RowlattAct",
+      "#History10",
+      "#CBSEHistory"
+    ],
+    "source_ref": "NCERT India & Contemporary World II — Ch 2 Section 1.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 120,
+      "comments": [],
+      "seed_comment": "Mahatma Gandhi organized a nationwide hartal on 6 April 1919."
+    }
+  },
+  {
+    "id": "sst10_2",
+    "type": "analogy",
+    "title": "Satyagraha is Soul-Force, Not Passive Resistance",
+    "body": "Gandhiji insisted Satyagraha is not passive weakness; it is the weapon of the morally strongest. It does not inflict pain upon the adversary, but appeals to their conscience through self-suffering and unyielding adherence to truth.",
+    "analogy": "Like an unbreakable banyan tree standing steadfast against cyclone winds without striking back.",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#Satyagraha",
+      "#MahatmaGandhi",
+      "#Ahimsa"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 1.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 110,
+      "comments": [],
+      "seed_comment": "Champaran, Kheda, Ahmedabad were his first 3 satyagrahas in India."
+    }
+  },
+  {
+    "id": "sst10_3",
+    "type": "quiz",
+    "title": "Board MCQ: Jallianwala Bagh Massacre Date",
+    "body": "Recall key chronological dates in Indian independence movement.",
+    "analogy": "",
+    "quiz": {
+      "question": "On which date did the infamous Jallianwala Bagh massacre take place in Amritsar?",
+      "options": [
+        "13-Apr-1919",
+        "6-Apr-1919",
+        "10-May-1857",
+        "26-Jan-1930"
+      ],
+      "answer": "13-Apr-1919",
+      "explanation": "On 13 April 1919 (the day of Baisakhi festival), General Dyer blocked exit gates and opened fire on peaceful villagers gathered at Jallianwala Bagh."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#JallianwalaBagh",
+      "#GeneralDyer",
+      "#BoardMCQ"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 1.2",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 160,
+      "comments": [],
+      "seed_comment": "Rabindranath Tagore renounced his knighthood in protest."
+    }
+  },
+  {
+    "id": "sst10_4",
+    "type": "timeline",
+    "title": "Timeline: Non-Cooperation to Civil Disobedience",
+    "body": "(1) 1919: Rowlatt Satyagraha & Jallianwala Bagh. (2) Dec 1920: Nagpur Congress Session adopts Non-Cooperation program. (3) Feb 1922: Chauri Chaura incident halts NCM. (4) Dec 1929: Lahore Congress demands Purna Swaraj. (5) Mar 1930: Salt Dandi March begins.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 400 200\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"50\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#0f1e3d\" stroke-width=\"3\"/><circle cx=\"80\" cy=\"100\" r=\"8\" fill=\"#e63946\"/><text x=\"80\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#e63946\" text-anchor=\"middle\">1919</text><text x=\"80\" y=\"130\" font-size=\"9\" fill=\"#0f1e3d\" text-anchor=\"middle\">Rowlatt</text><circle cx=\"160\" cy=\"100\" r=\"8\" fill=\"#4f6ba0\"/><text x=\"160\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#4f6ba0\" text-anchor=\"middle\">1920</text><text x=\"160\" y=\"130\" font-size=\"9\" fill=\"#0f1e3d\" text-anchor=\"middle\">NCM</text><circle cx=\"240\" cy=\"100\" r=\"8\" fill=\"#e63946\"/><text x=\"240\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#e63946\" text-anchor=\"middle\">1922</text><text x=\"240\" y=\"130\" font-size=\"9\" fill=\"#0f1e3d\" text-anchor=\"middle\">Chauri Chaura</text><circle cx=\"320\" cy=\"100\" r=\"8\" fill=\"#22c55e\"/><text x=\"320\" y=\"75\" font-size=\"11\" font-weight=\"bold\" fill=\"#22c55e\" text-anchor=\"middle\">1930</text><text x=\"320\" y=\"130\" font-size=\"9\" fill=\"#22c55e\" text-anchor=\"middle\">Dandi March</text></svg>",
+    "hashtags": [
+      "#HistoryTimeline",
+      "#CBSEChronology",
+      "#NCERTDate"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Timeline",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 175,
+      "comments": [],
+      "seed_comment": "Memorize these 4 dates for chronological arrangement questions."
+    }
+  },
+  {
+    "id": "sst10_5",
+    "type": "apply",
+    "title": "Khadi and Boycott of Foreign Cloth in Indian Markets",
+    "body": "Between 1921 and 1922, the import of foreign cloth dropped by half from ₹102 crore to ₹57 crore as merchants refused to trade imported goods. Millions took to handspun Khadi produced by local weavers across rural India.",
+    "analogy": "The earliest nationwide 'Make in India' and Vocal for Local economic movement.",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#Swadeshi",
+      "#KhadiMovement",
+      "#EconomicBoycott"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 2.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 140,
+      "comments": [],
+      "seed_comment": "Foreign cloth bonfires were held in major town squares."
+    }
+  },
+  {
+    "id": "sst10_6",
+    "type": "quiz",
+    "title": "Board MCQ: Reason for Withdrawing Non-Cooperation",
+    "body": "Check textbook accuracy on Gandhiji's sudden strategic withdrawal.",
+    "analogy": "",
+    "quiz": {
+      "question": "Why did Mahatma Gandhi decide to abruptly call off the Non-Cooperation Movement in February 1922?",
+      "options": [
+        "Violent clash at Chauri Chaura",
+        "Arrest of Jawaharlal Nehru",
+        "Signing of Gandhi-Irwin Pact",
+        "Failure of the Khilafat leaders"
+      ],
+      "answer": "Violent clash at Chauri Chaura",
+      "explanation": "At Chauri Chaura (Gorakhpur, UP), a peaceful demonstration turned violent and protestors burnt a police station killing 22 policemen. Feeling satyagrahis needed proper training in ahimsa, Gandhiji halted the movement."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#ChauriChaura",
+      "#GandhianStrategy",
+      "#BoardMCQ"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 3.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 155,
+      "comments": [],
+      "seed_comment": "Many Congress leaders like Subhas Bose were upset by this sudden call-off."
+    }
+  },
+  {
+    "id": "sst10_7",
+    "type": "exam_tip",
+    "title": "Map Work Checklist: Mandatory Indian History Locations",
+    "body": "CBSE Class 10 board exam assigns 2 compulsory marks for locating Indian national movement centers. Locating the wrong state or mislabeling costs full marks.",
+    "analogy": "Must locate: (1) Champaran (Bihar) - Indigo planters, (2) Kheda (Gujarat) - Peasant satyagraha, (3) Ahmedabad (Gujarat) - Cotton mill workers, (4) Amritsar (Punjab) - Jallianwala Bagh, (5) Chauri Chaura (UP), (6) Dandi (Gujarat) - Salt March.",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#CBSEMapWork",
+      "#FullMarks",
+      "#HistoryMap"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Map Work Guidelines",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 215,
+      "comments": [],
+      "seed_comment": "Guaranteed 2 marks every single year!"
+    }
+  },
+  {
+    "id": "sst10_8",
+    "type": "recap",
+    "title": "Mid-Feed Checkpoint: Different Strands in the Movement",
+    "body": "Remember how diverse groups interpreted Swaraj differently: (1) Middle class in towns boycotted schools and courts, (2) Peasants in Awadh led by Baba Ramchandra demanded revenue reduction, (3) Tribals in Gudem Hills led by Alluri Sitaram Raju used guerrilla methods, (4) Plantation workers in Assam demanded freedom of movement.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#DifferentStrands",
+      "#SocialGroups",
+      "#NCERT10"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 2",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 130,
+      "comments": [],
+      "seed_comment": "Great 5-mark answer structure."
+    }
+  },
+  {
+    "id": "sst10_9",
+    "type": "key_point",
+    "title": "The Salt March: 240 Miles from Sabarmati to Dandi",
+    "body": "On 12 March 1930, Mahatma Gandhi accompanied by 78 trusted volunteers began the historic march spanning 240 miles from Sabarmati Ashram to the coastal town of Dandi in Gujarat, walking 10 miles a day for 24 days to manufacture salt and break colonial monopoly.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 380 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"40\" y=\"30\" width=\"300\" height=\"120\" rx=\"12\" fill=\"#0f1e3d\"/><text x=\"190\" y=\"70\" fill=\"#22c55e\" font-size=\"16\" font-weight=\"bold\" text-anchor=\"middle\">Dandi Salt March (1930)</text><text x=\"190\" y=\"100\" fill=\"#ffffff\" font-size=\"12\" text-anchor=\"middle\">240 Miles • 24 Days • 78 Volunteers</text><text x=\"190\" y=\"125\" fill=\"#c8d4ec\" font-size=\"11\" text-anchor=\"middle\">Broke Salt Law on 6 April 1930</text></svg>",
+    "hashtags": [
+      "#DandiMarch",
+      "#SaltLaw",
+      "#CivilDisobedience"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 3.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 185,
+      "comments": [],
+      "seed_comment": "Salt was chosen because rich and poor consumed it equally."
+    }
+  },
+  {
+    "id": "sst10_10",
+    "type": "myth_buster",
+    "title": "Myth: Non-Cooperation and Civil Disobedience Were Identical",
+    "body": "Busted! In Non-Cooperation (1920-22), people were asked ONLY not to cooperate with the British administration. In Civil Disobedience (1930-34), people were asked to actively break colonial laws (like manufacturing salt and refusing chowkidari taxes).",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#MythBuster",
+      "#NCMvsCDM",
+      "#BoardDifference"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 3.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 190,
+      "comments": [],
+      "seed_comment": "Very common 3-mark distinction question!"
+    }
+  },
+  {
+    "id": "sst10_11",
+    "type": "quiz",
+    "title": "Board MCQ: Poona Pact Agreement of 1932",
+    "body": "Test your grasp of agreements between national leaders.",
+    "analogy": "",
+    "quiz": {
+      "question": "The Poona Pact of September 1932 between Mahatma Gandhi and Dr. B.R. Ambedkar resulted in:",
+      "options": [
+        "Reserved seats for Depressed Classes in provincial councils with joint electorates",
+        "Separate electorates for Depressed Classes in all elections",
+        "Declaration of immediate Dominion Status",
+        "Boycott of the Second Round Table Conference"
+      ],
+      "answer": "Reserved seats for Depressed Classes in provincial councils with joint electorates",
+      "explanation": "The Poona Pact gave the Depressed Classes (later Scheduled Castes) reserved seats in provincial and central legislative councils, but they were to be voted in by a joint electorate rather than separate electorates."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#PoonaPact",
+      "#Ambedkar",
+      "#BoardMCQ"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 3.3",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 160,
+      "comments": [],
+      "seed_comment": "Signed at Yerwada Central Jail in Pune."
+    }
+  },
+  {
+    "id": "sst10_12",
+    "type": "key_point",
+    "title": "Cultural Symbols: Bharat Mata & Tricolour Flag",
+    "body": "Nationalism was forged through cultural identity: Bankim Chandra Chattopadhyay wrote 'Vande Mataram' in the 1870s; Abanindranath Tagore painted the iconic visual of Bharat Mata as an ascetic, calm, divine figure dispensing food and cloth.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "<svg viewBox=\"0 0 380 180\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"20\" width=\"320\" height=\"140\" rx=\"10\" fill=\"#f7f9fc\" stroke=\"#1e3a6b\" stroke-width=\"2\"/><text x=\"190\" y=\"55\" fill=\"#1e3a6b\" font-weight=\"bold\" font-size=\"14\" text-anchor=\"middle\">CULTURAL ROOTS OF NATIONALISM</text><text x=\"190\" y=\"85\" fill=\"#0f1e3d\" font-size=\"12\" text-anchor=\"middle\">Vande Mataram by Bankim Chandra</text><text x=\"190\" y=\"110\" fill=\"#0f1e3d\" font-size=\"12\" text-anchor=\"middle\">Bharat Mata painting by Abanindranath Tagore</text><text x=\"190\" y=\"135\" fill=\"#22c55e\" font-size=\"12\" text-anchor=\"middle\">Swaraj Flag with spinning wheel by Gandhiji (1921)</text></svg>",
+    "hashtags": [
+      "#BharatMata",
+      "#VandeMataram",
+      "#SenseOfBelonging"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 4",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 175,
+      "comments": [],
+      "seed_comment": "Reinterpretation of history gave Indians pride in their heritage."
+    }
+  },
+  {
+    "id": "sst10_13",
+    "type": "quiz",
+    "title": "Board MCQ: Lahore Congress Session President",
+    "body": "Historical session where Purna Swaraj was officially proclaimed.",
+    "analogy": "",
+    "quiz": {
+      "question": "Who presided over the historic Lahore Congress session of December 1929 where Purna Swaraj was declared?",
+      "options": [
+        "Jawaharlal Nehru",
+        "Subhas Chandra Bose",
+        "Mahatma Gandhi",
+        "Motilal Nehru"
+      ],
+      "answer": "Jawaharlal Nehru",
+      "explanation": "In December 1929, under the presidency of Jawaharlal Nehru, the Lahore Congress formalized the demand for 'Purna Swaraj' (Full Independence) and celebrated 26 January 1930 as Independence Day."
+    },
+    "diagram": "",
+    "hashtags": [
+      "#PurnaSwaraj",
+      "#LahoreSession",
+      "#JawaharlalNehru"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Section 3.1",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 180,
+      "comments": [],
+      "seed_comment": "This is why 26 January was chosen as Republic Day in 1950!"
+    }
+  },
+  {
+    "id": "sst10_14",
+    "type": "summary",
+    "title": "Nationalism in India Chapter Revision Complete",
+    "body": "You mastered the freedom struggle! Remember: (1) Rowlatt Act & Jallianwala Bagh (1919), (2) Non-Cooperation (1920-22), (3) Simon Commission & Lahore Session (1928-29), (4) Salt March & Civil Disobedience (1930), (5) Poona Pact (1932), (6) Cultural symbols of unity.",
+    "analogy": "",
+    "quiz": null,
+    "diagram": "",
+    "hashtags": [
+      "#NationalismComplete",
+      "#CBSEHistoryTopper",
+      "#StudyRotNotes"
+    ],
+    "source_ref": "NCERT Class 10 History Ch 2 Chapter Summary",
+    "grade": 10,
+    "subject": "SST",
+    "engagement": {
+      "likes": 260,
+      "comments": [],
+      "seed_comment": "Best quick revision for Class 10 board exam!"
+    }
+  }
+]

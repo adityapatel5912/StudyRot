@@ -1,0 +1,17 @@
+{
+  "Science:10:Light \u2014 Reflection and Refraction": "Science_10_light-reflection-refraction.json",
+  "Science:10:Electricity": "Science_10_electricity.json",
+  "Science:8:Force and Pressure": "Science_8_force-and-pressure.json",
+  "Science:8:Sound": "Science_8_sound.json",
+  "Science:12:Electrostatics \u2014 Electric Charges and Fields": "Science_12_electrostatics.json",
+  "Maths:12:Parabola & Conic Sections": "Maths_12_parabola-conic-sections.json",
+  "Maths:10:Trigonometry": "Maths_10_trigonometry.json",
+  "Maths:8:Linear Equations in One Variable": "Maths_8_linear-equations.json",
+  "Maths:10:Real Numbers": "Maths_10_real-numbers.json",
+  "Maths:12:Matrices & Determinants": "Maths_12_matrices.json",
+  "SST:10:Nationalism in India": "SST_10_nationalism-in-india.json",
+  "SST:10:Resources and Development": "SST_10_resources-and-development.json",
+  "SST:8:The Indian Constitution": "SST_8_the-indian-constitution.json",
+  "SST:8:Resources & Land Use": "SST_8_resources.json",
+  "SST:10:Power Sharing": "SST_10_power-sharing.json"
+}
