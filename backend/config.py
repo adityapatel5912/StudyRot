@@ -31,8 +31,6 @@ FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")
 # Primary Keys
 GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "").strip()
 TAVILY_API_KEY: str = os.getenv("TAVILY_API_KEY", "").strip()
-DEMO_GROQ_KEY: str = os.getenv("DEMO_GROQ_KEY", "").strip() or GROQ_API_KEY
-DEMO_TAVILY_KEY: str = os.getenv("DEMO_TAVILY_KEY", "").strip() or TAVILY_API_KEY
 
 # Supabase Keys
 SUPABASE_URL: str = os.getenv("SUPABASE_URL", "").strip()
@@ -47,8 +45,8 @@ GOOGLE_CLIENT_SECRET: str = os.getenv("GOOGLE_CLIENT_SECRET", "").strip()
 def get_keys_present() -> Dict[str, bool]:
     """Returns boolean flags indicating which third-party integration keys are present."""
     return {
-        "groq": bool(GROQ_API_KEY or DEMO_GROQ_KEY),
-        "tavily": bool(TAVILY_API_KEY or DEMO_TAVILY_KEY),
+        "groq": bool(GROQ_API_KEY),
+        "tavily": bool(TAVILY_API_KEY),
         "supabase": bool(SUPABASE_URL and (SUPABASE_ANON_KEY or SUPABASE_SERVICE_ROLE_KEY)),
         "google": bool(GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET),
     }

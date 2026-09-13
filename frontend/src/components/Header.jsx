@@ -35,15 +35,25 @@ export default function Header({ soundEnabled = true, onToggleSound }) {
             )}
           </button>
 
-          {/* Classroom Battle Pill */}
+          {/* Daily Review Link */}
+          <Link
+            to="/review"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold rounded-full bg-blue-50 text-[var(--navy-900)] border border-blue-200 hover:bg-blue-100 transition"
+            title="Daily Spaced Repetition"
+          >
+            <span>📅</span>
+            <span className="hidden sm:inline">Review</span>
+          </Link>
+
+          {/* Solo Battle Pill */}
           <button
             type="button"
-            onClick={() => navigate('/battle/new')}
+            onClick={() => navigate('/battle/solo')}
             className="flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-red-50 text-[var(--red)] border border-red-200 hover:bg-red-100 transition shadow-sm"
-            aria-label="Classroom Battle Arena"
+            aria-label="Solo Battle Arena"
           >
             <Swords className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Classroom Battle</span>
+            <span className="hidden sm:inline">Solo Battle</span>
             <span className="sm:hidden">Battle</span>
           </button>
 

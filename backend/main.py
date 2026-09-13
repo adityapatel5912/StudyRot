@@ -39,13 +39,12 @@ from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 
+import asyncio
 from config import (
     ENVIRONMENT,
     ALLOWED_ORIGINS,
     GROQ_API_KEY,
     TAVILY_API_KEY,
-    DEMO_GROQ_KEY,
-    DEMO_TAVILY_KEY,
     get_keys_present,
     log_key_presence,
 )
@@ -68,7 +67,10 @@ from battle import battle_manager, clean_nickname
 from prompts import STUDYROT_SYSTEM_PROMPT, FEW_SHOT_SVG_EXAMPLES
 from crypto import encrypt_api_key, decrypt_api_key
 from auth import get_current_user_required, get_current_user_optional
-from db import db
+from db import db, shared_feed_store
+from routes.feeds import router as feeds_router
+from routes.review import router as review_router
+from routes.battle import router as battle_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("studyrot.api")
@@ -85,10 +87,27 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(feeds_router)
+app.include_router(review_router)
+app.include_router(battle_router)
+
+
+async def periodic_expiry_cleanup():
+    """Background task running every 6 hours to clean up expired shared feeds."""
+    while True:
+        try:
+            await asyncio.sleep(6 * 3600)
+            await shared_feed_store.cleanup_expired()
+        except asyncio.CancelledError:
+            break
+        except Exception as e:
+            logger.warning("Periodic cleanup error: %s", e)
+
 
 @app.on_event("startup")
 async def startup_event():
     log_key_presence()
+    asyncio.create_task(periodic_expiry_cleanup())
 
 
 @app.exception_handler(RateLimitExceeded)
@@ -110,6 +129,7 @@ async def http_exception_handler(request: Request, exc: HTTPException):
         content={
             "ok": False,
             "error": exc.detail,
+            "detail": exc.detail,
             "code": "HTTP_ERROR"
         }
     )
@@ -126,58 +146,6 @@ async def global_exception_handler(request: Request, exc: Exception):
             "code": "INTERNAL_ERROR"
         }
     )
-
-
-# In-memory demo feed cache with 24-hour TTL: key -> (timestamp, posts)
-_DEMO_FEED_CACHE: Dict[str, tuple[float, List[Dict[str, Any]]]] = {}
-DEMO_CACHE_TTL = 24 * 3600
-
-DEMO_FEEDS_DIR = Path(__file__).resolve().parent / "data" / "demo-feeds"
-
-
-def load_prebaked_feed(subject: str, grade: int, topic: str) -> List[Dict[str, Any]]:
-    """Loads pre-baked fallback feed from disk matching subject/grade/topic."""
-    search_terms = f"{subject} {grade} {topic}".lower()
-    
-    mapping = {
-        "light": "science-10-light.json",
-        "optics": "science-10-light.json",
-        "elec": "science-10-electricity.json",
-        "parabola": "maths-12-parabola.json",
-        "conic": "maths-12-parabola.json",
-        "trig": "maths-10-trigonometry.json",
-        "national": "sst-10-nationalism-in-india.json",
-        "dandi": "sst-10-nationalism-in-india.json",
-        "resource": "sst-10-resources-and-development.json",
-        "land": "sst-10-resources-and-development.json",
-    }
-
-    chosen_file = "science-10-light.json"
-    for keyword, filename in mapping.items():
-        if keyword in search_terms:
-            chosen_file = filename
-            break
-
-    target_path = DEMO_FEEDS_DIR / chosen_file
-    if target_path.exists():
-        try:
-            with open(target_path, "r", encoding="utf-8") as f:
-                d = json.load(f)
-                return d.get("posts", d) if isinstance(d, dict) else d
-        except Exception as e:
-            logger.warning("Failed to read pre-baked feed file %s: %s", target_path, e)
-
-    # Fallback to any json file in DEMO_FEEDS_DIR
-    if DEMO_FEEDS_DIR.exists():
-        for json_file in DEMO_FEEDS_DIR.glob("*.json"):
-            try:
-                with open(json_file, "r", encoding="utf-8") as f:
-                    d = json.load(f)
-                    return d.get("posts", d) if isinstance(d, dict) else d
-            except Exception:
-                continue
-
-    return []
 
 
 # ==========================================
@@ -206,29 +174,26 @@ async def list_research_topics():
 
 
 @app.post("/api/demo-generate")
-@limiter.limit("10/hour")
+@limiter.limit("3/hour")
 async def demo_generate(request: Request, body: DemoGenerateRequest):
     """
-    Demo Feed generation with 10 req/hour limit, 24-hr caching,
-    and graceful fallback to pre-baked JSON if offline or API keys absent.
+    Guest feed generation with strict 3 req/hour per IP limit.
+    Only generates genuine live content using Groq and NCERT context.
+    Never falls back to pre-baked demo JSONs.
     """
     topic_query = (body.topic or body.text or "Light — Reflection and Refraction").strip()
-    cache_key = f"{body.subject}:{body.grade}:{topic_query.lower()[:60]}:{body.vibe}"
-    now = time.time()
+    groq_key = GROQ_API_KEY
+    tavily_key = TAVILY_API_KEY
 
-    # Check 24-hour cache
-    if cache_key in _DEMO_FEED_CACHE:
-        ts, cached_posts = _DEMO_FEED_CACHE[cache_key]
-        if now - ts < DEMO_CACHE_TTL:
-            return {"ok": True, "data": {"posts": cached_posts, "demo_mode": True, "cached": True}}
-
-    groq_key = DEMO_GROQ_KEY or GROQ_API_KEY
-    tavily_key = DEMO_TAVILY_KEY or TAVILY_API_KEY
-
-    # If Groq key is absent or empty, fall back directly to pre-baked feed
     if not groq_key:
-        prebaked = load_prebaked_feed(body.subject, body.grade, topic_query)
-        return {"ok": True, "data": {"posts": prebaked, "demo_mode": True, "grounded": True, "fallback": True}}
+        return JSONResponse(
+            status_code=500,
+            content={
+                "ok": False,
+                "error": "Generation failed. Try again.",
+                "code": "GENERATION_FAILED"
+            }
+        )
 
     # Check verified NCERT archive first
     verified_ctx, is_verified = get_verified_ncert_context(body.subject, body.grade, topic_query)
@@ -257,27 +222,51 @@ async def demo_generate(request: Request, body: DemoGenerateRequest):
             grade=body.grade,
             topic_summary=topic_query[:100]
         )
-        _DEMO_FEED_CACHE[cache_key] = (now, posts)
-        return {"ok": True, "data": {"posts": posts, "demo_mode": True, "grounded": grounded}}
+        # Auto-persist generated feed
+        client_ip = request.client.host if request.client else "127.0.0.1"
+        shared_res = await shared_feed_store.create(
+            subject=body.subject,
+            grade=body.grade,
+            topic=topic_query,
+            vibe=body.vibe,
+            posts=posts,
+            ip=client_ip,
+        )
+        return {
+            "ok": True,
+            "data": {
+                "posts": shared_res["posts"],
+                "feed_code": shared_res["short_code"],
+                "feed_url": shared_res["feed_url"],
+                "grounded": grounded,
+            }
+        }
     except Exception as e:
-        logger.error("Demo generation failed: %s; falling back to pre-baked feed", e)
-        prebaked = load_prebaked_feed(body.subject, body.grade, topic_query)
-        return {"ok": True, "data": {"posts": prebaked, "demo_mode": True, "grounded": True, "fallback": True}}
+        logger.error("Live generation failed: %s", e)
+        return JSONResponse(
+            status_code=500,
+            content={
+                "ok": False,
+                "error": "Generation failed. Try again.",
+                "code": "GENERATION_FAILED"
+            }
+        )
 
 
 @app.post("/api/generate")
 @limiter.limit("20/hour")
 async def generate_feed(request: Request, body: GenerateRequest):
     """
-    Standard generation endpoint requiring BYO Groq Key or fallback to configured keys.
+    Standard generation endpoint requiring BYO Groq Key or fallback to server key.
+    Auto-saves feed and returns short code + deep link.
     """
-    user_groq = (body.groq_key or "").strip()
+    user_groq = (body.groq_key or "").strip() or GROQ_API_KEY
     if not user_groq or user_groq.upper() == "DEMO":
         return JSONResponse(
             status_code=400,
             content={
                 "ok": False,
-                "error": "Groq API Key is required for custom generation. Use /api/demo-generate for demo topics.",
+                "error": "Groq API Key is required for generation. Please provide a key in Settings.",
                 "code": "KEY_REQUIRED"
             }
         )
@@ -312,7 +301,24 @@ async def generate_feed(request: Request, body: GenerateRequest):
             grade=body.grade,
             topic_summary=body.text[:100]
         )
-        return {"ok": True, "data": {"posts": posts, "grounded": grounded}}
+        client_ip = request.client.host if request.client else "127.0.0.1"
+        shared_res = await shared_feed_store.create(
+            subject=body.subject,
+            grade=body.grade,
+            topic=body.text[:100],
+            vibe=body.vibe,
+            posts=posts,
+            ip=client_ip,
+        )
+        return {
+            "ok": True,
+            "data": {
+                "posts": shared_res["posts"],
+                "feed_code": shared_res["short_code"],
+                "feed_url": shared_res["feed_url"],
+                "grounded": grounded,
+            }
+        }
     except Exception as e:
         logger.error("Failed to generate feed: %s", e)
         return JSONResponse(
@@ -332,7 +338,7 @@ async def upload_document(
     subject: str = Form("Science"),
     grade: int = Form(10),
 ):
-    """Uploads document (txt/pdf/docx) and parses it into StudyRot feed."""
+    """Uploads document (txt/pdf/docx), parses it into StudyRot feed, and auto-saves share link."""
     effective_groq = groq_key.strip() or GROQ_API_KEY
     if not effective_groq:
         return JSONResponse(
@@ -390,7 +396,24 @@ async def upload_document(
             grade=grade,
             topic_summary=clean_text[:100]
         )
-        return {"ok": True, "data": {"posts": posts, "chars": len(clean_text)}}
+        client_ip = request.client.host if request.client else "127.0.0.1"
+        shared_res = await shared_feed_store.create(
+            subject=subject,
+            grade=grade,
+            topic=clean_text[:80],
+            vibe=vibe,
+            posts=posts,
+            ip=client_ip,
+        )
+        return {
+            "ok": True,
+            "data": {
+                "posts": shared_res["posts"],
+                "feed_code": shared_res["short_code"],
+                "feed_url": shared_res["feed_url"],
+                "chars": len(clean_text),
+            }
+        }
     except Exception as e:
         return JSONResponse(
             status_code=500,
@@ -685,8 +708,6 @@ if _frontend_dist:
         app.mount("/assets", StaticFiles(directory=str(_frontend_dist / "assets")), name="spa_assets")
     if (_frontend_dist / "sounds").exists():
         app.mount("/sounds", StaticFiles(directory=str(_frontend_dist / "sounds")), name="spa_sounds")
-    if (_frontend_dist / "demo-feeds").exists():
-        app.mount("/demo-feeds", StaticFiles(directory=str(_frontend_dist / "demo-feeds")), name="spa_demo_feeds")
 
     @app.get("/{full_path:path}")
     async def serve_spa_frontend(full_path: str):

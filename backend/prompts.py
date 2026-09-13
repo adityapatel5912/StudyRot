@@ -80,9 +80,8 @@ OUTPUT SCHEMA
       "grade": 10,
       "subject": "Science | Maths | SST",
       "engagement": {
-        "likes": 24,
-        "comments": [],
-        "seed_comment": "string, a plausible student question for demo comments"
+        "likes": 0,
+        "comments": []
       }
     }
   ]

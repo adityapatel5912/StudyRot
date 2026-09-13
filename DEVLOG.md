@@ -69,3 +69,41 @@ This document chronicles the design decisions, architectural pivots, and bug res
    - **Result**: 1,759 modules transformed, KaTeX fonts packaged, 0 syntax or bundling errors.
 3. **Smoke Testing**:
    - Authored `scripts/smoke.sh` and `scripts/smoke.ps1` for rapid endpoint validation against staging and local servers.
+
+---
+
+## Phase 5: Real User Data Only, Deep Link Sharing, FSRS-6 & Solo Battles
+
+### 1. Real User Data Only & Zero Dummy Data
+- **Problem**: Demo mode previously relied on pre-baked feed files in `backend/data/demo-feeds/` and `frontend/public/demo-feeds/`, hardcoded `likes: 24`, and AI-seeded "StudyBuddy" comments.
+- **Solution**:
+  - Deleted `backend/data/demo-feeds/` and `frontend/public/demo-feeds/` completely.
+  - Eliminated `likes: 24` across all schemas; initial likes strictly start at 0.
+  - Cleaned comment sheet; comments start empty with prompt: *"No comments yet. Be the first."*
+  - Re-labeled all bot opponents with explicit `Bot ` prefixes (e.g. `Bot Aditya`, `Bot Priya`, `Bot Rohan`) and a distinct 🤖 BOT badge so students always recognize simulated practice opponents.
+  - Built `SandboxProvider` for ephemeral state isolation across Feed, Review, and Solo Battle demos so guest testing never pollutes user account databases.
+  - Created a 5-step guided interactive tour with spotlight and explicit demo card labeling (`"DEMO POST — your own feed will look like this"`).
+
+### 2. Working Share & Card-Level Deep Links
+- **Short Code Engine**: Developed `utils/codes.py` generating 6-character short codes omitting ambiguous characters (`O, 0, I, 1`).
+- **Auto-Persistence**: `/api/generate`, `/api/demo-generate`, and `/api/upload` automatically persist feeds with 30-day expiry.
+- **Card-Level Routing**: Added `/s/:shortCode/:index` route, scrolling directly to the targeted card with an arriving glowing indicator ring.
+- **Safety**: Banned words content moderation, SVG script stripping, and guest rate-limiting (3/hour guest, 20/hour authenticated).
+- **Store Resilience**: Implemented `SupabaseSharedFeedStore` with transparent graceful fallback to `InMemorySharedFeedStore` (24h TTL, periodic cleanup) if the remote database table is unmigrated.
+
+### 3. Exam-Date-Aware Spaced Repetition (FSRS-6)
+- **FSRS-6 Math Engine**: Pure-Python implementation of the state-of-the-art Free Spaced Repetition Scheduler formula $R(t, S) = (1 + \frac{1}{9}\frac{t}{S})^{-1}$.
+- **Priority Queue**: Priority queue sorting by marginal retrievability gain $\Delta R = R_{\text{after}} - R(t)$, prioritizing concepts whose review yields the highest exam-day retention.
+- **Exam Mode & Cutoffs**: Calculates cutoff date after which new concept acquisition will decay below 70% before the board exam.
+- **Weakness Diagnostic**: Categorizes mistakes into Formula Confusion, Sign Convention, Conceptual Misapplication, or Careless Reading, producing an automated remediation report after 10+ wrong answers.
+
+### 4. Single-Player Solo Battle vs AI Bots
+- **Speed Scoring**: Implemented $\text{Score} = 1000 - (\frac{\text{time\_ms}}{15000}) \times 500$ for correct answers.
+- **Realistic Bot Simulation**: Easy (55%), Medium (75%), and Hard (90%) difficulty profiles with realistic answer latencies.
+- **Staggered Reveals & Commentary**: Bot reveals stagger across 15 seconds, live standings update in real-time with streak badges and reactions (🔥/💀), leading to a podium ceremony.
+
+### 5. Comprehensive Verification
+- **Pytest Suite Expanded**: Built 4 new test suites (`test_no_dummy_data.py`, `test_share.py`, `test_review.py`, `test_solo_battle.py`). Total: **33/33 passing (100%)**.
+- **Playwright E2E Browser Testing**: Built and verified `scratch/test_e2e_browser.py` executing 6 end-to-end user journeys (Home empty states, guided tour, sandbox feed, solo battle arena, spaced repetition review, and 404 shared feeds).
+- **Production Build**: Verified bundle size (249 kB gzipped JS, well under the 500 kB budget).
+

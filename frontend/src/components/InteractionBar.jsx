@@ -10,15 +10,18 @@ export default function InteractionBar({
   onOpenComments,
   onSaveChange,
   isSaved = false,
+  feedCode = '',
+  postIndex = 0,
+  isSandbox = false,
 }) {
   const activePost = post || postData || {};
   const postId = propPostId || activePost.id || `p_${Math.abs(hashString((postTitle || activePost.title || '') + (activePost.body || '')))}`;
-  
-  const initialLikes = propInitialLikes ?? (activePost.engagement && activePost.engagement.likes) ?? 24;
+
+  const initialLikes = propInitialLikes ?? (activePost.engagement && activePost.engagement.likes) ?? 0;
   const [likes, setLikes] = useState(initialLikes);
   const [hasLiked, setHasLiked] = useState(false);
   const [saved, setSaved] = useState(isSaved);
-  const [copiedToast, setCopiedToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
   const [bouncing, setBouncing] = useState(false);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ export default function InteractionBar({
       const likedPosts = JSON.parse(localStorage.getItem('studyrot_liked_posts') || '{}');
       if (likedPosts[postId]) {
         setHasLiked(true);
-        setLikes(initialLikes + 1);
+        setLikes((prev) => Math.max(prev, initialLikes + 1));
       }
       const rawSaved = localStorage.getItem('studyrot_saved_posts');
       let savedPosts = [];
@@ -41,6 +44,11 @@ export default function InteractionBar({
     } catch {}
   }, [postId, initialLikes, post?.title, post?.body]);
 
+  const showToast = (msg) => {
+    setToastMessage(msg);
+    setTimeout(() => setToastMessage(''), 2200);
+  };
+
   const toggleLike = (e) => {
     e.stopPropagation();
     setBouncing(true);
@@ -48,18 +56,20 @@ export default function InteractionBar({
 
     const nextLiked = !hasLiked;
     setHasLiked(nextLiked);
-    const newLikes = nextLiked ? likes + 1 : Math.max(initialLikes, likes - 1);
+    const newLikes = nextLiked ? likes + 1 : Math.max(0, likes - 1);
     setLikes(newLikes);
 
-    try {
-      const likedPosts = JSON.parse(localStorage.getItem('studyrot_liked_posts') || '{}');
-      if (nextLiked) {
-        likedPosts[postId] = true;
-      } else {
-        delete likedPosts[postId];
-      }
-      localStorage.setItem('studyrot_liked_posts', JSON.stringify(likedPosts));
-    } catch {}
+    if (!isSandbox) {
+      try {
+        const likedPosts = JSON.parse(localStorage.getItem('studyrot_liked_posts') || '{}');
+        if (nextLiked) {
+          likedPosts[postId] = true;
+        } else {
+          delete likedPosts[postId];
+        }
+        localStorage.setItem('studyrot_liked_posts', JSON.stringify(likedPosts));
+      } catch {}
+    }
   };
 
   const toggleSave = (e) => {
@@ -67,64 +77,77 @@ export default function InteractionBar({
     const nextSaved = !saved;
     setSaved(nextSaved);
 
-    try {
-      let savedPosts = [];
+    if (!isSandbox) {
       try {
-        const parsed = JSON.parse(localStorage.getItem('studyrot_saved_posts') || '[]');
-        savedPosts = Array.isArray(parsed) ? parsed : [];
-      } catch {
-        savedPosts = [];
-      }
+        let savedPosts = [];
+        try {
+          const parsed = JSON.parse(localStorage.getItem('studyrot_saved_posts') || '[]');
+          savedPosts = Array.isArray(parsed) ? parsed : [];
+        } catch {
+          savedPosts = [];
+        }
 
-      if (nextSaved) {
-        const postToSave = { ...activePost, id: postId, savedAt: new Date().toISOString() };
-        savedPosts = [postToSave, ...savedPosts.filter((p) => p && typeof p === 'object' && p.id !== postId)];
-      } else {
-        savedPosts = savedPosts.filter((p) => p && typeof p === 'object' && p.id !== postId && p.title !== activePost?.title);
-      }
-      localStorage.setItem('studyrot_saved_posts', JSON.stringify(savedPosts));
-      if (onSaveChange) {
-        onSaveChange(nextSaved);
-      }
-    } catch {}
+        if (nextSaved) {
+          const postToSave = { ...activePost, id: postId, savedAt: new Date().toISOString() };
+          savedPosts = [postToSave, ...savedPosts.filter((p) => p && typeof p === 'object' && p.id !== postId)];
+        } else {
+          savedPosts = savedPosts.filter((p) => p && typeof p === 'object' && p.id !== postId && p.title !== activePost?.title);
+        }
+        localStorage.setItem('studyrot_saved_posts', JSON.stringify(savedPosts));
+        if (onSaveChange) {
+          onSaveChange(nextSaved);
+        }
+      } catch {}
+    }
+  };
+
+  const fallbackCopy = (url) => {
+    navigator.clipboard.writeText(url).then(() => {
+      showToast('Link copied to clipboard');
+    }).catch(() => {
+      showToast('Could not copy link');
+    });
   };
 
   const handleShare = async (e) => {
     e.stopPropagation();
-    const shareUrl = `${window.location.origin}?post=${postId}`;
-    const shareTitle = `StudyRot: ${activePost.title || 'CBSE Study Card'}`;
-    const shareText = `Check out this CBSE Class ${activePost.grade || 10} ${activePost.subject || 'NCERT'} card on StudyRot!`;
+
+    if (isSandbox) {
+      showToast('Generate your own feed to share');
+      return;
+    }
+
+    const effectiveCode = feedCode || (postId.includes('-') ? postId.split('-')[0] : '');
+    const url = effectiveCode
+      ? `${window.location.origin}/s/${effectiveCode}/${postIndex}`
+      : window.location.href;
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: shareTitle,
-          text: shareText,
-          url: shareUrl,
+          title: activePost.title || 'StudyRot',
+          text: `${activePost.title || 'CBSE Study Card'} — StudyRot`,
+          url,
         });
-        return;
-      } catch (err) {}
-    }
-
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      setCopiedToast(true);
-      setTimeout(() => setCopiedToast(false), 2000);
-    } catch {
-      alert(`Card link: ${shareUrl}`);
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          fallbackCopy(url);
+        }
+      }
+    } else {
+      fallbackCopy(url);
     }
   };
 
   const commentsCount =
     initialCommentsCount ||
-    ((activePost.engagement && activePost.engagement.comments ? activePost.engagement.comments.length : 0) +
-     (activePost.engagement && activePost.engagement.seed_comment ? 1 : 3));
+    (activePost.engagement && activePost.engagement.comments ? activePost.engagement.comments.length : 0);
 
   return (
     <div className="relative pt-3 mt-4 border-t border-[var(--border)] flex items-center justify-between text-xs text-[var(--navy-600)] select-none">
-      {copiedToast && (
-        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-[var(--navy-900)] text-white text-xs px-3 py-1.5 rounded-full shadow-lg font-semibold animate-in fade-in zoom-in-95 z-30">
-          ✓ Link copied to clipboard!
+      {toastMessage && (
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-[var(--navy-900)] text-white text-xs px-3 py-1.5 rounded-full shadow-lg font-semibold animate-in fade-in zoom-in-95 z-30 whitespace-nowrap">
+          {toastMessage}
         </div>
       )}
 
@@ -180,7 +203,7 @@ export default function InteractionBar({
         id={`share-btn-${postId}`}
         onClick={handleShare}
         className="min-w-[44px] min-h-[44px] px-2 py-1.5 rounded-xl flex items-center gap-1.5 font-semibold text-[var(--navy-600)] hover:bg-[var(--off-white)] hover:text-[var(--navy-900)] transition"
-        title="Share card"
+        title={isSandbox ? "Generate your own feed to share" : "Share card"}
       >
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path

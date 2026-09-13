@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthProvider.jsx';
+import { AuthProvider, useAuth } from './contexts/AuthProvider.jsx';
 import { ToastProvider } from './contexts/ToastProvider.jsx';
+import { SandboxProvider } from './contexts/SandboxProvider.jsx';
+import { ReviewProvider } from './contexts/ReviewProvider.jsx';
 import Header from './components/Header.jsx';
 import Home from './pages/Home.jsx';
 import Battle from './pages/Battle.jsx';
+import SoloBattle from './pages/SoloBattle.jsx';
+import Review from './pages/Review.jsx';
+import SharedFeed from './pages/SharedFeed.jsx';
 import Saved from './pages/Saved.jsx';
 import Keys from './pages/Keys.jsx';
 
-export default function App() {
+function AppContent() {
+  const { user, signInWithGoogle } = useAuth();
   const [soundEnabled, setSoundEnabled] = useState(() => {
     try {
       const saved = localStorage.getItem('studyrot_sound_enabled');
@@ -35,51 +41,97 @@ export default function App() {
   };
 
   return (
+    <div className="min-h-screen flex flex-col bg-[var(--off-white)] text-[var(--navy-900)]">
+      {/* Guest Mode Banner (Hidden when signed in) */}
+      {!user && (
+        <div className="w-full bg-slate-800 text-slate-200 px-4 py-1.5 text-center text-[11px] font-medium flex items-center justify-center gap-2">
+          <span>Demo Mode — Free access.</span>
+          <button
+            type="button"
+            onClick={signInWithGoogle}
+            className="underline text-white font-bold hover:text-amber-300"
+          >
+            Sign in to save your progress
+          </button>
+        </div>
+      )}
+
+      <Header
+        soundEnabled={soundEnabled}
+        onToggleSound={handleToggleSound}
+      />
+      <main className="flex-1">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                soundEnabled={soundEnabled}
+                activePosts={activePosts}
+                setActivePosts={setActivePosts}
+              />
+            }
+          />
+          {/* Deep link shared feeds */}
+          <Route
+            path="/s/:shortCode"
+            element={<SharedFeed soundEnabled={soundEnabled} />}
+          />
+          <Route
+            path="/s/:shortCode/:index"
+            element={<SharedFeed soundEnabled={soundEnabled} />}
+          />
+
+          {/* Battles: Classroom & Solo vs Bots */}
+          <Route
+            path="/battle"
+            element={<Battle soundEnabled={soundEnabled} />}
+          />
+          <Route
+            path="/battle/solo"
+            element={<SoloBattle soundEnabled={soundEnabled} />}
+          />
+          <Route
+            path="/battle/:code"
+            element={<Battle soundEnabled={soundEnabled} />}
+          />
+
+          {/* Exam-Date Spaced Repetition Review */}
+          <Route
+            path="/review"
+            element={<Review />}
+          />
+
+          <Route
+            path="/saved"
+            element={<Saved onSelectFeed={handleSelectSavedFeed} />}
+          />
+          <Route
+            path="/keys"
+            element={<Keys />}
+          />
+          <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+          />
+        </Routes>
+      </main>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
     <AuthProvider>
-      <ToastProvider>
-        <Router>
-          <div className="min-h-screen flex flex-col bg-[var(--off-white)] text-[var(--navy-900)]">
-            <Header
-              soundEnabled={soundEnabled}
-              onToggleSound={handleToggleSound}
-            />
-            <main className="flex-1">
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <Home
-                      soundEnabled={soundEnabled}
-                      activePosts={activePosts}
-                      setActivePosts={setActivePosts}
-                    />
-                  }
-                />
-                <Route
-                  path="/battle"
-                  element={<Battle soundEnabled={soundEnabled} />}
-                />
-                <Route
-                  path="/battle/:code"
-                  element={<Battle soundEnabled={soundEnabled} />}
-                />
-                <Route
-                  path="/saved"
-                  element={<Saved onSelectFeed={handleSelectSavedFeed} />}
-                />
-                <Route
-                  path="/keys"
-                  element={<Keys />}
-                />
-                <Route
-                  path="*"
-                  element={<Navigate to="/" replace />}
-                />
-              </Routes>
-            </main>
-          </div>
-        </Router>
-      </ToastProvider>
+      <ReviewProvider>
+        <SandboxProvider>
+          <ToastProvider>
+            <Router>
+              <AppContent />
+            </Router>
+          </ToastProvider>
+        </SandboxProvider>
+      </ReviewProvider>
     </AuthProvider>
   );
 }

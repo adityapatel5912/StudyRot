@@ -120,20 +120,43 @@ def test_post_schema_validation():
 
 
 # 5. Error Envelopes & Rate Limiting Checks
-def test_generate_missing_key_error_envelope():
+def test_generate_missing_key_error_envelope(monkeypatch):
+    monkeypatch.setattr("main.GROQ_API_KEY", "")
     res = client.post("/api/generate", json={
         "groq_key": "",
         "text": "Photosynthesis",
         "subject": "Science",
         "grade": 10
     })
-    # If GROQ_API_KEY is present in env, it generates; if absent, returns 400 KEY_REQUIRED
-    assert res.status_code in [200, 400]
+    # With GROQ_API_KEY patched to empty, returns 400 KEY_REQUIRED
+    assert res.status_code == 400
     data = res.json()
-    assert "ok" in data
+    assert data["ok"] is False
+    assert data["code"] == "KEY_REQUIRED"
 
 
-def test_demo_generate_endpoint():
+def test_demo_generate_endpoint(monkeypatch):
+    dummy_posts = [
+        {
+            "id": f"post-{i}",
+            "type": "key_point",
+            "title": f"Key Point {i}",
+            "body": f"Explanation for key point {i}",
+            "analogy": "Analogy",
+            "diagram": "",
+            "hashtags": ["#Science"],
+            "source_ref": "NCERT Class 10",
+            "grade": 10,
+            "subject": "Science",
+            "engagement": {"likes": 0, "comments": []}
+        }
+        for i in range(10)
+    ]
+    async def mock_generate(*args, **kwargs):
+        return dummy_posts
+
+    monkeypatch.setattr("main.generate_hardened_feed", mock_generate)
+
     res = client.post("/api/demo-generate", json={
         "text": "Light — Reflection and Refraction",
         "subject": "Science",
@@ -143,11 +166,13 @@ def test_demo_generate_endpoint():
     data = res.json()
     assert data["ok"] is True
     assert "posts" in data["data"]
-    assert len(data["data"]["posts"]) >= 14
+    assert len(data["data"]["posts"]) >= 8
     first_post = data["data"]["posts"][0]
     assert "title" in first_post
     assert "body" in first_post
     assert "source_ref" in first_post
+    assert "feed_code" in data["data"]
+    assert "feed_url" in data["data"]
 
 
 # 6. AES-256-GCM Cryptographic Tests

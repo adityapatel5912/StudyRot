@@ -12,16 +12,30 @@ export default function SnapFeed({
   soundEnabled = true,
   onReset,
   onStartBattle,
-  feedMeta = {}
+  feedMeta = {},
+  initialIndex = 0,
+  feedCode = '',
+  isSandbox = false,
 }) {
   const { token } = useAuth();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
   const [activeCommentPost, setActiveCommentPost] = useState(null);
   const [savedFeedSuccess, setSavedFeedSuccess] = useState(false);
   const [savingFeed, setSavingFeed] = useState(false);
 
   const containerRef = useRef(null);
   const cardRefs = useRef([]);
+
+  useEffect(() => {
+    if (initialIndex > 0 && containerRef.current) {
+      const target = cardRefs.current[initialIndex];
+      if (target) {
+        target.scrollIntoView({ behavior: 'instant' });
+        target.classList.add('post-arrived');
+        setTimeout(() => target.classList.remove('post-arrived'), 1800);
+      }
+    }
+  }, [initialIndex]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -215,9 +229,12 @@ export default function SnapFeed({
               {isNearViewport ? (
                 <PostCard
                   post={post}
+                  index={idx}
                   timerSeconds={timerSeconds}
                   soundEnabled={soundEnabled}
                   onOpenComments={(p) => setActiveCommentPost(p)}
+                  feedCode={feedCode}
+                  isSandbox={isSandbox}
                 />
               ) : (
                 <div

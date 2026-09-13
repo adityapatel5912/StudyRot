@@ -9,29 +9,10 @@ export default function CommentSheet({ post, onClose }) {
     if (!post) return;
     try {
       const stored = JSON.parse(localStorage.getItem(`studyrot_comments_${postId}`) || '[]');
-      if (stored.length > 0) {
-        setComments(stored);
-      } else {
-        const defaultComments = [
-          {
-            id: 'c1',
-            author: 'Ananya (Delhi)',
-            text: post.engagement?.seed_comment || 'Is this concept frequently asked as a 3-mark question in Boards?',
-            time: '2h ago',
-            likes: 4,
-          },
-          {
-            id: 'c2',
-            author: 'StudyBuddy AI',
-            text: 'Yes! Focus on drawing the labeled diagram carefully with proper arrows for full marks according to CBSE marking scheme.',
-            time: '1h ago',
-            likes: 7,
-            isAi: true,
-          },
-        ];
-        setComments(defaultComments);
-      }
-    } catch {}
+      setComments(stored);
+    } catch {
+      setComments([]);
+    }
   }, [post, postId]);
 
   const handleAddComment = (e) => {
@@ -43,13 +24,26 @@ export default function CommentSheet({ post, onClose }) {
       author: 'You (Student)',
       text: commentText.trim(),
       time: 'Just now',
-      likes: 1,
+      likes: 0,
     };
 
     const updated = [...comments, newComment];
     setComments(updated);
     setCommentText('');
 
+    try {
+      localStorage.setItem(`studyrot_comments_${postId}`, JSON.stringify(updated));
+    } catch {}
+  };
+
+  const handleLikeComment = (commentId) => {
+    const updated = comments.map((c) => {
+      if (c.id === commentId) {
+        return { ...c, likes: (c.likes || 0) + 1 };
+      }
+      return c;
+    });
+    setComments(updated);
     try {
       localStorage.setItem(`studyrot_comments_${postId}`, JSON.stringify(updated));
     } catch {}
@@ -87,26 +81,42 @@ export default function CommentSheet({ post, onClose }) {
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-3.5">
-          {comments.map((c) => (
-            <div
-              key={c.id}
-              className={`p-3 rounded-xl border text-xs leading-relaxed ${
-                c.isAi
-                  ? 'bg-[#f0f4fc] border-[#c8d4ec] text-[var(--navy-900)]'
-                  : 'bg-[var(--white)] border-[var(--border)] text-[var(--navy-800)]'
-              }`}
-            >
-              <div className="flex items-center justify-between mb-1">
-                <span className="font-bold flex items-center gap-1.5">
-                  {c.isAi && <span className="text-[10px] bg-[var(--navy-900)] text-white px-1.5 py-0.2 rounded">Tutor</span>}
-                  <span>{c.author}</span>
-                </span>
-                <span className="text-[10px] text-[var(--navy-400)]">{c.time}</span>
-              </div>
-              <p className="text-[12px]">{c.text}</p>
+        <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-3.5 min-h-[160px]">
+          {comments.length === 0 ? (
+            <div className="py-12 flex flex-col items-center justify-center text-center">
+              <span className="text-3xl mb-2 opacity-60">💬</span>
+              <p className="text-xs font-semibold text-[var(--navy-800)]">
+                No comments yet. Be the first.
+              </p>
+              <p className="text-[11px] text-[var(--navy-400)] mt-1">
+                Ask a clarifying doubt or leave an exam tip for others.
+              </p>
             </div>
-          ))}
+          ) : (
+            comments.map((c) => (
+              <div
+                key={c.id}
+                className="p-3 rounded-xl border text-xs leading-relaxed bg-[var(--white)] border-[var(--border)] text-[var(--navy-800)]"
+              >
+                <div className="flex items-center justify-between mb-1">
+                  <span className="font-bold flex items-center gap-1.5">
+                    <span>{c.author}</span>
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-[var(--navy-400)]">{c.time}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleLikeComment(c.id)}
+                      className="text-[10px] text-[var(--navy-600)] hover:text-red-500 flex items-center gap-0.5"
+                    >
+                      ❤️ {c.likes > 0 ? c.likes : ''}
+                    </button>
+                  </div>
+                </div>
+                <p className="text-[12px]">{c.text}</p>
+              </div>
+            ))
+          )}
         </div>
 
         <form onSubmit={handleAddComment} className="p-3.5 border-t border-[var(--border)] bg-[var(--white)] flex items-center gap-2">

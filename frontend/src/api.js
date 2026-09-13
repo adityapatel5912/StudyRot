@@ -2,18 +2,18 @@
  * StudyRot API client
  * Communicates with backend endpoints:
  * - POST /api/generate (BYO key JSON)
- * - POST /api/demo-generate (Demo Mode rate-limited)
+ * - POST /api/demo-generate (Guest rate-limited live generation)
  * - POST /api/upload (multipart)
+ * - POST /api/feeds/share
+ * - GET  /api/feeds/shared/{code}
  */
-
-import { SAMPLE_FEEDS } from './sampleData.js';
 
 const DEFAULT_LOCAL_BACKEND = 'http://localhost:8000';
 
 function getBackendCandidates() {
   const customUrl = (typeof window !== 'undefined' && window.__STUDYROT_API_URL__) || import.meta.env.VITE_API_URL || '';
   if (customUrl) return [customUrl.replace(/\/$/, ''), ''];
-  
+
   if (typeof window !== 'undefined') {
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
       return ['', DEFAULT_LOCAL_BACKEND];
@@ -36,7 +36,9 @@ async function requestWithFallback(path, options) {
       }
       const errorJson = await response.json().catch(() => null);
       const detail = errorJson?.detail || errorJson?.error || `Server returned ${response.status}: ${response.statusText}`;
-      throw new Error(detail);
+      const err = new Error(detail);
+      err.code = errorJson?.code;
+      throw err;
     } catch (err) {
       lastError = err;
       console.warn(`Attempt to fetch ${fullUrl} failed:`, err.message);
@@ -53,7 +55,7 @@ async function requestWithFallback(path, options) {
  * Generate feed posts from text/topic
  */
 export async function generateFromText({
-  groq_key,
+  groq_key = '',
   tavily_key = '',
   text,
   vibe = 'Instagram',
@@ -63,69 +65,41 @@ export async function generateFromText({
   isDemoMode = false,
   token = '',
 }) {
-  if (isDemoMode || !groq_key) {
-    try {
-      const demoRes = await requestWithFallback('/api/demo-generate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token || 'guest'}`,
-        },
-        body: JSON.stringify({
-          text,
-          vibe,
-          is_topic,
-          subject,
-          grade: Number(grade),
-        }),
-      });
-      const posts = demoRes?.data?.posts || demoRes?.posts;
-      if (Array.isArray(posts) && posts.length > 0) {
-        return { posts };
-      }
-    } catch (demoErr) {
-      console.warn('Demo generation API fallback:', demoErr.message);
-      const lower = (text || '').toLowerCase();
-      if (lower.includes('electric') || lower.includes('circuit') || lower.includes('ohm')) {
-        return { posts: SAMPLE_FEEDS.electricity_10?.posts || SAMPLE_FEEDS.science_10.posts };
-      }
-      if (lower.includes('light') || lower.includes('refraction') || subject === 'Science') {
-        return { posts: SAMPLE_FEEDS.science_10.posts };
-      }
-      if (lower.includes('parabola') || lower.includes('conic') || subject === 'Maths') {
-        return { posts: SAMPLE_FEEDS.maths_12.posts };
-      }
-      if (lower.includes('national') || lower.includes('history') || subject === 'SST') {
-        return { posts: SAMPLE_FEEDS.sst_10.posts };
-      }
-      return { posts: SAMPLE_FEEDS.science_10.posts };
-    }
-  }
+  const endpoint = (!groq_key || isDemoMode) ? '/api/demo-generate' : '/api/generate';
+  const payload = {
+    groq_key,
+    tavily_key,
+    text,
+    topic: text,
+    vibe,
+    is_topic,
+    subject,
+    grade: Number(grade),
+  };
 
-  const res = await requestWithFallback('/api/generate', {
+  const res = await requestWithFallback(endpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token || 'guest'}`,
     },
-    body: JSON.stringify({
-      groq_key,
-      tavily_key,
-      text,
-      vibe,
-      is_topic,
-      subject,
-      grade: Number(grade),
-    }),
+    body: JSON.stringify(payload),
   });
-  return { posts: res?.data?.posts || res?.posts || [] };
+
+  const d = res?.data || res;
+  return {
+    posts: d?.posts || [],
+    feed_code: d?.feed_code || '',
+    feed_url: d?.feed_url || '',
+    grounded: d?.grounded || false,
+  };
 }
 
 /**
  * Generate feed posts from uploaded file (multipart POST)
  */
 export async function generateFromFile({
-  groq_key,
+  groq_key = '',
   tavily_key = '',
   vibe = 'Instagram',
   subject = 'Science',
@@ -150,5 +124,32 @@ export async function generateFromFile({
     },
     body: formData,
   });
-  return { posts: res?.data?.posts || res?.posts || [] };
+
+  const d = res?.data || res;
+  return {
+    posts: d?.posts || [],
+    feed_code: d?.feed_code || '',
+    feed_url: d?.feed_url || '',
+    chars: d?.chars || 0,
+  };
+}
+
+/**
+ * Share a feed explicitly
+ */
+export async function shareFeedApi(feedData) {
+  return await requestWithFallback('/api/feeds/share', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(feedData),
+  });
+}
+
+/**
+ * Get a shared feed by short code
+ */
+export async function getSharedFeedApi(shortCode) {
+  return await requestWithFallback(`/api/feeds/shared/${shortCode}`, {
+    method: 'GET',
+  });
 }

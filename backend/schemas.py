@@ -99,8 +99,8 @@ class Post(BaseModel):
     hashtags: List[str] = Field(default_factory=list)
     source_ref: str = ""
     grade: int
-    subject: Literal["Science", "Maths", "SST"]
-    engagement: Dict[str, Any] = Field(default_factory=lambda: {"likes": 24, "comments": []})
+    subject: Literal["Science", "Maths", "SST"] = "Science"
+    engagement: Dict[str, Any] = Field(default_factory=lambda: {"likes": 0, "comments": []})
 
     @field_validator("title")
     @classmethod

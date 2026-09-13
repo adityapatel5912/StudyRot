@@ -38,6 +38,8 @@ export default function PostCard({
   onToggleSound,
   onOpenComments,
   onSaveChange,
+  feedCode = '',
+  isSandbox = false,
 }) {
   const [fullscreenQuizOpen, setFullscreenQuizOpen] = useState(false);
 
@@ -135,15 +137,15 @@ export default function PostCard({
         <InteractionBar
           post={post}
           postId={post.id || `post_${index}`}
-          initialLikes={post.engagement?.likes || 18}
-          initialCommentsCount={
-            (post.engagement?.comments?.length || 0) +
-            (post.engagement?.seed_comment ? 1 : 0)
-          }
+          initialLikes={post.engagement?.likes || 0}
+          initialCommentsCount={post.engagement?.comments?.length || 0}
           postTitle={post.title}
           onOpenComments={onOpenComments}
           onSaveChange={onSaveChange}
           postData={post}
+          feedCode={feedCode}
+          postIndex={index}
+          isSandbox={isSandbox}
         />
       </article>
 

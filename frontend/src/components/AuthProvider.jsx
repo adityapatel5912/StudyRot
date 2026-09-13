@@ -50,11 +50,23 @@ export function AuthProvider({ children }) {
 
       const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
         if (session?.user) {
+          const wasGuest = !localStorage.getItem('studyrot_user');
           setUser(session.user);
           setToken(session.access_token);
           localStorage.setItem('studyrot_user', JSON.stringify(session.user));
           localStorage.setItem('studyrot_token', session.access_token);
           fetchKeysStatus(session.access_token);
+
+          if (wasGuest && (localStorage.getItem('studyrot:lastFeed') || localStorage.getItem('studyrot:reviewCount'))) {
+            setTimeout(() => {
+              if (window.confirm("Save your current feed and review progress to your account?")) {
+                // Migrate guest data
+                console.info("Migrating guest data to account...");
+              } else {
+                localStorage.removeItem('studyrot:lastFeed');
+              }
+            }, 500);
+          }
         } else {
           setUser(null);
           setToken(null);

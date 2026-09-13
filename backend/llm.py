@@ -194,33 +194,5 @@ async def generate_hardened_feed(
         extra_validated, _ = validate_and_sanitize_posts(extra_raw, subject, grade)
         posts.extend(extra_validated)
 
-    # Enforce minimum post count (14-18)
-    if len(posts) < 14:
-        logger.info("[%s] Feed has %d posts; supplementing to reach target 14-18", req_id, len(posts))
-        from pathlib import Path
-        demo_dir = Path(__file__).resolve().parent / "data" / "demo-feeds"
-        search_terms = f"{subject} {grade} {topic_summary}".lower()
-        matched_file = None
-        if demo_dir.exists():
-            for f in demo_dir.glob("*.json"):
-                stem = f.stem.replace("-", " ").lower()
-                if any(w in search_terms for w in stem.split() if len(w) > 3):
-                    matched_file = f
-                    break
-            if not matched_file:
-                matched_file = next(demo_dir.glob("*.json"), None)
-            if matched_file and matched_file.exists():
-                try:
-                    with open(matched_file, "r", encoding="utf-8") as f_in:
-                        supp_posts = json.load(f_in)
-                    existing_titles = set(p.get("title", "").strip().lower() for p in posts)
-                    for sp in supp_posts:
-                        if len(posts) >= 14:
-                            break
-                        if sp.get("title", "").strip().lower() not in existing_titles:
-                            posts.append(sp)
-                            existing_titles.add(sp.get("title", "").strip().lower())
-                except Exception as err:
-                    logger.warning("Failed to supplement from prebaked: %s", err)
-
     return posts[:18]
+
