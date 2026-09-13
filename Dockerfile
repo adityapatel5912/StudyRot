@@ -24,6 +24,7 @@ COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
 
 ENV PORT=8000
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH="/app/backend:${PYTHONPATH}"
 EXPOSE 8000
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \

@@ -6,11 +6,18 @@ and real-time Classroom Battle WebSockets.
 """
 
 import os
+import sys
 import io
 import time
 import json
 import logging
 from pathlib import Path
+
+# Ensure backend directory is in sys.path for direct module imports (Docker / Render / Monorepo)
+_backend_dir = str(Path(__file__).resolve().parent)
+if _backend_dir not in sys.path:
+    sys.path.insert(0, _backend_dir)
+
 from typing import Optional, List, Any, Dict
 
 from fastapi import (
