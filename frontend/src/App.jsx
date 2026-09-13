@@ -4,7 +4,10 @@ import { AuthProvider, useAuth } from './contexts/AuthProvider.jsx';
 import { ToastProvider } from './contexts/ToastProvider.jsx';
 import { SandboxProvider } from './contexts/SandboxProvider.jsx';
 import { ReviewProvider } from './contexts/ReviewProvider.jsx';
+import { TalkProvider, useTalk } from './contexts/TalkProvider.jsx';
 import Header from './components/Header.jsx';
+import TalkMode from './components/TalkMode.jsx';
+import DoubtPanel from './components/DoubtPanel.jsx';
 import Home from './pages/Home.jsx';
 import Battle from './pages/Battle.jsx';
 import SoloBattle from './pages/SoloBattle.jsx';
@@ -12,9 +15,22 @@ import Review from './pages/Review.jsx';
 import SharedFeed from './pages/SharedFeed.jsx';
 import Saved from './pages/Saved.jsx';
 import Keys from './pages/Keys.jsx';
+import Doubt from './pages/Doubt.jsx';
+import { Sparkles, Mic } from 'lucide-react';
 
 function AppContent() {
   const { user, signInWithGoogle } = useAuth();
+  const {
+    isTalkOpen,
+    closeTalkMode,
+    isDoubtOpen,
+    openDoubt,
+    closeDoubt,
+    doubtPayload,
+    activeVoice,
+    setActiveVoice,
+  } = useTalk();
+
   const [soundEnabled, setSoundEnabled] = useState(() => {
     try {
       const saved = localStorage.getItem('studyrot_sound_enabled');
@@ -60,6 +76,7 @@ function AppContent() {
         soundEnabled={soundEnabled}
         onToggleSound={handleToggleSound}
       />
+
       <main className="flex-1">
         <Routes>
           <Route
@@ -102,6 +119,12 @@ function AppContent() {
             element={<Review />}
           />
 
+          {/* AI Doubt Solver & Voice Tutor Page */}
+          <Route
+            path="/doubt"
+            element={<Doubt />}
+          />
+
           <Route
             path="/saved"
             element={<Saved onSelectFeed={handleSelectSavedFeed} />}
@@ -116,6 +139,35 @@ function AppContent() {
           />
         </Routes>
       </main>
+
+      {/* Floating "Ask Tutor" Quick Action FAB */}
+      <button
+        type="button"
+        id="ask-tutor-fab"
+        onClick={() => openDoubt()}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-xl shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all"
+        title="Ask StudyRot AI Tutor (Voice, Sims & Graphs)"
+      >
+        <Sparkles className="w-4 h-4 animate-spin text-amber-300" style={{ animationDuration: '8s' }} />
+        <span>Ask Tutor</span>
+      </button>
+
+      {/* Fullscreen Talk Mode Modal */}
+      <TalkMode
+        isOpen={isTalkOpen}
+        onClose={closeTalkMode}
+        activeVoice={activeVoice}
+        onSelectVoice={setActiveVoice}
+      />
+
+      {/* 520px Slide-out Doubt Drawer */}
+      <DoubtPanel
+        isOpen={isDoubtOpen}
+        onClose={closeDoubt}
+        initialPayload={doubtPayload}
+        activeVoice={activeVoice}
+        onSelectVoice={setActiveVoice}
+      />
     </div>
   );
 }
@@ -126,9 +178,11 @@ export default function App() {
       <ReviewProvider>
         <SandboxProvider>
           <ToastProvider>
-            <Router>
-              <AppContent />
-            </Router>
+            <TalkProvider>
+              <Router>
+                <AppContent />
+              </Router>
+            </TalkProvider>
           </ToastProvider>
         </SandboxProvider>
       </ReviewProvider>

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Volume2, VolumeX, Swords, LogIn, LogOut, Bookmark, Key } from 'lucide-react';
+import { Volume2, VolumeX, Swords, LogIn, LogOut, Bookmark, Key, Mic, HelpCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthProvider.jsx';
+import { useTalk } from '../contexts/TalkProvider.jsx';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header({ soundEnabled = true, onToggleSound }) {
   const { user, demoMode, setDemoMode, signInWithGoogle, signOut } = useAuth();
+  const { openTalkMode, openDoubt } = useTalk();
   const navigate = useNavigate();
 
   return (
@@ -20,6 +22,32 @@ export default function Header({ soundEnabled = true, onToggleSound }) {
         </div>
 
         <div className="header-right">
+          {/* Voice Tutor Live Mode Pill */}
+          <button
+            type="button"
+            onClick={openTalkMode}
+            className="flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 hover:bg-emerald-100 transition shadow-sm"
+            aria-label="Voice Tutor Live Mode"
+            title="Talk to AI Voice Tutor (AssemblyAI + Fish Audio)"
+          >
+            <Mic className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+            <span className="hidden sm:inline">Voice Tutor</span>
+            <span className="sm:hidden">Talk</span>
+          </button>
+
+          {/* Doubt Solver Drawer Button */}
+          <button
+            type="button"
+            onClick={() => openDoubt()}
+            className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold rounded-full bg-amber-50 text-amber-800 border border-amber-300 hover:bg-amber-100 transition shadow-sm"
+            aria-label="Ask Doubt Solver"
+            title="Ask a Doubt with 3D Simulations and Graphs"
+          >
+            <HelpCircle className="w-3.5 h-3.5 text-amber-600" />
+            <span className="hidden sm:inline">Ask Doubt</span>
+            <span className="sm:hidden">Doubt</span>
+          </button>
+
           {/* Mute Toggle */}
           <button
             type="button"

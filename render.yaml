@@ -22,3 +22,9 @@ services:
         sync: false
       - key: ENCRYPTION_MASTER_KEY
         generateValue: true
+      - key: ASSEMBLYAI_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: NVIDIA_API_KEY
+        sync: false

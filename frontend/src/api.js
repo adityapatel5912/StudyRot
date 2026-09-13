@@ -153,3 +153,202 @@ export async function getSharedFeedApi(shortCode) {
     method: 'GET',
   });
 }
+
+/**
+ * Transcribe recorded audio via AssemblyAI Universal-3.5 Pro
+ */
+export async function transcribeAudioApi(audioBlob, { language = 'en', grade = 10, subject = 'Science', prompt = '' } = {}) {
+  const formData = new FormData();
+  formData.append('file', audioBlob, 'speech.webm');
+  if (language) formData.append('language', language);
+  if (grade) formData.append('grade', String(grade));
+  if (subject) formData.append('subject', subject);
+  if (prompt) formData.append('prompt', prompt);
+
+  const candidates = getBackendCandidates();
+  let lastError = null;
+
+  for (const baseUrl of candidates) {
+    const fullUrl = `${baseUrl}/api/stt/sync`;
+    try {
+      const response = await fetch(fullUrl, {
+        method: 'POST',
+        body: formData,
+      });
+      if (response.ok) {
+        return await response.json();
+      }
+      const errJson = await response.json().catch(() => null);
+      throw new Error(errJson?.detail || `STT failed with status ${response.status}`);
+    } catch (err) {
+      lastError = err;
+      if (err.message && !err.message.includes('Failed to fetch') && !err.message.includes('NetworkError')) {
+        throw err;
+      }
+    }
+  }
+  throw lastError || new Error('Failed to transcribe audio.');
+}
+
+/**
+ * Synthesize speech via Fish Audio S2.1 Pro / OpenRouter
+ * Returns audio Blob
+ */
+export async function synthesizeSpeechApi({
+  text,
+  voice = 'teacher',
+  grade = 10,
+  subject = 'Science',
+  openrouter_key = '',
+}) {
+  const candidates = getBackendCandidates();
+  let lastError = null;
+
+  const payload = {
+    text,
+    voice,
+    grade: Number(grade),
+    subject,
+    openrouter_key: openrouter_key || undefined,
+  };
+
+  for (const baseUrl of candidates) {
+    const fullUrl = `${baseUrl}/api/tts`;
+    try {
+      const response = await fetch(fullUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (response.ok) {
+        const blob = await response.blob();
+        return blob;
+      }
+      const errJson = await response.json().catch(() => null);
+      throw new Error(errJson?.detail || `TTS failed with status ${response.status}`);
+    } catch (err) {
+      lastError = err;
+      if (err.message && !err.message.includes('Failed to fetch') && !err.message.includes('NetworkError')) {
+        throw err;
+      }
+    }
+  }
+  throw lastError || new Error('Failed to synthesize speech.');
+}
+
+/**
+ * Fetch available TTS voices
+ */
+export async function getTTSVoicesApi() {
+  return await requestWithFallback('/api/tts/voices', { method: 'GET' });
+}
+
+/**
+ * Solve text doubt with multi-modal response (steps, LaTeX, diagrams, 3D sim, practice)
+ */
+export async function solveTextDoubtApi({
+  question,
+  grade = 10,
+  subject = 'Science',
+  student_context = {},
+  openrouter_key = '',
+  groq_key = '',
+  nvidia_key = '',
+  token = '',
+}) {
+  return await requestWithFallback('/api/doubt/text', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token || 'guest'}`,
+    },
+    body: JSON.stringify({
+      question,
+      grade: Number(grade),
+      subject,
+      student_context,
+      openrouter_key: openrouter_key || undefined,
+      groq_key: groq_key || undefined,
+      nvidia_key: nvidia_key || undefined,
+    }),
+  });
+}
+
+/**
+ * Solve doubt with uploaded photo/diagram
+ */
+export async function solveImageDoubtApi(formData, token = '') {
+  const candidates = getBackendCandidates();
+  let lastError = null;
+
+  for (const baseUrl of candidates) {
+    const fullUrl = `${baseUrl}/api/doubt/with-image`;
+    try {
+      const response = await fetch(fullUrl, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token || 'guest'}`,
+        },
+        body: formData,
+      });
+      if (response.ok) {
+        return await response.json();
+      }
+      const errJson = await response.json().catch(() => null);
+      throw new Error(errJson?.detail || `Image doubt failed with status ${response.status}`);
+    } catch (err) {
+      lastError = err;
+      if (err.message && !err.message.includes('Failed to fetch') && !err.message.includes('NetworkError')) {
+        throw err;
+      }
+    }
+  }
+  throw lastError || new Error('Failed to solve image doubt.');
+}
+
+/**
+ * Generate 3D simulation or model spec for a concept
+ */
+export async function generate3DConceptApi({ concept, grade = 10, subject = 'Science', nvidia_key = '', token = '' }) {
+  return await requestWithFallback('/api/doubt/3d', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token || 'guest'}`,
+    },
+    body: JSON.stringify({
+      concept,
+      grade: Number(grade),
+      subject,
+      nvidia_key: nvidia_key || undefined,
+    }),
+  });
+}
+
+/**
+ * Get doubt history for user
+ */
+export async function getDoubtHistoryApi(token = '') {
+  return await requestWithFallback('/api/doubt/history', {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token || 'guest'}`,
+    },
+  });
+}
+
+/**
+ * Construct WebSocket URL for Talk Mode
+ */
+export function getWebSocketUrl(path = '/ws/talk') {
+  const customUrl = (typeof window !== 'undefined' && window.__STUDYROT_API_URL__) || import.meta.env.VITE_API_URL || '';
+  if (customUrl) {
+    const wsBase = customUrl.replace(/^http:\/\//, 'ws://').replace(/^https:\/\//, 'wss://');
+    return `${wsBase.replace(/\/$/, '')}${path}`;
+  }
+  if (typeof window !== 'undefined') {
+    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    return `${proto}//${window.location.host}${path}`;
+  }
+  return `ws://localhost:8000${path}`;
+}

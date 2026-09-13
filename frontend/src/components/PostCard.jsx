@@ -4,7 +4,8 @@ import Quiz from './Quiz.jsx';
 import FullScreenQuiz from './FullScreenQuiz.jsx';
 import InteractionBar from './InteractionBar.jsx';
 import MathText from './MathText.jsx';
-import { BookOpen } from 'lucide-react';
+import { BookOpen, Sparkles } from 'lucide-react';
+import { useTalk } from '../contexts/TalkProvider.jsx';
 
 const TYPE_CONFIG = {
   key_point: { label: 'Key Point', emoji: '🔑' },
@@ -42,6 +43,7 @@ export default function PostCard({
   isSandbox = false,
 }) {
   const [fullscreenQuizOpen, setFullscreenQuizOpen] = useState(false);
+  const { openDoubt } = useTalk();
 
   if (!post) return null;
 
@@ -132,6 +134,26 @@ export default function PostCard({
             ))}
           </div>
         )}
+
+        {/* Ask Tutor Action Chip */}
+        <div className="flex items-center justify-between pt-2">
+          <button
+            type="button"
+            onClick={() =>
+              openDoubt({
+                question: `Explain "${post.title}" with derivations, diagrams, and examples.`,
+                subject: post.subject || 'Science',
+                grade: post.grade || 10,
+                autoSolve: true,
+              })
+            }
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition shadow-sm"
+            title="Ask StudyRot Tutor to explain this concept"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Ask Tutor about this</span>
+          </button>
+        </div>
 
         {/* Interaction Bar (Likes, Comments, Share, Save) */}
         <InteractionBar

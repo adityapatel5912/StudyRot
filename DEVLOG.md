@@ -107,3 +107,41 @@ This document chronicles the design decisions, architectural pivots, and bug res
 - **Playwright E2E Browser Testing**: Built and verified `scratch/test_e2e_browser.py` executing 6 end-to-end user journeys (Home empty states, guided tour, sandbox feed, solo battle arena, spaced repetition review, and 404 shared feeds).
 - **Production Build**: Verified bundle size (249 kB gzipped JS, well under the 500 kB budget).
 
+---
+
+## Phase 6: Full AI Voice & Multi-Modal Doubt-Solving Tutor
+
+### 1. Architectural Positioning
+- **Moat Enforcement**: Rather than building generic flashcards or mind maps (dominated by Google NotebookLM and Gemini Student Hub), StudyRot doubled down on its four defensible pillars:
+  1. Retention science (FSRS-6 calibrated to board exam dates)
+  2. Voice-first doubt solver (AssemblyAI Universal-3.5 Pro + Fish Audio S2.1 Pro with math LaTeX converter)
+  3. Multi-modal learning with 3D simulations (Ray optics, projectile trajectories, unit circles, pure SVG graphs)
+  4. Competitive battles (Solo AI bot arena & classroom multiplayer)
+
+### 2. Voice Stack (STT & TTS)
+- **AssemblyAI Universal-3.5 Pro**: Integrated `backend/stt.py` with CBSE curriculum prompt injection (`"CBSE Class 10 Science physics ray optics concave mirror focal length..."`) to maximize recognition accuracy on accented English, Hinglish, and scientific vocabulary.
+- **Fish Audio S2.1 Pro via OpenRouter**: Integrated `backend/tts.py` with 3 voice presets (`teacher`, `buddy`, `narrator`) and in-memory LRU audio cache.
+- **LaTeX Math-to-Spoken English Converter**: Created `backend/tts_latex.py` translating complex mathematical equations into smooth spoken English (e.g., `\frac{1}{v} + \frac{1}{u} = \frac{1}{f}` $\to$ *"one over v plus one over u equals one over f"*, `\sin^2\theta + \cos^2\theta = 1` $\to$ *"sine squared theta plus cosine squared theta equals one"*), with automated fallback to the browser's `window.speechSynthesis`.
+
+### 3. Multi-Modal Academic Doubt Solver
+- **NVIDIA NIM Integration**: Built `backend/nvidia.py` integrating:
+  - Vision: `meta/llama-3.2-11b-vision-instruct` for textbook diagram & handwritten assignment recognition.
+  - OCR: `nvidia/nemotron-ocr-v2` for dense formula extraction.
+  - 3D Generation: `microsoft/trellis` for GLB 3D concept asset generation.
+- **Groq Model Cascade & Fast Failover**: Integrated `qwen/qwen3.8-27b`, `qwen/qwen3.6-27b`, and `openai/gpt-oss-120b` in `backend/doubt.py`. Set `max_retries=0` and `timeout=12.0` with `max_tokens=700` so rate limits fail over instantly without hanging requests.
+- **Guaranteed Output Schema**: Added strict schema guards ensuring `final_answer`, `common_mistakes`, `steps`, `next_practice`, and `StudyRot Tutor` identity are always present.
+
+### 4. Visualizations & Simulations
+- **Interactive 3D Simulation**: Created `frontend/src/components/Simulation3D.jsx` with interactive sliders for Concave Mirror optics ($u, v, f, m$), Projectile Motion ($\theta, u, H, R$), and Trigonometric Unit Circle ($\sin, \cos, \theta$).
+- **Pure SVG Graph Renderer**: Created `frontend/src/components/GraphRenderer.jsx` rendering coordinate axes, ticks, plotted curves, and hover coordinate tooltips with zero external charting dependencies, maintaining our < 500 kB bundle budget (actual: 270 kB gzipped).
+- **Interactive Diagram Viewer**: Created `frontend/src/components/DiagramRenderer.jsx` with DOMPurify sanitization, zoom controls, and fullscreen view.
+
+### 5. Live Voice Talk Mode & Everywhere Integration
+- **Full-Screen Voice Orb Interface**: Built `frontend/src/components/TalkMode.jsx` with a 200px pulsing voice orb, live audio visualizer bars, and bidirectional WebSocket streaming (`/ws/talk`).
+- **Global Drawer & Everywhere Actions**: Added floating `#ask-tutor-fab`, header "Voice Tutor" live mode button, post card "Ask Tutor about this" chip, and quiz card "Explain with 3D Simulation & Diagram" button.
+
+### 6. Full Verification & Results
+- **Backend Pytest Suite**: Added `backend/tests/test_voice_and_doubt.py`. **44/44 tests passing (100%)**.
+- **Playwright E2E Browser Suite**: Expanded to 9 automated user journey tests in `scratch/test_e2e_browser.py`. **All 9 test suites passing (100%)**.
+- **Production Bundle**: Gzipped JS is 270.70 kB (well under the 500 kB budget); build completes in ~5s.
+

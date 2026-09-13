@@ -71,6 +71,10 @@ from db import db, shared_feed_store
 from routes.feeds import router as feeds_router
 from routes.review import router as review_router
 from routes.battle import router as battle_router
+from routes.stt import router as stt_router
+from routes.tts import router as tts_router
+from routes.doubt import router as doubt_router
+from routes.talk import router as talk_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("studyrot.api")
@@ -90,6 +94,10 @@ app.add_middleware(
 app.include_router(feeds_router)
 app.include_router(review_router)
 app.include_router(battle_router)
+app.include_router(stt_router)
+app.include_router(tts_router)
+app.include_router(doubt_router)
+app.include_router(talk_router)
 
 
 async def periodic_expiry_cleanup():

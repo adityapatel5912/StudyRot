@@ -29,10 +29,19 @@
 - [x] **Single-Player Solo Battle vs AI Bots**:
   - 8 questions, 15-second timer, millisecond-accurate speed scoring formula: $1000 - (\frac{\text{time\_ms}}{15000}) \times 500$.
   - Realistic bot latencies, staggered reveals, live commentary, reactions (🔥/💀), and victory podium.
+- [x] **AI Voice & Multi-Modal Doubt-Solving Tutor**:
+  - AssemblyAI Universal-3.5 Pro speech-to-text with CBSE syllabus prompt injection.
+  - Fish Audio S2.1 Pro TTS with specialized LaTeX math-to-speech converter and browser speech synthesis fallback.
+  - Multi-modal academic doubt resolution with step-by-step LaTeX derivations, common CBSE board mistakes, and follow-up MCQs.
+  - Interactive 3D concept simulations (Ray Optics concave mirror, Projectile Motion, Trigonometric Unit Circle).
+  - Pure SVG graphing engine (line, scatter, bar) with coordinate hover without external charting libraries.
+  - Multi-modal vision and OCR integration via NVIDIA NIM (Llama 3.2 11B Vision, Nemotron-OCR-v2, Microsoft TRELLIS 3D).
+  - Live conversational Voice Tutor mode with central 200px pulsing orb and bidirectional WebSocket streaming (`/ws/talk`).
+  - Strict "StudyRot Tutor" persona identity.
 - [x] **100% Test Pass Rate**:
-  - **Pytest**: 33/33 tests passing across 5 test suites.
-  - **Playwright**: Complete E2E browser automation suite passing.
-  - **Build**: Vite production build succeeded in 8s (249 kB gzipped JS, well under 500 kB budget).
+  - **Pytest**: 44/44 tests passing across 6 test suites (100% pass rate).
+  - **Playwright**: Complete 9-suite E2E browser automation suite passing green.
+  - **Build**: Vite production build succeeded in 5s (270 kB gzipped JS, well under 500 kB budget).
 
 ---
 
@@ -70,12 +79,26 @@
    - Generate a topic or visit `/s/:shortCode` to view a shared study feed.
    - Test card-level deep links: `/s/:shortCode/2` navigates directly to card #3 with an arrival glowing ring.
 
+6. **Test 6: AI Voice & Multi-Modal Doubt Solver**:
+   - Click the floating **Ask Tutor** FAB (bottom-right) or header **Ask Doubt** button to open the 520px right drawer.
+   - Tap a 1-click concept doubt: *"Concave Mirror: Object between C and F"*.
+   - Observe the step-by-step CBSE solution render with KaTeX formulas, Final Answer card, Common CBSE Mistakes warnings, and follow-up MCQ.
+   - Interact with the **3D Concept Simulation** (drag sliders for object distance $u$ and focal length $f$ to watch real-time image formation and magnification).
+   - Click **Listen** to hear the explanation synthesized via Fish Audio / browser speech with LaTeX formulas naturally spoken.
+
+7. **Test 7: Live Voice Tutor Talk Mode**:
+   - In the header, click the **Voice Tutor** button (waveform icon) to open full-screen Live Voice Mode.
+   - Tap the central 200px pulsing Voice Orb to speak in Hinglish or English (or click any quick prompt pill).
+   - Speak your question; observe the live audio waveform visualizer and immediate spoken guidance from StudyRot Tutor.
+
 ---
 
 ## 3. Technology Highlights for Nerdy Judges
 
 - **FSRS-6 Algorithm**: Pure-Python implementation of Free Spaced Repetition Scheduler v6, with mathematical marginal gain sorting optimized for board exam dates.
-- **AI Inference Cascade**: Groq Cloud SDK (`llama-3.3-70b-versatile` with `qwen/qwen3.8-27b` and `llama-3.1-8b-instant` fallbacks) generating 14–18 curriculum cards with SVG diagrams and board-exam MCQs.
+- **Voice Stack**: AssemblyAI Universal-3.5 Pro for speech-to-text with CBSE syllabus prompt injection, combined with Fish Audio S2.1 Pro and a custom LaTeX formula-to-spoken-English converter.
+- **Multi-Modal Vision & 3D**: NVIDIA NIM integration (Llama-3.2-11b-vision-instruct, Nemotron-OCR-v2, and Microsoft TRELLIS 3D), with pure SVG graph plotting maintaining a 270 kB gzipped bundle.
+- **AI Inference Cascade**: Groq Cloud SDK (`qwen/qwen3.8-27b`, `qwen/qwen3.6-27b`, `openai/gpt-oss-120b`) with zero-retry fast failover generating 14–18 curriculum cards with SVG diagrams and board-exam MCQs.
 - **Syllabus Grounding**: Tavily Search integration grounding CBSE curriculum guidelines and board exam marking schemes.
 - **Multiplayer & Bot Simulation**: Server-authoritative WebSocket state machine for multiplayer rooms, paired with deterministic bot simulations for zero-wait solo revision.
 - **Client Security**: AES-256-GCM authenticated encryption with PBKDF2 key derivation for Bring-Your-Own API keys.

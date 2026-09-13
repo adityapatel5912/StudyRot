@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useSound from 'use-sound';
 import MathText from './MathText.jsx';
-import { Maximize2 } from 'lucide-react';
+import { Maximize2, Sparkles } from 'lucide-react';
+import { useTalk } from '../contexts/TalkProvider.jsx';
 
 function playSynthSound(type) {
   try {
@@ -61,6 +62,7 @@ export default function Quiz({
 }) {
   if (!quiz) return null;
 
+  const { openDoubt } = useTalk();
   const [started, setStarted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(seconds);
   const [answered, setAnswered] = useState(false);
@@ -313,6 +315,19 @@ export default function Quiz({
           <div className="quiz-feedback-explanation">
             <MathText>{quiz.explanation}</MathText>
           </div>
+          <button
+            type="button"
+            onClick={() =>
+              openDoubt({
+                question: `Explain this CBSE MCQ with diagrams or 3D simulation: "${quiz.question}". Options were: ${quiz.options?.join(', ')}. The correct answer is: ${quiz.answer}. Explanation: ${quiz.explanation}`,
+                autoSolve: true,
+              })
+            }
+            className="mt-2.5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white text-emerald-800 border border-emerald-300 hover:bg-emerald-50 transition shadow-sm"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span>Explain with 3D Simulation & Diagram</span>
+          </button>
         </div>
       )}
     </div>

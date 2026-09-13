@@ -1,27 +1,26 @@
-# StudyRot — NCERT Study Feeds, Spaced Repetition & Classroom Battles
+# StudyRot — NCERT Study Feeds, Voice Tutor, Spaced Repetition & Classroom Battles
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI_0.115-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/Frontend-React_18_Vite-61DAFB?logo=react&logoColor=black)](https://reactjs.org)
 [![Groq](https://img.shields.io/badge/LLM-Groq_Llama_3.3_70B-F55036?logo=groq&logoColor=white)](https://groq.com)
-[![Tavily](https://img.shields.io/badge/Search-Tavily_AI-4F46E5)](https://tavily.com)
-[![Pytest](https://img.shields.io/badge/Tests-33%2F33_Passing-success)](backend/tests)
+[![AssemblyAI](https://img.shields.io/badge/STT-AssemblyAI_Universal_3.5_Pro-0066FF)](https://www.assemblyai.com)
+[![FishAudio](https://img.shields.io/badge/TTS-Fish_Audio_S2.1_Pro-black)](https://fish.audio)
+[![NVIDIA](https://img.shields.io/badge/Vision_&_3D-NVIDIA_NIM_TRELLIS-76B900?logo=nvidia&logoColor=white)](https://build.nvidia.com)
+[![Pytest](https://img.shields.io/badge/Tests-44%2F44_Passing-success)](backend/tests)
 [![Playwright](https://img.shields.io/badge/E2E-Playwright_Passing-green)](scratch)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Turn dense CBSE Class 8–12 NCERT textbooks into an addictive, swipeable study feed with animated vector diagrams, timed board-exam MCQs, FSRS-6 exam-date-aware spaced repetition, and real-time multiplayer & solo AI bot battles.**
+> **Turn dense CBSE Class 8–12 NCERT textbooks into an addictive, swipeable study feed with animated vector diagrams, timed board-exam MCQs, FSRS-6 exam-date-aware spaced repetition, a real-time Voice & 3D Doubt Solver, and multiplayer & solo AI bot battles.**
 
 ---
 
-## 1. Executive Summary
+## 1. Strategic Positioning & The Four Pillars
 
-Students spend hours doomscrolling short-form video algorithms designed for distraction. **StudyRot** reclaims those cognitive habit loops by transforming dry NCERT chapters into a high-engagement, TikTok-style snap-scroll feed. Every swipe delivers structured CBSE curriculum concepts:
-- **Zero Dummy Data Guarantee**: Real user data only. Likes start at 0 and increment only on real taps; comments start empty; bot players are transparently labeled with `Bot ` prefixes and 🤖 BOT badges.
-- **Working Share & Deep Links**: Every generated feed receives a collision-resistant 6-character short code (`/s/:shortCode`) with instant deep linking to specific cards (`/s/:shortCode/:index`), view counters, content moderation, and 30-day TTL cleanup.
-- **Exam-Date-Aware Spaced Repetition (FSRS-6)**: Pure-Python Free Spaced Repetition Scheduler v6 engine ($R(t) = (1 + \frac{1}{9}\frac{t}{S})^{-1}$) calibrated to board exam dates, prioritizing cards with the highest marginal retrievability gain and providing LLM-driven error pattern diagnosis.
-- **Solo Battle Arena vs AI Bots**: Challenge 3 simulated bot opponents (`Bot Aditya`, `Bot Priya`, `Bot Rohan`) across Easy, Medium, and Hard difficulty curves with 15s timers, millisecond speed scoring, live commentary, and champion podiums.
-- **Visual Retention**: Handcrafted, animated SVGs and ray diagrams for every scientific concept.
-- **Active Recall**: Timed board-exam MCQs with Web Audio haptics and KaTeX LaTeX rendering.
-- **Privacy First**: BYO Groq/Tavily API keys encrypted at rest using AES-256-GCM authenticated encryption.
+StudyRot does NOT build flashcards or mind maps. Our architectural moat rests on four pillars:
+1. **Retention Science** — Pure Python FSRS-6 Free Spaced Repetition calibrated to the student's exact board exam date ($R(t) = (1 + \frac{1}{9}\frac{t}{S})^{-1}$), prioritizing cards by marginal retrievability gain.
+2. **Voice-First Multi-Modal Doubt Solving** — Speak doubts in Hinglish or English via AssemblyAI Universal-3.5 Pro; receive spoken voice explanations via Fish Audio S2.1 Pro with LaTeX formula-to-speech conversion.
+3. **Multi-Modal Learning & 3D Simulations** — Interactive ray optics, projectile trajectories, unit circles, pure SVG graphing (zero external charting dependencies, 270 kB gzipped bundle), and NVIDIA NIM VLM/OCR/TRELLIS integration.
+4. **Competitive Classroom Battles** — Real-time multiplayer arenas and solo practice against 3 clearly labeled AI bots (`Bot Aditya`, `Bot Priya`, `Bot Rohan` with 🤖 BOT badges) with 15s clocks, millisecond speed scoring, and live standings.
 
 ---
 
@@ -73,12 +72,23 @@ Students spend hours doomscrolling short-form video algorithms designed for dist
 - **Sandbox State Isolation**: Guests can try all core features (Feed, Daily Review, Solo Battle) in an ephemeral sandbox without modifying real user accounts. Sandbox feeds clearly display a warning banner, and share actions are gracefully restricted.
 - **Interactive 5-Step Guided Tour**: Spotlight tour explaining the Feed, Quizzes, Animated Diagrams, Exam-Date Review, and Solo Battles, complete with explicit demo card labels ("DEMO POST — your own feed will look like this").
 
+### 🎙️ AI Voice & Multi-Modal Doubt-Solving Tutor
+- **Strict Persona Identity**: Always responds and guides as the **"StudyRot Tutor"** for CBSE Class 8–12 Science, Maths, and Social Studies.
+- **Speech-to-Text (STT)**: Built on **AssemblyAI Universal-3.5 Pro** with CBSE domain vocabulary prompting (`backend/stt.py`), handling accented English, Hinglish, and scientific terms.
+- **Text-to-Speech (TTS)**: Built on **Fish Audio S2.1 Pro** via OpenRouter (`backend/tts.py`), featuring a specialized LaTeX-to-spoken-English converter (`backend/tts_latex.py`) translating equations into natural teacher cadence (e.g. $\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$ $\to$ *"one over v plus one over u equals one over f"*), with seamless browser `window.speechSynthesis` fallback.
+- **Interactive 3D Simulations & Concept Lab**: Instant prebuilt and dynamic simulations (`frontend/src/components/Simulation3D.jsx`) for Ray Optics ($u, v, f, m$ concave mirror), Projectile Motion ($\theta, u, H, R$), and Trigonometric Unit Circle ($\sin, \cos, \theta$).
+- **Pure SVG Graph Renderer**: Zero external charting libraries; dynamically renders coordinate axes, tick marks, plotted curves, and hover coordinates in lightweight pure SVG (< 275 kB total bundle).
+- **Multi-Modal Vision & OCR**: Accepts textbook photos, diagrams, and notes via **NVIDIA NIM** (Vision: `meta/llama-3.2-11b-vision-instruct`, OCR: `nvidia/nemotron-ocr-v2`, 3D: `microsoft/trellis`).
+- **Step-by-Step Derivations & Board Traps**: Every solution breaks derivations into numbered steps with KaTeX equations, an explicit Final Answer card, Common CBSE Mistakes warnings, and follow-up practice MCQs.
+- **Live Talk Mode**: Full-screen conversational voice interface (`frontend/src/components/TalkMode.jsx`) with a central 200px pulsing voice orb, live audio level analysis, and bidirectional streaming over WebSockets (`/ws/talk`).
+- **Everywhere Integration**: Launch the tutor anywhere from the floating **Ask Tutor FAB**, the header "Voice Tutor" button, the post card "Ask Tutor about this" chip, or the quiz "Explain with 3D Simulation" action.
+
 ### 📐 Animated SVG Diagrams & LaTeX Formulas
 - Embedded vector graphics: Optics ray tracings with normal lines, Snell's law refraction, Ohm's law circuits, conic sections (parabolas, focus, directrix), and historical timelines.
 - KaTeX mathematical and chemical typesetting supporting inline `$...$` and display `$$...$$` notations.
 
 ### 🔒 BYO Keys with AES-256-GCM Authenticated Encryption
-- Bring-Your-Own Groq (`gsk_...`) and Tavily (`tvly-...`) API keys.
+- Bring-Your-Own Groq (`gsk_...`), Tavily (`tvly-...`), AssemblyAI, OpenRouter, and NVIDIA NIM API keys.
 - Client keys are encrypted with authenticated AES-256-GCM using PBKDF2/SHA-256 derived keys before persistence in Supabase.
 
 ---
@@ -212,12 +222,12 @@ Frontend will be live at `http://localhost:5173`.
 
 ## 8. Running Tests
 
-### Backend Test Suite (33/33 Pytest Tests)
-The comprehensive test suite covers all endpoints, security sanitization, quiz integrity, dummy data absence, FSRS-6 spaced repetition, share links, and solo bot battle mechanics:
+### Backend Test Suite (44/44 Pytest Tests)
+The comprehensive test suite covers all endpoints, security sanitization, quiz integrity, dummy data absence, FSRS-6 spaced repetition, share links, solo bot battle mechanics, AssemblyAI STT, Fish Audio TTS with LaTeX math conversion, and multi-modal doubt solving:
 ```bash
 py -3.12 -m pytest backend/tests -v
 ```
-**Result**: `33 passed in ~7s (100% pass rate)`.
+**Result**: `44 passed in ~10s (100% pass rate)`.
 
 Test modules include:
 - `backend/tests/test_endpoints.py`: Core endpoints, error envelopes, crypto roundtrips, and WebSocket battle.
@@ -225,13 +235,14 @@ Test modules include:
 - `backend/tests/test_share.py`: Short code entropy, deep link routing, XSS sanitization, content moderation, and store fallbacks.
 - `backend/tests/test_review.py`: FSRS-6 retrievability decay, stability updates, cutoff calculations, LLM error classifier, and weakness report generation.
 - `backend/tests/test_solo_battle.py`: Speed scoring formula, bot naming and badge labeling, deterministic simulation, and battle API flow.
+- `backend/tests/test_voice_and_doubt.py`: STT transcription, TTS synthesis with math LaTeX-to-speech, multi-modal doubt solving schema, and `/ws/talk` live streaming.
 
 ### End-to-End Browser Testing (Playwright)
-Full automated browser test verifying Home empty states, guided tour modal, sandbox feed, solo battle arena with labeled bots, and spaced repetition review flow:
+Full automated browser test across 9 comprehensive test suites verifying Home empty states, guided tour modal, sandbox feed, solo battle arena with labeled bots, spaced repetition review flow, short code expired states, AI Doubt drawer with 3D simulations & LaTeX, Live Voice Tutor Talk Mode, and dedicated `/doubt` page:
 ```bash
 py -3.12 scratch/test_e2e_browser.py
 ```
-**Result**: `ALL E2E PLAYWRIGHT TESTS PASSED SUCCESSFULLY`.
+**Result**: `=== ALL E2E PLAYWRIGHT TESTS PASSED SUCCESSFULLY! ===`.
 
 ### Frontend Production Build Verification
 Verify production compilation and bundle budgets:
@@ -239,7 +250,7 @@ Verify production compilation and bundle budgets:
 cd frontend
 npm run build
 ```
-**Result**: `✓ built in ~8s. Gzipped JS bundle is 249 kB (well under 500 kB budget)`.
+**Result**: `✓ built in ~5s. Gzipped JS bundle is 270 kB (well under 500 kB budget)`.
 
 ---
 
@@ -263,6 +274,13 @@ npm run build
 | `POST` | `/api/battle/create` | Public | Create multiplayer classroom room |
 | `POST` | `/api/battle/join` | Public | Validate room PIN and join arena |
 | `WS` | `/ws/battle/{code}` | Public | WebSocket for real-time multiplayer battle arena |
+| `POST` | `/api/stt/sync` | Public | AssemblyAI Universal-3.5 Pro speech-to-text |
+| `POST` | `/api/tts` | Public | Fish Audio S2.1 Pro TTS with LaTeX conversion |
+| `GET` | `/api/tts/voices` | Public | List available tutor voice presets |
+| `POST` | `/api/doubt/text` | Public | Step-by-step doubt solver with 3D sims & SVG graphs |
+| `POST` | `/api/doubt/with-image` | Public | Multi-modal textbook photo solver via NVIDIA NIM |
+| `POST` | `/api/doubt/3d` | Public | Microsoft TRELLIS 3D generation via NVIDIA NIM |
+| `WS` | `/ws/talk` | Public | Bidirectional real-time conversational Voice Tutor |
 
 ---
 
@@ -276,83 +294,89 @@ Study Rot/
 │   │   └── research/           # 15 Verified curriculum topics
 │   ├── routes/
 │   │   ├── battle.py           # Solo battle API endpoints
+│   │   ├── doubt.py            # Academic doubt solver endpoints
 │   │   ├── feeds.py            # Shared feeds API endpoints
-│   │   └── review.py           # FSRS-6 spaced repetition endpoints
+│   │   ├── review.py           # FSRS-6 spaced repetition endpoints
+│   │   ├── stt.py              # AssemblyAI STT route
+│   │   ├── talk.py             # Live Voice Tutor WebSocket route
+│   │   └── tts.py              # Fish Audio TTS route
 │   ├── supabase/
-│   │   └── migrations/         # PostgreSQL schema, shared_feeds & review tables
+│   │   └── migrations/         # PostgreSQL schema & doubt history tables
 │   ├── tests/
 │   │   ├── test_endpoints.py   # Core API & crypto test suite
 │   │   ├── test_no_dummy_data.py # Dummy data elimination suite
 │   │   ├── test_review.py      # FSRS-6 algorithm & cutoff tests
 │   │   ├── test_share.py       # Deep linking & moderation tests
-│   │   └── test_solo_battle.py # Bot simulation & speed scoring tests
-│   ├── utils/
-│   │   └── codes.py            # 6-character short code generator
+│   │   ├── test_solo_battle.py # Bot simulation & speed scoring tests
+│   │   └── test_voice_and_doubt.py # STT, TTS, doubt & talk tests
 │   ├── auth.py                 # Supabase JWT authentication
 │   ├── battle.py               # WebSocket multiplayer battle state machine
 │   ├── config.py               # Safe environment loader
 │   ├── crypto.py               # AES-256-GCM BYO key encryption
 │   ├── db.py                   # Supabase & in-memory shared feed stores
+│   ├── doubt.py                # Multi-modal solver with model cascade & sims
 │   ├── llm.py                  # Groq inference client & prompt orchestration
 │   ├── main.py                 # FastAPI application & lifespan background cleanup
+│   ├── nvidia.py               # NVIDIA NIM (VLM, OCR, TRELLIS 3D) client
 │   ├── review.py               # Pure-Python FSRS-6 engine & error classifier
 │   ├── sanitizer.py            # SVG & text sanitization
 │   ├── schemas.py              # Pydantic data contracts
 │   ├── search.py               # Tavily NCERT grounding integration
-│   └── solo_battle.py          # Seeded bot simulation & speed scoring
+│   ├── solo_battle.py          # Seeded bot simulation & speed scoring
+│   ├── stt.py                  # AssemblyAI Universal-3.5 Pro client
+│   ├── tts.py                  # Fish Audio S2.1 Pro TTS client
+│   └── tts_latex.py            # Mathematical LaTeX equation to spoken English
 ├── frontend/
-│   ├── public/
-│   │   └── sounds/             # Web Audio sound clips (tick, win, correct, etc.)
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── BattlePodium.jsx
 │   │   │   ├── BattleSummary.jsx
 │   │   │   ├── BotBadge.jsx    # 🤖 BOT identity chip
+│   │   │   ├── ChatBubble.jsx  # Student & tutor chat message bubbles
 │   │   │   ├── CommentSheet.jsx # Clean empty state comments
 │   │   │   ├── DailyReviewCard.jsx # Exam-date aware daily review card
 │   │   │   ├── DemoBanner.jsx  # Ephemeral sandbox banner
+│   │   │   ├── DiagramRenderer.jsx # DOMPurify SVG diagram viewer
+│   │   │   ├── DoubtPanel.jsx  # 520px multi-modal doubt solver drawer
 │   │   │   ├── EmptyState.jsx  # Actionable empty state card
 │   │   │   ├── ExamDatePrompt.jsx # Exam date selector modal
-│   │   │   ├── FullScreenQuiz.jsx
-│   │   │   ├── Header.jsx      # Non-overlapping responsive header
-│   │   │   ├── InteractionBar.jsx # Native share & like triggers
-│   │   │   ├── MathText.jsx    # KaTeX LaTeX renderer
-│   │   │   ├── PostCard.jsx    # Feed card with animated diagram
-│   │   │   ├── Quiz.jsx        # Timed MCQ card
-│   │   │   ├── ReviewCard.jsx  # FSRS flashcard with 4-button ratings
-│   │   │   ├── SnapFeed.jsx    # 100dvh snap feed with arrival glow ring
-│   │   │   ├── SoloBattleArena.jsx # Question arena with 15s timer
-│   │   │   ├── SoloBattleLobby.jsx # Matchup lobby with 3 labeled bots
-│   │   │   ├── SourcePanel.jsx # Input configuration panel
-│   │   │   ├── Tour.jsx        # 5-step guided spotlight tour
-│   │   │   └── WeaknessReport.jsx # 10+ error diagnostic report
+│   │   │   ├── GraphRenderer.jsx # Pure SVG line/scatter/bar plotting
+│   │   │   ├── ImageUploader.jsx # Textbook photo dropzone & camera snap
+│   │   │   ├── MicButton.jsx   # Interactive mic button with pulsing animation
+│   │   │   ├── MicOverlay.jsx  # Live audio waveform recording overlay
+│   │   │   ├── PracticeCard.jsx # Follow-up MCQ with FSRS queue button
+│   │   │   ├── Simulation3D.jsx # Optics, projectile & unit circle sims
+│   │   │   ├── StepList.jsx    # Numbered steps with LaTeX & voice button
+│   │   │   ├── TalkMode.jsx    # Fullscreen live conversational voice interface
+│   │   │   ├── VoicePicker.jsx # 3 voice presets (Teacher, Buddy, Narrator)
+│   │   │   └── ...
 │   │   ├── contexts/
 │   │   │   ├── AuthProvider.jsx
 │   │   │   ├── ReviewProvider.jsx
-│   │   │   ├── SandboxProvider.jsx # Ephemeral sandbox state isolation
+│   │   │   ├── SandboxProvider.jsx
+│   │   │   ├── TalkProvider.jsx # Global voice tutor & drawer state
 │   │   │   └── ToastProvider.jsx
 │   │   ├── hooks/
-│   │   │   ├── useReviewQueue.js
-│   │   │   ├── useSoloBattle.js
-│   │   │   └── useTour.js
+│   │   │   ├── useDoubt.js     # Doubt solver and history hook
+│   │   │   ├── useRecorder.js  # Audio recording & level analyser hook
+│   │   │   ├── useTalkMode.js  # WebSocket talk client hook
+│   │   │   └── useTTS.js       # Speech synthesis & playback hook
 │   │   ├── pages/
+│   │   │   ├── Doubt.jsx       # Dedicated /doubt solver page
 │   │   │   ├── Home.jsx
-│   │   │   ├── Review.jsx      # Spaced repetition review flow
-│   │   │   ├── SharedFeed.jsx  # /s/:shortCode deep link route
-│   │   │   └── SoloBattle.jsx  # /battle/solo arena route
-│   │   ├── utils/
-│   │   │   └── emptyStates.js  # Centralized empty state copy
-│   │   ├── App.jsx             # React Router root
+│   │   │   ├── Review.jsx
+│   │   │   ├── SharedFeed.jsx
+│   │   │   └── SoloBattle.jsx
+│   │   ├── App.jsx             # React Router with /doubt route & tutor FAB
 │   │   ├── api.js              # Client API wrapper
-│   │   └── styles.css          # Design tokens, arrival rings, KaTeX
+│   │   └── styles.css
 │   ├── package.json
 │   └── vite.config.js
 ├── submission/
-│   ├── demo-script.md          # 3-minute hackathon presentation script
-│   ├── judging-notes.md        # Technical rubrics and evaluation checklist
-│   ├── pitch-deck.md           # Presentation slide content
-│   └── README.md               # Submission directory index
-├── Dockerfile                  # Multi-stage production container
+│   ├── demo-script.md
+│   ├── judging-notes.md
+│   ├── pitch-deck.md
+│   └── README.md
 ├── DEVLOG.md                   # Engineering trajectory log
 ├── SUBMISSION_NOTES.md         # Final hackathon submission notes
 └── LICENSE                     # MIT License
