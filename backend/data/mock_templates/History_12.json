@@ -1,0 +1,16 @@
+{
+  "id": "history_12_standard",
+  "subject": "History",
+  "grade": 12,
+  "title": "CBSE Class 12 History Board Mock Paper",
+  "duration_min": 180,
+  "total_marks": 80,
+  "negative_marking": false,
+  "sections": [
+    {"id": "A", "name": "Section A", "type": "MCQ", "count": 21, "marks_per_q": 1, "total_marks": 21},
+    {"id": "B", "name": "Section B", "type": "SA1", "count": 6, "marks_per_q": 3, "total_marks": 18},
+    {"id": "C", "name": "Section C", "type": "LA", "count": 3, "marks_per_q": 8, "total_marks": 24},
+    {"id": "D", "name": "Section D", "type": "Case", "count": 3, "marks_per_q": 4, "total_marks": 12},
+    {"id": "E", "name": "Section E", "type": "Map", "count": 1, "marks_per_q": 5, "total_marks": 5}
+  ]
+}

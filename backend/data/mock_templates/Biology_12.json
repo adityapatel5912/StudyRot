@@ -1,0 +1,16 @@
+{
+  "id": "biology_12_standard",
+  "subject": "Biology",
+  "grade": 12,
+  "title": "CBSE Class 12 Biology Board Mock Paper",
+  "duration_min": 180,
+  "total_marks": 70,
+  "negative_marking": false,
+  "sections": [
+    {"id": "A", "name": "Section A", "type": "MCQ", "count": 16, "marks_per_q": 1, "total_marks": 16},
+    {"id": "B", "name": "Section B", "type": "SA1", "count": 5, "marks_per_q": 2, "total_marks": 10},
+    {"id": "C", "name": "Section C", "type": "SA2", "count": 7, "marks_per_q": 3, "total_marks": 21},
+    {"id": "D", "name": "Section D", "type": "Case", "count": 2, "marks_per_q": 4, "total_marks": 8},
+    {"id": "E", "name": "Section E", "type": "LA", "count": 3, "marks_per_q": 5, "total_marks": 15}
+  ]
+}

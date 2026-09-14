@@ -63,6 +63,46 @@ export default function Header({ soundEnabled = true, onToggleSound }) {
             )}
           </button>
 
+          {/* Study Pathway Link */}
+          <Link
+            to="/plan"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold rounded-full bg-amber-50 text-amber-900 border border-amber-300 hover:bg-amber-100 transition shadow-xs"
+            title="7-Day Adaptive Study Pathway"
+          >
+            <span>🎯</span>
+            <span className="hidden sm:inline">Plan</span>
+          </Link>
+
+          {/* Full Mock Test Link */}
+          <Link
+            to="/mock"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold rounded-full bg-indigo-50 text-indigo-800 border border-indigo-200 hover:bg-indigo-100 transition shadow-xs"
+            title="CBSE Board Full Mock Tests"
+          >
+            <span>📝</span>
+            <span className="hidden sm:inline">Mock</span>
+          </Link>
+
+          {/* Collaborative Study Room Link */}
+          <Link
+            to="/room"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold rounded-full bg-teal-50 text-teal-800 border border-teal-200 hover:bg-teal-100 transition shadow-xs"
+            title="Collaborative Study Rooms (2-8 Students)"
+          >
+            <span>👥</span>
+            <span className="hidden sm:inline">Room</span>
+          </Link>
+
+          {/* Check My Work Link */}
+          <Link
+            to="/check-work"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold rounded-full bg-purple-50 text-purple-800 border border-purple-200 hover:bg-purple-100 transition shadow-xs"
+            title="Check My Work Photo Feedback"
+          >
+            <span>📷</span>
+            <span className="hidden sm:inline">Check</span>
+          </Link>
+
           {/* Daily Review Link */}
           <Link
             to="/review"

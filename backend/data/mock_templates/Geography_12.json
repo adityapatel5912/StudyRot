@@ -1,0 +1,16 @@
+{
+  "id": "geography_12_standard",
+  "subject": "Geography",
+  "grade": 12,
+  "title": "CBSE Class 12 Geography Board Mock Paper",
+  "duration_min": 180,
+  "total_marks": 70,
+  "negative_marking": false,
+  "sections": [
+    {"id": "A", "name": "Section A", "type": "MCQ", "count": 17, "marks_per_q": 1, "total_marks": 17},
+    {"id": "B", "name": "Section B", "type": "SA1", "count": 2, "marks_per_q": 3, "total_marks": 6},
+    {"id": "C", "name": "Section C", "type": "SA2", "count": 5, "marks_per_q": 3, "total_marks": 15},
+    {"id": "D", "name": "Section D", "type": "LA", "count": 4, "marks_per_q": 5, "total_marks": 20},
+    {"id": "E", "name": "Section E", "type": "Map", "count": 2, "marks_per_q": 6, "total_marks": 12}
+  ]
+}

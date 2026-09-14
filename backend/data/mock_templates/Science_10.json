@@ -1,0 +1,56 @@
+{
+  "id": "science_10_standard",
+  "subject": "Science",
+  "grade": 10,
+  "title": "CBSE Class 10 Science Board Mock Paper",
+  "duration_min": 180,
+  "total_marks": 80,
+  "negative_marking": false,
+  "sections": [
+    {
+      "id": "A",
+      "name": "Section A",
+      "type": "MCQ",
+      "count": 20,
+      "marks_per_q": 1,
+      "total_marks": 20,
+      "description": "Multiple Choice Questions including Assertion-Reasoning"
+    },
+    {
+      "id": "B",
+      "name": "Section B",
+      "type": "SA1",
+      "count": 6,
+      "marks_per_q": 2,
+      "total_marks": 12,
+      "description": "Very Short Answer Questions (30 to 50 words)"
+    },
+    {
+      "id": "C",
+      "name": "Section C",
+      "type": "SA2",
+      "count": 7,
+      "marks_per_q": 3,
+      "total_marks": 21,
+      "description": "Short Answer Questions (50 to 80 words)"
+    },
+    {
+      "id": "D",
+      "name": "Section D",
+      "type": "LA",
+      "count": 3,
+      "marks_per_q": 5,
+      "total_marks": 15,
+      "description": "Long Answer Questions (80 to 120 words) with internal choices"
+    },
+    {
+      "id": "E",
+      "name": "Section E",
+      "type": "Case",
+      "count": 3,
+      "marks_per_q": 4,
+      "total_marks": 12,
+      "description": "Source-based / Case-based assessment units"
+    }
+  ]
+}

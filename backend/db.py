@@ -41,6 +41,11 @@ _MEM_SAVES: Dict[str, set] = {}  # user_id -> set of post_ids
 _MEM_SHARED_FEEDS: Dict[str, Dict[str, Any]] = {}
 _MEM_REVIEW_STATES: Dict[str, Dict[str, Any]] = {}  # (user_id, card_id) -> state dict
 _MEM_ERROR_PATTERNS: List[Dict[str, Any]] = []
+_MEM_MOCK_TESTS: Dict[str, Dict[str, Any]] = {}  # mock_id -> mock test dict
+_MEM_ROOM_CHATS: List[Dict[str, Any]] = []  # room chat records
+_MEM_STUDY_PLANS: Dict[str, Dict[str, Any]] = {}  # f"{user_id}:{week_start}" -> plan dict
+_MEM_PLAN_SESSIONS: Dict[int, Dict[str, Any]] = {}  # session_id -> session dict
+_MEM_CHECK_WORK_HISTORY: List[Dict[str, Any]] = []
 
 
 # ==========================================
@@ -498,6 +503,178 @@ class DatabaseService:
             except Exception as e:
                 logger.warning("Supabase get_user_error_patterns error: %s", e)
         return [r for r in _MEM_ERROR_PATTERNS if r.get("user_id") == user_id]
+
+    # Mock Tests (Feature 1)
+    @staticmethod
+    async def create_mock_test(user_id: Optional[str], subject: str, grade: int, paper_json: Dict[str, Any]) -> Dict[str, Any]:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        total_marks = paper_json.get("total_marks", 80)
+        record = {
+            "id": f"mock_{int(time.time() * 1000)}_{generate_short_code(4)}",
+            "user_id": user_id,
+            "subject": subject,
+            "grade": grade,
+            "paper_json": paper_json,
+            "answers_json": {},
+            "started_at": now_iso,
+            "submitted_at": None,
+            "total_marks": total_marks,
+            "score": None,
+            "duration_sec": 0,
+            "status": "in_progress",
+        }
+        if _supabase_client:
+            try:
+                sb_rec = dict(record)
+                # If using numeric serial in Supabase, let DB assign id
+                sb_rec.pop("id", None)
+                res = _supabase_client.table("mock_tests").insert(sb_rec).execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase create_mock_test error: %s", e)
+
+        _MEM_MOCK_TESTS[record["id"]] = record
+        return record
+
+    @staticmethod
+    async def update_mock_test(mock_id: str, updates: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        if _supabase_client and str(mock_id).isdigit():
+            try:
+                res = _supabase_client.table("mock_tests").update(updates).eq("id", int(mock_id)).execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase update_mock_test error: %s", e)
+
+        if mock_id in _MEM_MOCK_TESTS:
+            _MEM_MOCK_TESTS[mock_id].update(updates)
+            return _MEM_MOCK_TESTS[mock_id]
+        return None
+
+    @staticmethod
+    async def get_mock_test(mock_id: str) -> Optional[Dict[str, Any]]:
+        if _supabase_client and str(mock_id).isdigit():
+            try:
+                res = _supabase_client.table("mock_tests").select("*").eq("id", int(mock_id)).execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase get_mock_test error: %s", e)
+
+        return _MEM_MOCK_TESTS.get(mock_id)
+
+    @staticmethod
+    async def get_user_mock_history(user_id: str) -> List[Dict[str, Any]]:
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("mock_tests").select("*").eq("user_id", user_id).order("started_at", desc=True).limit(20).execute()
+                if res.data:
+                    return res.data
+            except Exception as e:
+                logger.warning("Supabase get_user_mock_history error: %s", e)
+
+        return [m for m in _MEM_MOCK_TESTS.values() if m.get("user_id") == user_id]
+
+    # Room Chat (Feature 2)
+    @staticmethod
+    async def save_room_chat(room_code: str, user_id: Optional[str], nickname: str, message: str, is_ai: bool = False) -> Dict[str, Any]:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        record = {
+            "room_code": room_code,
+            "user_id": user_id,
+            "nickname": nickname,
+            "message": message,
+            "is_ai": is_ai,
+            "created_at": now_iso,
+        }
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("room_chat").insert(record).execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase save_room_chat error: %s", e)
+
+        _MEM_ROOM_CHATS.append(record)
+        return record
+
+    @staticmethod
+    async def get_room_chats(room_code: str, limit: int = 50) -> List[Dict[str, Any]]:
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("room_chat").select("*").eq("room_code", room_code).order("created_at", desc=False).limit(limit).execute()
+                if res.data:
+                    return res.data
+            except Exception as e:
+                logger.warning("Supabase get_room_chats error: %s", e)
+
+        return [c for c in _MEM_ROOM_CHATS if c.get("room_code") == room_code][-limit:]
+
+    # Check My Work History (Feature 3)
+    @staticmethod
+    async def save_check_work_result(user_id: Optional[str], result: Dict[str, Any]) -> Dict[str, Any]:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        record = {
+            "id": f"cw_{int(time.time() * 1000)}",
+            "user_id": user_id,
+            "result": result,
+            "created_at": now_iso,
+        }
+        _MEM_CHECK_WORK_HISTORY.append(record)
+        return record
+
+    @staticmethod
+    async def get_check_work_history(user_id: str, limit: int = 20) -> List[Dict[str, Any]]:
+        return [r for r in _MEM_CHECK_WORK_HISTORY if r.get("user_id") == user_id][-limit:]
+
+    # Adaptive Study Pathway (Feature 4)
+    @staticmethod
+    async def save_study_plan(user_id: str, week_start: str, plan_json: Dict[str, Any]) -> Dict[str, Any]:
+        now_iso = datetime.now(timezone.utc).isoformat()
+        record = {
+            "id": int(time.time() * 1000) % 1000000000,
+            "user_id": user_id,
+            "week_start": week_start,
+            "plan_json": plan_json,
+            "generated_at": now_iso,
+        }
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("study_plans").upsert(record, on_conflict="user_id, week_start").execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase save_study_plan error: %s", e)
+
+        key = f"{user_id}:{week_start}"
+        _MEM_STUDY_PLANS[key] = record
+        return record
+
+    @staticmethod
+    async def get_study_plan(user_id: str, week_start: str) -> Optional[Dict[str, Any]]:
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("study_plans").select("*").eq("user_id", user_id).eq("week_start", week_start).execute()
+                if res.data:
+                    return res.data[0]
+            except Exception as e:
+                logger.warning("Supabase get_study_plan error: %s", e)
+
+        key = f"{user_id}:{week_start}"
+        return _MEM_STUDY_PLANS.get(key)
+
+    @staticmethod
+    async def get_user_study_plans(user_id: str) -> List[Dict[str, Any]]:
+        if _supabase_client:
+            try:
+                res = _supabase_client.table("study_plans").select("*").eq("user_id", user_id).order("week_start", desc=True).limit(10).execute()
+                if res.data:
+                    return res.data
+            except Exception as e:
+                logger.warning("Supabase get_user_study_plans error: %s", e)
+
+        return [p for k, p in _MEM_STUDY_PLANS.items() if k.startswith(f"{user_id}:")]
 
 
 db = DatabaseService()

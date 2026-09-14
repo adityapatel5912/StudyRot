@@ -6,7 +6,7 @@
 [![AssemblyAI](https://img.shields.io/badge/STT-AssemblyAI_Universal_3.5_Pro-0066FF)](https://www.assemblyai.com)
 [![FishAudio](https://img.shields.io/badge/TTS-Fish_Audio_S2.1_Pro-black)](https://fish.audio)
 [![NVIDIA](https://img.shields.io/badge/Vision_&_3D-NVIDIA_NIM_TRELLIS-76B900?logo=nvidia&logoColor=white)](https://build.nvidia.com)
-[![Pytest](https://img.shields.io/badge/Tests-44%2F44_Passing-success)](backend/tests)
+[![Pytest](https://img.shields.io/badge/Tests-59%2F59_Passing-success)](backend/tests)
 [![Playwright](https://img.shields.io/badge/E2E-Playwright_Passing-green)](scratch)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -83,6 +83,29 @@ StudyRot does NOT build flashcards or mind maps. Our architectural moat rests on
 - **Live Talk Mode**: Full-screen conversational voice interface (`frontend/src/components/TalkMode.jsx`) with a central 200px pulsing voice orb, live audio level analysis, and bidirectional streaming over WebSockets (`/ws/talk`).
 - **Everywhere Integration**: Launch the tutor anywhere from the floating **Ask Tutor FAB**, the header "Voice Tutor" button, the post card "Ask Tutor about this" chip, or the quiz "Explain with 3D Simulation" action.
 
+### 📝 Full Mock Test Mode (`/mock`)
+- **Official CBSE Blueprints & Difficulty Balancing**: 11 paper templates covering Class 10 (Science, Maths, SST) and Class 12 (Physics, Chemistry, Maths, Biology, History, Political Science, Geography, Economics) adhering to a 40% Easy, 40% Medium, 20% Hard difficulty distribution.
+- **Authentic PYQ Seed Bank**: 3 years of authentic CBSE Board Previous Year Questions (2022–2024) with official marking scheme rationales.
+- **Interactive Testing**: Full countdown timer, auto-saving every 30 seconds, KaTeX formula editor, and pure SVG clickable India Map skill question.
+- **Auto-Grading & Spaced Repetition Integration**: Immediate scoring against official marking schemes; incorrect concepts automatically sync into the student's FSRS spaced repetition review queue.
+
+### 👥 Collaborative Study Rooms (`/room`)
+- **Synchronized Group Study**: 2–8 student rooms over real-time WebSockets (`/ws/room/{code}`).
+- **Sync vs Free Scrolling**: Host can lock students to a synchronized lesson or permit independent free scrolling.
+- **Integrated AI Interventions**: Moderated chat with `@ai` mention trigger, providing grounded NCERT tutoring on demand within the conversation.
+- **3-Question Group Quizzes**: Server-authoritative 20-second countdown, real-time participant choices reveal, and celebratory winner confetti.
+
+### 📸 Check My Work — Photo Feedback (`/check-work`)
+- **Handwritten Solution Analyzer**: Multi-model vision pipeline (NVIDIA NIM OCR + Groq reasoning) parsing student handwritten photos step-by-step.
+- **Error Pinpointing**: Color-coded step breakdown (Emerald for valid steps, Crimson with explanation for mistakes).
+- **Misconception Classifier**: Automatically categorizes errors under `sign_error`, `formula_confusion`, `calculation_error`, or `interpretation_error` and recommends targeted drills.
+- **BYOK Security & 1-Click Demo**: Strict user API key isolation with instant 1-click sample numerical demo requiring zero API keys.
+
+### 📅 Adaptive Study Pathway Generator (`/plan` and `/plan/today`)
+- **7-Day Dynamic Calendar**: Automatically schedules daily review, drill, read, and mock sessions weighted by FSRS retention stability, error frequency, CBSE chapter weightage, and upcoming exam countdown.
+- **Subject Balance Guarantee**: Enforces that no single subject can consume more than 50% of the student's weekly study budget.
+- **Mid-Week Roll-Forward & Nightly Sync**: Missed priority sessions automatically roll forward into the active day; background APScheduler rebalances weekly plans nightly at 02:00 IST.
+
 ### 📐 Animated SVG Diagrams & LaTeX Formulas
 - Embedded vector graphics: Optics ray tracings with normal lines, Snell's law refraction, Ohm's law circuits, conic sections (parabolas, focus, directrix), and historical timelines.
 - KaTeX mathematical and chemical typesetting supporting inline `$...$` and display `$$...$$` notations.
@@ -90,6 +113,7 @@ StudyRot does NOT build flashcards or mind maps. Our architectural moat rests on
 ### 🔒 BYO Keys with AES-256-GCM Authenticated Encryption
 - Bring-Your-Own Groq (`gsk_...`), Tavily (`tvly-...`), AssemblyAI, OpenRouter, and NVIDIA NIM API keys.
 - Client keys are encrypted with authenticated AES-256-GCM using PBKDF2/SHA-256 derived keys before persistence in Supabase.
+- Strict isolation ensures developer server keys are never consumed by user generation requests.
 
 ---
 

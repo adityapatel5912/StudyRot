@@ -67,6 +67,7 @@ from battle import battle_manager, clean_nickname
 from prompts import STUDYROT_SYSTEM_PROMPT, FEW_SHOT_SVG_EXAMPLES
 from crypto import encrypt_api_key, decrypt_api_key
 from auth import get_current_user_required, get_current_user_optional
+from auth_keys import get_user_groq_key, get_user_tavily_key
 from db import db, shared_feed_store
 from routes.feeds import router as feeds_router
 from routes.review import router as review_router
@@ -75,6 +76,11 @@ from routes.stt import router as stt_router
 from routes.tts import router as tts_router
 from routes.doubt import router as doubt_router
 from routes.talk import router as talk_router
+from routes.mock import router as mock_router
+from routes.room import router as room_router, study_room_websocket
+from routes.check_work import router as check_work_router
+from routes.plan import router as plan_router
+from jobs.regenerate_plans import schedule_planner_jobs
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("studyrot.api")
@@ -98,6 +104,14 @@ app.include_router(stt_router)
 app.include_router(tts_router)
 app.include_router(doubt_router)
 app.include_router(talk_router)
+app.include_router(mock_router)
+app.include_router(room_router)
+app.include_router(check_work_router)
+app.include_router(plan_router)
+
+@app.websocket("/ws/room/{code}")
+async def ws_room_direct_endpoint(websocket: WebSocket, code: str):
+    await study_room_websocket(websocket, code)
 
 
 async def periodic_expiry_cleanup():
@@ -116,6 +130,14 @@ async def periodic_expiry_cleanup():
 async def startup_event():
     log_key_presence()
     asyncio.create_task(periodic_expiry_cleanup())
+    try:
+        from apscheduler.schedulers.asyncio import AsyncIOScheduler
+        scheduler = AsyncIOScheduler()
+        schedule_planner_jobs(scheduler)
+        scheduler.start()
+        logger.info("APScheduler initialized successfully for background jobs.")
+    except Exception as e:
+        logger.warning("Could not initialize APScheduler: %s", e)
 
 
 @app.exception_handler(RateLimitExceeded)
@@ -268,8 +290,8 @@ async def generate_feed(request: Request, body: GenerateRequest):
     Standard generation endpoint requiring BYO Groq Key or fallback to server key.
     Auto-saves feed and returns short code + deep link.
     """
-    user_groq = (body.groq_key or "").strip() or GROQ_API_KEY
-    if not user_groq or user_groq.upper() == "DEMO":
+    user_groq = get_user_groq_key(request, body.groq_key)
+    if not user_groq:
         return JSONResponse(
             status_code=400,
             content={
@@ -279,7 +301,7 @@ async def generate_feed(request: Request, body: GenerateRequest):
             }
         )
 
-    user_tavily = (body.tavily_key or "").strip() or TAVILY_API_KEY
+    user_tavily = get_user_tavily_key(request, body.tavily_key)
 
     verified_ctx, is_verified = get_verified_ncert_context(body.subject, body.grade, body.text[:120])
 
@@ -347,7 +369,7 @@ async def upload_document(
     grade: int = Form(10),
 ):
     """Uploads document (txt/pdf/docx), parses it into StudyRot feed, and auto-saves share link."""
-    effective_groq = groq_key.strip() or GROQ_API_KEY
+    effective_groq = get_user_groq_key(request, groq_key)
     if not effective_groq:
         return JSONResponse(
             status_code=400,

@@ -16,6 +16,11 @@ import SharedFeed from './pages/SharedFeed.jsx';
 import Saved from './pages/Saved.jsx';
 import Keys from './pages/Keys.jsx';
 import Doubt from './pages/Doubt.jsx';
+import MockTest from './pages/MockTest.jsx';
+import StudyRoom from './pages/StudyRoom.jsx';
+import CheckWork from './pages/CheckWork.jsx';
+import Plan from './pages/Plan.jsx';
+import PlanToday from './pages/PlanToday.jsx';
 import { Sparkles, Mic } from 'lucide-react';
 
 function AppContent() {
@@ -123,6 +128,42 @@ function AppContent() {
           <Route
             path="/doubt"
             element={<Doubt />}
+          />
+
+          {/* Full Mock Test Mode */}
+          <Route
+            path="/mock"
+            element={<MockTest />}
+          />
+          <Route
+            path="/mock/:id"
+            element={<MockTest />}
+          />
+
+          {/* Collaborative Study Rooms */}
+          <Route
+            path="/room"
+            element={<StudyRoom />}
+          />
+          <Route
+            path="/room/:code"
+            element={<StudyRoom />}
+          />
+
+          {/* Check My Work with Photo Feedback */}
+          <Route
+            path="/check-work"
+            element={<CheckWork />}
+          />
+
+          {/* Adaptive Study Pathway Generator */}
+          <Route
+            path="/plan"
+            element={<Plan />}
+          />
+          <Route
+            path="/plan/today"
+            element={<PlanToday />}
           />
 
           <Route

@@ -4,8 +4,9 @@ import Quiz from './Quiz.jsx';
 import FullScreenQuiz from './FullScreenQuiz.jsx';
 import InteractionBar from './InteractionBar.jsx';
 import MathText from './MathText.jsx';
-import { BookOpen, Sparkles } from 'lucide-react';
+import { BookOpen, Sparkles, Camera } from 'lucide-react';
 import { useTalk } from '../contexts/TalkProvider.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const TYPE_CONFIG = {
   key_point: { label: 'Key Point', emoji: '🔑' },
@@ -44,6 +45,7 @@ export default function PostCard({
 }) {
   const [fullscreenQuizOpen, setFullscreenQuizOpen] = useState(false);
   const { openDoubt } = useTalk();
+  const navigate = useNavigate();
 
   if (!post) return null;
 
@@ -135,8 +137,8 @@ export default function PostCard({
           </div>
         )}
 
-        {/* Ask Tutor Action Chip */}
-        <div className="flex items-center justify-between pt-2">
+        {/* Ask Tutor & Check My Work Action Chips */}
+        <div className="flex flex-wrap items-center justify-between gap-2 pt-2">
           <button
             type="button"
             onClick={() =>
@@ -152,6 +154,16 @@ export default function PostCard({
           >
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Ask Tutor about this</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => navigate(`/check-work?question=${encodeURIComponent(post.title || '')}`)}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold text-purple-700 bg-purple-50 border border-purple-200 hover:bg-purple-100 transition shadow-sm"
+            title="Upload photo of your handwritten solution for this concept"
+          >
+            <Camera className="w-3.5 h-3.5 text-purple-600" />
+            <span>Check my work</span>
           </button>
         </div>
 

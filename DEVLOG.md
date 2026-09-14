@@ -145,3 +145,38 @@ This document chronicles the design decisions, architectural pivots, and bug res
 - **Playwright E2E Browser Suite**: Expanded to 9 automated user journey tests in `scratch/test_e2e_browser.py`. **All 9 test suites passing (100%)**.
 - **Production Bundle**: Gzipped JS is 270.70 kB (well under the 500 kB budget); build completes in ~5s.
 
+---
+
+## Phase 6: Four Core Defensible Features
+
+### 1. Full Mock Test Mode (`/mock`)
+- **CBSE Blueprints & Balanced Difficulty**: Created 11 official paper templates across Class 10 (Science, Maths, SST) and Class 12 (Physics, Chemistry, Maths, Biology, History, Political Science, Geography, Economics). Enforces 40% Easy, 40% Medium, 20% Hard difficulty distribution.
+- **Authentic PYQ Seed Data**: Seeded authentic CBSE Previous Year Questions (2022–2024) complete with official marking scheme rationales.
+- **Multi-Modal Testing**: Built KaTeX rich equation answer editor and interactive pure SVG India Map skill question with clickable state identification (e.g., major iron ore mines, dams, nuclear plants).
+- **Auto-Grader & PDF Export**: Server auto-grades MCQs, map locations, and evaluates subjective answers against rubrics, syncing mistakes into the FSRS spaced repetition retention queue.
+
+### 2. Collaborative Study Rooms (`/room`)
+- **Real-Time Synchronized Study**: Built room manager supporting 2–8 concurrent students via WebSockets (`/ws/room/{code}`).
+- **Sync Mode vs. Free Mode**: Host controls navigation lockstep across the feed or allows free independent scrolling.
+- **Bottom Bar Chat with AI Interventions**: Moderated chat with 2-second rate limiting, profane filter, and `@ai` trigger delivering instant verified NCERT tutor responses directly into the group conversation.
+- **3-Question Group Quiz**: Synchronized 20-second countdown timer, real-time participant choice reveal, and MVP winner celebratory confetti.
+
+### 3. Check My Work with Photo Feedback (`/check-work`)
+- **Handwritten Solution Grader**: Multi-model vision pipeline (NVIDIA NIM OCR + Groq reasoning) grading student photos step-by-step.
+- **Pedagogical Pinpointing**: Displays student's written text side-by-side with step-by-step colored badges (green for correct, red with highlight for errors).
+- **Misconception Classifier**: Identifies mistake classes (`sign_error`, `formula_confusion`, `calculation_error`, `interpretation_error`) and suggests targeted drill topics.
+- **Security & Caching**: 24-hour SHA-256 image caching and BYOK isolation with 1-click sample numerical demo.
+
+### 4. Adaptive Study Pathway Generator (`/plan` and `/plan/today`)
+- **7-Day Dynamic Calendar**: Calibrated against FSRS-6 card stability, topic error history, CBSE blueprint weightage, and upcoming exam countdown.
+- **Subject Balance Guarantee**: Strictly prevents any single subject from exceeding 50% of the weekly time budget.
+- **Dynamic Mid-Week Roll-Forward**: Past uncompleted priority sessions automatically roll forward into the active day.
+- **Automated Rebalancing**: APScheduler cron job running nightly at 02:00 IST to rebalance schedules based on recent student activity.
+
+### 5. Verification & Quality Gates
+- **Pytest Suite**: **59/59 tests passing (100% green)** in `backend/tests/`.
+- **Smoke Suite**: All 9 automated API health and feature tests passing in `scripts/smoke.ps1`.
+- **Frontend Production Build**: Vite build completed cleanly with index bundle gzip at 291.77 kB (< 500 kB budget).
+- **Playwright E2E Verification**: 15 screenshots captured across Mobile (375x812), Tablet (768x1024), and Desktop (1440x900).
+
+

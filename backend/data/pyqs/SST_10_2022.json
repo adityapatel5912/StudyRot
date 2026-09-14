@@ -1,0 +1,46 @@
+[
+  {
+    "id": "SST10_2022_Q01",
+    "year": 2022,
+    "subject": "SST",
+    "grade": 10,
+    "chapter": "Nationalism in India",
+    "section": "A",
+    "type": "MCQ",
+    "marks": 1,
+    "question": "Which of the following pacts was signed in September 1932 between Mahatma Gandhi and Dr. B.R. Ambedkar?",
+    "options": [
+      "Poona Pact",
+      "Gandhi-Irwin Pact",
+      "Lucknow Pact",
+      "Lahore Pact"
+    ],
+    "correct_answer": "Poona Pact",
+    "bloom_level": "recall",
+    "concept_complexity": "easy",
+    "source": "CBSE 2024 SST Set 1 Q2",
+    "marking_scheme": "1 mark for Poona Pact."
+  },
+  {
+    "id": "SST10_2022_Q37",
+    "year": 2022,
+    "subject": "SST",
+    "grade": 10,
+    "chapter": "Map Skills \u2014 History and Geography",
+    "section": "E",
+    "type": "Map",
+    "marks": 4,
+    "question": "On the political outline map of India, locate and label the following:\n(A) The place where Mahatma Gandhi broke the salt law (Dandi, Gujarat)\n(B) The place where the Indian National Congress session of December 1920 was held (Nagpur, Maharashtra)\n(C) Salal Dam (Jammu and Kashmir)\n(D) Kalpakkam Nuclear Power Plant (Tamil Nadu)",
+    "correct_answer": "Regions: A = Gujarat (Dandi), B = Maharashtra (Nagpur), C = Jammu & Kashmir (Salal Dam), D = Tamil Nadu (Kalpakkam).",
+    "expected_regions": [
+      "Gujarat",
+      "Maharashtra",
+      "Jammu and Kashmir",
+      "Tamil Nadu"
+    ],
+    "bloom_level": "apply",
+    "concept_complexity": "medium",
+    "source": "CBSE 2024 SST Set 1 Q37",
+    "marking_scheme": "1 mark each for accurately locating and labeling the four specified historical/geographical regions on the map."
+  }
+]

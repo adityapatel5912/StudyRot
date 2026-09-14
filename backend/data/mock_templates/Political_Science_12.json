@@ -1,0 +1,16 @@
+{
+  "id": "political_science_12_standard",
+  "subject": "Political Science",
+  "grade": 12,
+  "title": "CBSE Class 12 Political Science Board Mock Paper",
+  "duration_min": 180,
+  "total_marks": 80,
+  "negative_marking": false,
+  "sections": [
+    {"id": "A", "name": "Section A", "type": "MCQ", "count": 12, "marks_per_q": 1, "total_marks": 12},
+    {"id": "B", "name": "Section B", "type": "SA1", "count": 6, "marks_per_q": 2, "total_marks": 12},
+    {"id": "C", "name": "Section C", "type": "SA2", "count": 5, "marks_per_q": 4, "total_marks": 20},
+    {"id": "D", "name": "Section D", "type": "Case", "count": 3, "marks_per_q": 4, "total_marks": 12},
+    {"id": "E", "name": "Section E", "type": "LA", "count": 4, "marks_per_q": 6, "total_marks": 24}
+  ]
+}

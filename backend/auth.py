@@ -56,19 +56,25 @@ def verify_supabase_jwt(token: str) -> Optional[Dict[str, Any]]:
     return None
 
 
-async def get_current_user_required(authorization: Optional[str] = Header(None)) -> Dict[str, Any]:
+async def get_current_user_required(authorization: Any = Header(None)) -> Dict[str, Any]:
     """
     Protected route dependency: strictly requires a valid Bearer token.
-    Raises 401 if missing or invalid.
+    Raises 401 if missing or invalid. Supports both FastAPI Header dependency and direct Request passing.
     """
-    if not authorization or not authorization.startswith("Bearer "):
+    auth_val: Optional[str] = None
+    if isinstance(authorization, str):
+        auth_val = authorization
+    elif authorization is not None and hasattr(authorization, "headers"):
+        auth_val = authorization.headers.get("Authorization") or authorization.headers.get("authorization")
+
+    if not auth_val or not auth_val.startswith("Bearer "):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Authorization header with Bearer token is required.",
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    token = authorization.split(" ")[1].strip()
+    token = auth_val.split(" ")[1].strip()
     user_info = verify_supabase_jwt(token)
     if not user_info:
         raise HTTPException(
@@ -82,12 +88,20 @@ async def get_current_user_required(authorization: Optional[str] = Header(None))
     return user_info
 
 
-async def get_current_user_optional(authorization: Optional[str] = Header(None)) -> Optional[Dict[str, Any]]:
+async def get_current_user_optional(authorization: Any = Header(None)) -> Optional[Dict[str, Any]]:
     """
     Optional user dependency: returns user dict if valid Bearer token is present, else None.
+    Supports both FastAPI Header dependency and direct Request passing.
     """
-    if not authorization or not authorization.startswith("Bearer "):
+    auth_val: Optional[str] = None
+    if isinstance(authorization, str):
+        auth_val = authorization
+    elif authorization is not None and hasattr(authorization, "headers"):
+        auth_val = authorization.headers.get("Authorization") or authorization.headers.get("authorization")
+
+    if not auth_val or not auth_val.startswith("Bearer "):
         return None
 
-    token = authorization.split(" ")[1].strip()
+    token = auth_val.split(" ")[1].strip()
     return verify_supabase_jwt(token)
+

@@ -50,6 +50,48 @@ else
   echo "❌ FAIL ($BATTLE_RES)"
 fi
 
+# 5. Mock Test paper create
+echo -n "Checking /api/mock/create ... "
+MOCK_RES=$(curl -s -X POST "$HOST/api/mock/create" \
+  -H "Content-Type: application/json" \
+  -d '{"subject": "Science", "grade": 10, "timed": true}')
+if echo "$MOCK_RES" | grep -q '"ok":true'; then
+  echo "✅ PASS"
+else
+  echo "❌ FAIL ($MOCK_RES)"
+fi
+
+# 6. Study room create
+echo -n "Checking /api/room/create ... "
+ROOM_RES=$(curl -s -X POST "$HOST/api/room/create" \
+  -H "Content-Type: application/json" \
+  -d '{"nickname": "Tester", "topic": "Optics", "subject": "Science", "grade": 10}')
+if echo "$ROOM_RES" | grep -q '"ok":true'; then
+  echo "✅ PASS"
+else
+  echo "❌ FAIL ($ROOM_RES)"
+fi
+
+# 7. Check work
+echo -n "Checking /api/check-work ... "
+CHECK_RES=$(curl -s -X POST "$HOST/api/check-work" \
+  -H "Content-Type: application/json" \
+  -d '{"image": "data:image/jpeg;base64,dGVzdA==", "question_text": "Sample problem"}')
+if echo "$CHECK_RES" | grep -q '"ok":true'; then
+  echo "✅ PASS"
+else
+  echo "❌ FAIL ($CHECK_RES)"
+fi
+
+# 8. Adaptive Study Pathway current
+echo -n "Checking /api/plan/current ... "
+PLAN_RES=$(curl -s "$HOST/api/plan/current")
+if echo "$PLAN_RES" | grep -q '"ok":true'; then
+  echo "✅ PASS"
+else
+  echo "❌ FAIL ($PLAN_RES)"
+fi
+
 echo "========================================"
 echo "All smoke tests finished."
 echo "========================================"
