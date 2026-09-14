@@ -24,6 +24,7 @@ logger = logging.getLogger("studyrot.tts")
 
 FISH_TTS_URL = "https://api.fish.audio/v1/tts"
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+OPENROUTER_SPEECH_URL = "https://openrouter.ai/api/v1/audio/speech"
 
 # In-memory LRU cache: cache_key -> (timestamp, audio_bytes)
 _TTS_CACHE: Dict[str, tuple[float, bytes]] = {}
@@ -143,22 +144,16 @@ async def synthesize_speech(text: str, voice: str = "teacher") -> bytes:
         }
         payload = {
             "model": "fish-audio/s2.1-pro-free:free",
-            "messages": [{"role": "user", "content": spoken_text}],
-            "modalities": ["audio"],
-            "audio": {"voice": voice_ref or "alloy", "format": "mp3"},
+            "input": spoken_text,
+            "voice": voice_ref or "alloy",
         }
         async with httpx.AsyncClient(timeout=45.0) as client:
             try:
-                resp = await client.post(OPENROUTER_API_URL, headers=headers, json=payload)
-                if resp.status_code == 200:
-                    res_json = resp.json()
-                    # Extract audio if returned in choices
-                    audio_b64 = res_json.get("choices", [{}])[0].get("message", {}).get("audio", {}).get("data")
-                    if audio_b64:
-                        import base64
-                        audio_bytes = base64.b64decode(audio_b64)
-                        _set_cache(cache_key, audio_bytes)
-                        return audio_bytes
+                resp = await client.post(OPENROUTER_SPEECH_URL, headers=headers, json=payload)
+                if resp.status_code == 200 and len(resp.content) > 100:
+                    _set_cache(cache_key, resp.content)
+                    return resp.content
+                logger.warning("OpenRouter audio/speech returned %d: %s", resp.status_code, resp.text[:200])
             except Exception as e:
                 logger.warning("OpenRouter TTS call failed: %s", e)
 
