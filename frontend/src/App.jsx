@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthProvider.jsx';
 import { ToastProvider } from './contexts/ToastProvider.jsx';
 import { SandboxProvider } from './contexts/SandboxProvider.jsx';
@@ -24,6 +24,8 @@ import PlanToday from './pages/PlanToday.jsx';
 import { Sparkles, Mic } from 'lucide-react';
 
 function AppContent() {
+  const location = useLocation();
+  const showFab = location.pathname === '/' || location.pathname.startsWith('/s/');
   const { user, signInWithGoogle } = useAuth();
   const {
     isTalkOpen,
@@ -63,26 +65,12 @@ function AppContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--off-white)] text-[var(--navy-900)]">
-      {/* Guest Mode Banner (Hidden when signed in) */}
-      {!user && (
-        <div className="w-full bg-slate-800 text-slate-200 px-4 py-1.5 text-center text-[11px] font-medium flex items-center justify-center gap-2">
-          <span>Demo Mode — Free access.</span>
-          <button
-            type="button"
-            onClick={signInWithGoogle}
-            className="underline text-white font-bold hover:text-amber-300"
-          >
-            Sign in to save your progress
-          </button>
-        </div>
-      )}
-
       <Header
         soundEnabled={soundEnabled}
         onToggleSound={handleToggleSound}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-24 sm:pb-20">
         <Routes>
           <Route
             path="/"
@@ -181,17 +169,19 @@ function AppContent() {
         </Routes>
       </main>
 
-      {/* Floating "Ask Tutor" Quick Action FAB */}
-      <button
-        type="button"
-        id="ask-tutor-fab"
-        onClick={() => openDoubt()}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-xl shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all"
-        title="Ask StudyRot AI Tutor (Voice, Sims & Graphs)"
-      >
-        <Sparkles className="w-4 h-4 animate-spin text-amber-300" style={{ animationDuration: '8s' }} />
-        <span>Ask Tutor</span>
-      </button>
+      {/* Floating "Ask Tutor" Quick Action FAB - Only on Feed pages */}
+      {showFab && (
+        <button
+          type="button"
+          id="ask-tutor-fab"
+          onClick={() => openDoubt()}
+          className="fixed bottom-5 right-5 z-30 flex items-center gap-1.5 p-2.5 sm:px-4 sm:py-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-lg shadow-emerald-600/30 hover:scale-105 active:scale-95 transition-all"
+          title="Ask StudyRot AI Tutor (Voice, Sims & Graphs)"
+        >
+          <Sparkles className="w-4 h-4 animate-spin text-amber-300" style={{ animationDuration: '8s' }} />
+          <span className="hidden sm:inline">Ask Tutor</span>
+        </button>
+      )}
 
       {/* Fullscreen Talk Mode Modal */}
       <TalkMode

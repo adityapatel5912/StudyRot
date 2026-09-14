@@ -21,36 +21,25 @@ export default function DayCard({ day, isToday, onToggleSessionComplete }) {
           : 'border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/70'
       }`}
     >
-      {/* Day Header */}
-      <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-2">
-        <div className="flex items-center gap-2">
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-black text-sm text-slate-900 dark:text-slate-100">
-                {day.day_name}
-              </span>
-              {isToday && (
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-indigo-600 text-white uppercase tracking-wider">
-                  Today
-                </span>
-              )}
-            </div>
-            <span className="text-[10px] text-slate-400 font-mono">{day.date}</span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-1.5 text-xs">
-          {isDayFinished ? (
-            <span className="flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-200">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              <span>Done (Streak +1)</span>
-            </span>
-          ) : (
-            <span className="flex items-center gap-1 text-[11px] text-slate-500 font-medium">
-              <Clock className="w-3.5 h-3.5 text-slate-400" />
-              <span>{completedMinutes}/{totalMinutes}m</span>
+      {/* Day Header - Clean 2-row layout with zero overlap */}
+      <div className="flex flex-col gap-1 border-b border-slate-100 dark:border-slate-700/60 pb-2">
+        <div className="flex items-center justify-between gap-1">
+          <span className="font-black text-sm text-slate-900 dark:text-slate-100">
+            {day.day_name}
+          </span>
+          {isToday && (
+            <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-indigo-600 text-white uppercase tracking-wider shrink-0">
+              Today
             </span>
           )}
+        </div>
+
+        <div className="flex items-center justify-between text-[11px] text-slate-500 font-medium">
+          <span className="text-[10px] text-slate-400 font-mono">{day.date}</span>
+          <span className="flex items-center gap-1 font-bold text-slate-600 dark:text-slate-300 shrink-0">
+            <Clock className="w-3 h-3 text-slate-400 shrink-0" />
+            <span>{completedMinutes}/{totalMinutes}m</span>
+          </span>
         </div>
       </div>
 

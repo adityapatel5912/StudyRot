@@ -11,7 +11,7 @@ export default function WeekView({ days = [], onToggleSessionComplete }) {
   return (
     <div className="w-full flex flex-col gap-4">
       {/* Mobile Day Selector Bar */}
-      <div className="lg:hidden flex items-center gap-1.5 overflow-x-auto pb-2 border-b border-slate-200 dark:border-slate-700">
+      <div className="md:hidden flex items-center gap-1.5 overflow-x-auto pb-2 border-b border-slate-200 dark:border-slate-700">
         {days.map((day, idx) => {
           const isSelected = idx === selectedMobileDayIdx;
           const isToday = day.date === todayStr;
@@ -35,7 +35,7 @@ export default function WeekView({ days = [], onToggleSessionComplete }) {
       </div>
 
       {/* Mobile Selected Day View */}
-      <div className="lg:hidden">
+      <div className="md:hidden">
         {days[selectedMobileDayIdx] && (
           <DayCard
             day={days[selectedMobileDayIdx]}
@@ -45,8 +45,8 @@ export default function WeekView({ days = [], onToggleSessionComplete }) {
         )}
       </div>
 
-      {/* Desktop 7-Column Grid Layout */}
-      <div className="hidden lg:grid grid-cols-7 gap-3 items-start">
+      {/* Responsive Grid Layout (2 cols on tablet, 3 on laptop, 4 on standard desktop, 7 on 2xl) */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-3.5 items-start">
         {days.map((day) => (
           <DayCard
             key={day.date}
